@@ -36,25 +36,25 @@ const stats = [
 
 const previewCards = [
   {
+    icon: GraduationCap,
     title: 'Nuestras Clases',
     description: 'Clases para niños, adolescentes y adultos. Metodología comunicativa con profesores certificados.',
-    image: '/images/classes/methodology.jpg',
+    //image: '/images/classes/methodology.jpg',
     link: '/nuestras-clases',
-    icon: GraduationCap,
   },
   {
+    icon: FileText,
     title: 'Exámenes Internacionales',
     description: 'Preparación para Cambridge, IELTS, TOEFL y Trinity. 94% de tasa de aprobación.',
-    image: '/images/exams/certificate.jpg',
+    //image: '/images/exams/certificate.jpg',
     link: '/examenes-internacionales',
-    icon: FileText,
   },
   {
+    icon: Plane,
     title: 'Viajes a Inglaterra',
     description: 'Viajes de inmersión lingüística a Londres, Oxford, Cambridge y más destinos.',
-    image: '/images/trips/immersion.jpg',
+    //image: '/images/trips/immersion.jpg',
     link: '/viajes-a-inglaterra',
-    icon: Plane,
   },
 ]
 
