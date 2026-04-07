@@ -6,7 +6,7 @@ import sitemap from 'vite-plugin-sitemap'
 const siteUrl = process.env.VITE_SITE_URL ?? 'https://www.englishacademymardelplata.com'
 
 export default defineConfig({
-  base: '/Steps-web/',
+  base: '/steps-web/',
   plugins: [
     react(),
     sitemap({
