@@ -1,13 +1,11 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { Target, Eye, BookOpen, Award, Users, GraduationCap, FileText, Plane, Instagram, Facebook } from 'lucide-react'
+import { Target, Eye, BookOpen, Award, Users, GraduationCap, FileText, Plane} from 'lucide-react'
 import { PageMeta } from '@/components/layout/PageMeta'
 import { siteConfig } from '@/data/siteConfig'
-import { team } from '@/data/team'
 import { awards, isOfficialExamCenter } from '@/data/awards'
 import { pageMeta } from '@/data/pageMeta'
-import { SkeletonCard } from '@/components/ui/skeletons/SkeletonCard'
 import { SkeletonImage } from '@/components/ui/skeletons/SkeletonImage'
 
 const containerVariants = {
@@ -96,12 +94,10 @@ function AnimatedCounter({ value, suffix = '' }: { value: number; suffix?: strin
 }
 
 export default function About() {
-  const [teamLoaded, setTeamLoaded] = useState(false)
   const [awardsLoaded, setAwardsLoaded] = useState(false)
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setTeamLoaded(true)
       setAwardsLoaded(true)
     }, 500)
     return () => clearTimeout(timer)
