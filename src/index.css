@@ -82,7 +82,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #c9a227;
+  background: #87ceea;
   border-radius: 4px;
 }
 
@@ -92,13 +92,13 @@
 
 /* Selection color */
 ::selection {
-  background: #c9a227;
+  background: #87ceea;
   color: #1e3a5f;
 }
 
 /* Focus styles */
 *:focus-visible {
-  outline: 2px solid #c9a227;
+  outline: 2px solid #87ceea;
   outline-offset: 2px;
 }
 
