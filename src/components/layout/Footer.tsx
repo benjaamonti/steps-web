@@ -21,9 +21,11 @@ export function Footer() {
           {/* Logo & Description */}
           <div className="lg:col-span-1">
             <Link to="/" className="inline-block">
-              <span className="text-2xl font-bold text-white">
-                {siteConfig.businessName}
-              </span>
+              <img
+                src="/images/logo.svg"
+                alt={siteConfig.businessName}
+                className="h-10 w-auto"
+              />
             </Link>
             <p className="mt-4 text-white/80 text-sm leading-relaxed">
               Más de 25 años formando estudiantes de inglés en Mar del Plata. 

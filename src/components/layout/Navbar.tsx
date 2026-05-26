@@ -39,14 +39,12 @@ export function Navbar() {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <span
-              className={`text-xl lg:text-2xl font-bold transition-colors duration-300 ${
-                isScrolled ? 'text-primary' : 'text-white'
-              }`}
-            >
-              {siteConfig.businessName}
-            </span>
+          <Link to="/" className="flex items-center">
+            <img
+              src="/images/logo.svg"
+              alt={siteConfig.businessName}
+              className="h-8 w-auto lg:h-10 shrink-0"
+            />
           </Link>
 
           {/* Desktop Navigation */}
