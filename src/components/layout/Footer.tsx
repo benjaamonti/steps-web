@@ -24,7 +24,10 @@ export function Footer() {
               <img
                 src="/images/logo.svg"
                 alt={siteConfig.businessName}
-                className="h-10 w-auto"
+                className="h-10 w-auto transition-all duration-300"
+                style={{
+                  filter: 'brightness(0) invert(1)',
+                }}
               />
             </Link>
             <p className="mt-4 text-white/80 text-sm leading-relaxed">

@@ -104,6 +104,25 @@ export default function Contact() {
                   </p>
                 </div>
               </motion.a>
+
+              {/* Map */}
+              <motion.div variants={itemVariants} className="mt-8 rounded-2xl overflow-hidden bg-cream">
+                <div className="p-6 pb-4">
+                  <h3 className="text-xl font-bold text-primary">
+                    Encontranos en el mapa
+                  </h3>
+                </div>
+                <iframe
+                  src={siteConfig.mapsUrl}
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Ubicación de Steps"
+                />
+              </motion.div>
             </motion.div>
 
             {/* Right Column - Contact Info */}
@@ -197,20 +216,6 @@ export default function Contact() {
                     </a>
                   )}
                 </div>
-              </motion.div>
-
-              {/* Map */}
-              <motion.div variants={itemVariants} className="rounded-2xl overflow-hidden">
-                <iframe
-                  src={siteConfig.mapsUrl}
-                  width="100%"
-                  height="300"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Ubicación de English Academy"
-                />
               </motion.div>
             </motion.div>
           </div>

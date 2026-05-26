@@ -43,7 +43,10 @@ export function Navbar() {
             <img
               src="/images/logo.svg"
               alt={siteConfig.businessName}
-              className="h-8 w-auto lg:h-10 shrink-0"
+              className="h-8 w-auto lg:h-10 shrink-0 transition-all duration-300"
+              style={{
+                filter: isScrolled ? 'none' : 'brightness(0) invert(1)',
+              }}
             />
           </Link>
 
