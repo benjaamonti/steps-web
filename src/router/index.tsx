@@ -3,7 +3,6 @@ import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { ScrollToTop } from '@/components/layout/ScrollToTop'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
-import { BackToTop } from '@/components/ui/BackToTop'
 
 // Pages
 import Home from '@/pages/Home'
@@ -25,7 +24,6 @@ function Layout() {
       </main>
       <Footer />
       <WhatsAppButton />
-      <BackToTop />
     </div>
   )
 }

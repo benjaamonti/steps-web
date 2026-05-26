@@ -1,7 +1,14 @@
 import { motion } from 'framer-motion'
 import { siteConfig } from '@/data/siteConfig'
+import { useIsMobile } from '@/hooks/use-mobile'
 
 export function WhatsAppButton() {
+  const isMobile = useIsMobile()
+
+  if (!isMobile) {
+    return null
+  }
+
   const whatsappUrl = `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(
     siteConfig.whatsappDefaultMessage
   )}`
@@ -27,13 +34,14 @@ export function WhatsAppButton() {
 
       {/* Button */}
       <div
-        className="w-14 h-14 lg:w-16 lg:h-16 rounded-full bg-whatsapp flex items-center justify-center shadow-lg hover:shadow-whatsapp/50 transition-shadow duration-300"
+        className="w-14 h-14 rounded-full bg-whatsapp opacity-100 flex items-center justify-center shadow-lg hover:shadow-whatsapp/50 transition-shadow duration-300 overflow-hidden"
         style={{
-          boxShadow: '0 4px 20px rgba(37, 211, 102, 0.4)',
+          backgroundColor: 'rgb(37 211 102)',
+          boxShadow: '0 4px 20px rgba(37, 211, 102, 0.45)',
         }}
       >
         <svg
-          className="w-7 h-7 lg:w-8 lg:h-8 text-white animate-pulse-slow"
+          className="w-7 h-7 text-white animate-pulse-slow"
           fill="currentColor"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
