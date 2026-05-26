@@ -3,10 +3,10 @@ name: Deploy to GitHub Pages
 on:
   # Se ejecuta cada vez que haces push a la rama main
   push:
-   branches: ["main"] 
+    branches: ["main"]
   workflow_dispatch:
 
-
+# Permisos necesarios para que GitHub Actions publique en Pages
 permissions:
   contents: read
   pages: write
@@ -15,6 +15,10 @@ permissions:
 concurrency:
   group: "pages"
   cancel-in-progress: true
+
+# 1. AGREGAR ESTO: Fuerza a las actions a usar Node 24 y silencia la advertencia
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   deploy:
@@ -29,7 +33,7 @@ jobs:
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24 # 2. CAMBIAR ESTO: de 20 a 24
           cache: 'npm'
 
       - name: Instalar dependencias
@@ -44,7 +48,7 @@ jobs:
       - name: Subir artefacto (carpeta dist)
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist' # Vite genera los archivos estáticos en esta carpeta
+          path: './dist' 
 
       - name: Desplegar en GitHub Pages
         id: deployment
