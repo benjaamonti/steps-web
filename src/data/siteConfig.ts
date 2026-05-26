@@ -1,8 +1,8 @@
 export const siteConfig = {
   businessName: 'Steps',
-  tagline: 'Aprendé inglés de verdad, en serio, para toda la vida',
+  tagline: 'Aprendé inglés y disfrutá del proceso',
   tabTitle: 'Steps | School of English',
-  metaDescription: 'Academia de inglés en Mar del Plata con más de 25 años de experiencia. Clases para niños y adolescentes. Preparación para exámenes internacionales Cambridge. Viajes de inmersión a Inglaterra.',
+  metaDescription: 'Academia de inglés en Mar del Plata. Clases para niños y adolescentes. Preparación para exámenes internacionales Cambridge. Viajes de inmersión a Inglaterra.',
   primaryColor: '#1e3a5f',
   accentColor: '#c9a227',
   themeColor: '#1e3a5f',
