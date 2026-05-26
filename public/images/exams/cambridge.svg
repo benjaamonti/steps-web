@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
-  <path fill="#0255df" d="M20 10c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10zm0 16c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6z"/>
-  <text x="40" y="35" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#0255df">Cambridge</text>
+  <path fill="#468bfd" d="M20 10c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10zm0 16c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6z"/>
+  <text x="40" y="35" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#468bfd">Cambridge</text>
   <text x="40" y="50" font-family="Arial, sans-serif" font-size="10" fill="#666">Assessment English</text>
 </svg>

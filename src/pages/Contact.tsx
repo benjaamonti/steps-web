@@ -86,9 +86,9 @@ export default function Contact() {
                 className="group flex items-center gap-4 rounded-2xl border border-whatsapp/20 bg-white p-6 shadow-lg transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"
                 aria-label={`Abrir WhatsApp de ${siteConfig.businessName}`}
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-whatsapp/10 text-whatsapp transition-colors duration-200 group-hover:bg-whatsapp">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-whatsapp/10 text-accent transition-colors duration-200 group-hover:bg-whatsapp">
                   <svg
-                    className="h-7 w-7 text-black"
+                    className="h-7 w-7 text-accent"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
