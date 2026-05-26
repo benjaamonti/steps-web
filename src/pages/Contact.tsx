@@ -88,7 +88,7 @@ export default function Contact() {
               >
                 <div className="flex h-14 w-14 items-center justify-center rounded-full bg-whatsapp/10 text-whatsapp transition-colors duration-200 group-hover:bg-whatsapp">
                   <svg
-                    className="h-7 w-7 text-white"
+                    className="h-7 w-7 text-black"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
