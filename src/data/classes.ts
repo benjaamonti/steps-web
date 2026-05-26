@@ -5,19 +5,11 @@ export interface MethodologyPillar {
 }
 
 export interface ClassLevel {
-  group: 'kids' | 'teens' | 'adults'
+  group: 'kids' | 'juniors' | 'teens' | 'exams'
   level: string
   ageRange?: string
   description: string
-  modality: string[]
   image: string
-}
-
-export interface Schedule {
-  day: string
-  time: string
-  level: string
-  modality: string
 }
 
 export interface FAQ {
@@ -55,99 +47,116 @@ export const classLevels: ClassLevel[] = [
   // Kids
   {
     group: 'kids',
-    level: 'Starter Kids',
-    ageRange: '6-8 años',
-    description: 'Primer contacto con el idioma inglés a través de juegos, canciones y actividades lúdicas. Desarrollo de vocabulario básico y comprensión oral.',
-    modality: ['Presencial'],
+    level: 'Little Steps',
+    ageRange: '6-7 años',
+    description: 'Primer acercamiento al inglés con juegos, canciones y actividades guiadas para construir confianza desde el inicio.',
     image: '/images/classes/kids/starter.jpg',
   },
   {
     group: 'kids',
-    level: 'Elementary Kids',
-    ageRange: '8-10 años',
-    description: 'Consolidación de vocabulario, introducción a estructuras gramaticales simples y desarrollo de habilidades de lectoescritura básicas.',
-    modality: ['Presencial'],
+    level: 'First Steps',
+    ageRange: '7-8 años',
+    description: 'Consolidación de vocabulario básico, rutinas simples y primeras estructuras para comunicarse en clase.',
     image: '/images/classes/kids/elementary.jpg',
+  },
+  {
+    group: 'kids',
+    level: 'Kids 1',
+    ageRange: '8-9 años',
+    description: 'Desarrollo de comprensión oral y escrita con actividades dinámicas y vocabulario cotidiano.',
+    image: '/images/classes/kids/preintermediate.jpg',
+  },
+  {
+    group: 'kids',
+    level: 'Kids 2',
+    ageRange: '9-10 años',
+    description: 'Avance en lectura, escritura y expresión oral con mayor autonomía y práctica guiada.',
+    image: '/images/classes/kids/intermediate.jpg',
+  },
+  {
+    group: 'kids',
+    level: 'Kids 3',
+    ageRange: '10-11 años',
+    description: 'Profundización de contenidos y estructuras para ganar fluidez y seguridad al comunicarse.',
+    image: '/images/classes/kids/upperintermediate.jpg',
+  },
+  {
+    group: 'kids',
+    level: 'Kids 4',
+    ageRange: '11-12 años',
+    description: 'Nivel de cierre de la etapa kids con más lectura, producción oral y preparación para juniors.',
+    image: '/images/classes/kids/intermediate.jpg',
+  },
+  // Juniors
+  {
+    group: 'juniors',
+    level: 'Juniors 1',
+    ageRange: '12-13 años',
+    description: 'Transición hacia niveles más analíticos, con foco en comunicación, gramática y vocabulario ampliado.',
+    image: '/images/classes/adults/preintermediate.jpg',
+  },
+  {
+    group: 'juniors',
+    level: 'Juniors 2',
+    ageRange: '13-14 años',
+    description: 'Desarrollo de fluidez, comprensión lectora y producción escrita para consolidar el paso a teens.',
+    image: '/images/classes/adults/intermediate.jpg',
   },
   // Teens
   {
     group: 'teens',
-    level: 'Pre-Intermediate Teens',
-    ageRange: '11-13 años',
-    description: 'Ampliación de vocabulario, estructuras gramaticales más complejas y desarrollo de las cuatro habilidades comunicativas.',
-    modality: ['Presencial', 'Híbrido'],
-    image: '/images/classes/kids/preintermediate.jpg',
-  },
-  {
-    group: 'teens',
-    level: 'Intermediate Teens',
-    ageRange: '13-15 años',
-    description: 'Nivel intermedio con énfasis en comunicación fluida. Preparación para exámenes internacionales de nivel B1.',
-    modality: ['Presencial', 'Híbrido'],
-    image: '/images/classes/kids/intermediate.jpg',
-  },
-  {
-    group: 'teens',
-    level: 'Upper-Intermediate Teens',
-    ageRange: '15-17 años',
-    description: 'Nivel avanzado para adolescentes. Dominio del idioma en contextos académicos y profesionales. Preparación para FCE.',
-    modality: ['Presencial', 'Híbrido'],
-    image: '/images/classes/kids/upperintermediate.jpg',
-  },
-  // Adults
-  {
-    group: 'adults',
-    level: 'Elementary',
-    description: 'Fundamentos del idioma para adultos. Vocabulario esencial, estructuras básicas y desarrollo de confianza para comunicarse.',
-    modality: ['Presencial', 'Online', 'Híbrido'],
+    level: '1st level',
+    ageRange: '14-15 años',
+    description: 'Inicio del ciclo teens con práctica integral de las cuatro habilidades y comunicación más espontánea.',
     image: '/images/classes/adults/elementary.jpg',
   },
   {
-    group: 'adults',
-    level: 'Pre-Intermediate',
-    description: 'Consolidación de conocimientos básicos. Mayor fluidez en conversaciones cotidianas y comprensión de textos simples.',
-    modality: ['Presencial', 'Online', 'Híbrido'],
+    group: 'teens',
+    level: '2nd level',
+    ageRange: '15-16 años',
+    description: 'Profundización de gramática, lectura y speaking con mayor independencia en el uso del idioma.',
     image: '/images/classes/adults/preintermediate.jpg',
   },
   {
-    group: 'adults',
-    level: 'Intermediate',
-    description: 'Nivel intermedio con énfasis en comunicación efectiva. Capacidad para mantener conversaciones sobre diversos temas.',
-    modality: ['Presencial', 'Online', 'Híbrido'],
+    group: 'teens',
+    level: '3rd level',
+    ageRange: '16-17 años',
+    description: 'Mayor precisión y fluidez para expresarse en contextos académicos y cotidianos con soltura.',
     image: '/images/classes/adults/intermediate.jpg',
   },
   {
-    group: 'adults',
-    level: 'Upper-Intermediate',
-    description: 'Dominio del idioma en contextos variados. Comprensión de textos complejos y expresión de ideas con claridad.',
-    modality: ['Presencial', 'Online', 'Híbrido'],
+    group: 'teens',
+    level: '4th level',
+    ageRange: '17 años',
+    description: 'Consolidación del nivel intermedio alto con énfasis en comprensión y producción más compleja.',
     image: '/images/classes/adults/upperintermediate.jpg',
   },
   {
-    group: 'adults',
-    level: 'Advanced',
-    description: 'Nivel avanzado cercano a la competencia nativa. Uso fluido y flexible del idioma en cualquier contexto.',
-    modality: ['Presencial', 'Online', 'Híbrido'],
+    group: 'teens',
+    level: '5th level',
+    ageRange: '17+ años',
+    description: 'Preparación avanzada con foco en argumentación, escritura y comunicación académica.',
     image: '/images/classes/adults/advanced.jpg',
   },
   {
-    group: 'adults',
-    level: 'Conversation Club',
-    description: 'Práctica intensiva de speaking en grupos reducidos. Temas variados y actividades dinámicas para ganar fluidez.',
-    modality: ['Presencial', 'Online'],
+    group: 'teens',
+    level: '6th level',
+    ageRange: '17+ años',
+    description: 'Nivel de cierre teens para llegar con seguridad a la preparación de exámenes internacionales.',
     image: '/images/classes/adults/conversation.jpg',
   },
-]
-
-export const schedules: Schedule[] = [
-  { day: 'Lunes y Miércoles', time: '9:00 - 10:30', level: 'Elementary / Pre-Intermediate', modality: 'Presencial' },
-  { day: 'Lunes y Miércoles', time: '18:00 - 19:30', level: 'Intermediate / Upper-Intermediate', modality: 'Presencial' },
-  { day: 'Lunes y Miércoles', time: '19:45 - 21:15', level: 'Advanced / Conversation Club', modality: 'Presencial' },
-  { day: 'Martes y Jueves', time: '9:00 - 10:30', level: 'Pre-Intermediate / Intermediate', modality: 'Presencial' },
-  { day: 'Martes y Jueves', time: '18:00 - 19:30', level: 'Elementary / Pre-Intermediate', modality: 'Presencial' },
-  { day: 'Martes y Jueves', time: '19:45 - 21:15', level: 'Intermediate / Upper-Intermediate', modality: 'Presencial' },
-  { day: 'Miércoles', time: '19:00 - 20:30', level: 'Conversation Club', modality: 'Online' },
-  { day: 'Sábados', time: '10:00 - 12:00', level: 'Todos los niveles', modality: 'Presencial' },
+  {
+    group: 'exams',
+    level: 'B2 First',
+    description: 'Preparación específica para el examen B2 First con foco en estrategia, práctica y confianza en examen.',
+    image: '/images/exams/certificate.jpg',
+  },
+  {
+    group: 'exams',
+    level: 'C1 Advanced',
+    description: 'Preparación específica para el examen C1 Advanced con práctica intensiva de todas las partes del examen.',
+    image: '/images/exams/hero-exams.jpg',
+  },
 ]
 
 export const faq: FAQ[] = [
