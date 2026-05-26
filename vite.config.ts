@@ -3,10 +3,10 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 import sitemap from 'vite-plugin-sitemap'
 
-const siteUrl = process.env.VITE_SITE_URL ?? 'https://www.englishacademymardelplata.com'
+const siteUrl = process.env.VITE_SITE_URL ?? 'https://steps.qzz.io'
 
 export default defineConfig({
-  base: '/steps-web/',
+  base: '/',
   plugins: [
     react(),
     sitemap({
