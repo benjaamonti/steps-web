@@ -122,7 +122,7 @@ export default function Home() {
               variants={itemVariants}
               className="text-xl sm:text-2xl text-white/90 mb-4"
             >
-              En Steps School of English te ayudamos a alcanzar tus mejores resultados con una metodología dinámica y efectiva.
+              Te ayudamos a alcanzar tus mejores resultados con una metodología dinámica y efectiva.
             </motion.p>
             <motion.p
               variants={itemVariants}
