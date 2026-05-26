@@ -31,9 +31,9 @@ Sitio web de la academia de inglés English Academy, ubicada en Mar del Plata, A
 | `tagline` | Slogan principal | `'Aprendé inglés de verdad...'` |
 | `tabTitle` | Título de pestaña | `'English Academy \| Academia...'` |
 | `metaDescription` | Meta descripción SEO | `'Academia de inglés en Mar del Plata...'` |
-| `primaryColor` | Color principal (hex) | `'#94bcfe'` |
-| `accentColor` | Color de acento (hex) | `'#ad2156'` |
-| `themeColor` | Color del tema móvil | `'#94bcfe'` |
+| `primaryColor` | Color principal (hex) | `'#1d3d5d'` |
+| `accentColor` | Color de acento (hex) | `'#e47f71'` |
+| `themeColor` | Color del tema móvil | `'#1d3d5d'` |
 | `whatsapp` | Número sin + | `'5492236123456'` |
 | `whatsappDefaultMessage` | Mensaje por defecto WA | `'Hola, me comunico desde la web...'` |
 | `showExamStats` | Mostrar/ocultar gráficos | `true` / `false` |

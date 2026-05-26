@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 50" fill="none">
-  <rect x="5" y="10" width="15" height="30" fill="#94bcfe"/>
-  <rect x="25" y="10" width="15" height="30" fill="#ad2156"/>
-  <rect x="45" y="10" width="15" height="30" fill="#94bcfe"/>
-  <rect x="65" y="10" width="15" height="30" fill="#ad2156"/>
-  <rect x="85" y="10" width="15" height="30" fill="#94bcfe"/>
-  <text x="5" y="48" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#94bcfe">IELTS</text>
+  <rect x="5" y="10" width="15" height="30" fill="#1d3d5d"/>
+  <rect x="25" y="10" width="15" height="30" fill="#e47f71"/>
+  <rect x="45" y="10" width="15" height="30" fill="#1d3d5d"/>
+  <rect x="65" y="10" width="15" height="30" fill="#e47f71"/>
+  <rect x="85" y="10" width="15" height="30" fill="#1d3d5d"/>
+  <text x="5" y="48" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#1d3d5d">IELTS</text>
 </svg>

@@ -10,13 +10,13 @@
     --card-foreground: 210 50% 24%;
     --popover: 0 0% 100%;
     --popover-foreground: 210 50% 24%;
-    --primary: 218 98% 79%;
+    --primary: 210 32% 20%;
     --primary-foreground: 0 0% 100%;
     --secondary: 40 33% 96%;
     --secondary-foreground: 210 50% 24%;
     --muted: 40 20% 94%;
     --muted-foreground: 210 20% 45%;
-    --accent: 339 68% 40%;
+    --accent: 7 68% 67%;
     --accent-foreground: 210 50% 24%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
@@ -95,23 +95,23 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ad2156;
+  background: #e47f71;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #9a1d4a;
+  background: #d86d60;
 }
 
 /* Selection color */
 ::selection {
-  background: #ad2156;
-  color: #94bcfe;
+  background: #e47f71;
+  color: #1d3d5d;
 }
 
 /* Focus styles */
 *:focus-visible {
-  outline: 2px solid #ad2156;
+  outline: 2px solid #e47f71;
   outline-offset: 2px;
 }
 
