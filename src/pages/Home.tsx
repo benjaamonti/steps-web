@@ -45,7 +45,7 @@ const previewCards = [
   {
     icon: FileText,
     title: 'Exámenes Internacionales',
-    description: 'Preparación para Cambridge.',
+    description: 'Te brindamos las herramientas necesarias para certificar tu nivel de inglés a nivel internacional. Cursos para PET, FCE y CAE.',
     image: '/images/exams/certificate.jpg',
     link: '/examenes-internacionales',
   },
