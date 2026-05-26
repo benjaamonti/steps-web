@@ -45,14 +45,14 @@ const previewCards = [
   {
     icon: FileText,
     title: 'Exámenes Internacionales',
-    description: 'Preparación para Cambridge, IELTS, TOEFL y Trinity. 94% de tasa de aprobación.',
+    description: 'Preparación para Cambridge.',
     image: '/images/exams/certificate.jpg',
     link: '/examenes-internacionales',
   },
   {
     icon: Plane,
     title: 'Viajes a Inglaterra',
-    description: 'Viajes de inmersión lingüística a Londres, Oxford, Cambridge y más destinos.',
+    description: 'Viajes de inmersión lingüística a Inglaterra y más destinos.',
     image: '/images/trips/immersion.jpg',
     link: '/viajes-a-inglaterra',
   },
@@ -122,13 +122,13 @@ export default function Home() {
               variants={itemVariants}
               className="text-xl sm:text-2xl text-white/90 mb-4"
             >
-              Learn English for life. Aprendé inglés para siempre.
+              En Steps School of English te ayudamos a alcanzar tus mejores resultados con una metodología dinámica y efectiva.
             </motion.p>
             <motion.p
               variants={itemVariants}
               className="text-lg text-white/80 mb-10"
             >
-              Más de 25 años formando estudiantes de inglés en Mar del Plata
+              Preparate para tu futuro con nosotros en Mar del Plata.
             </motion.p>
             <motion.div
               variants={itemVariants}
