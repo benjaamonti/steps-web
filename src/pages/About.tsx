@@ -57,7 +57,7 @@ const whatWeDoCards = [
   {
     icon: FileText,
     title: 'Exámenes Internacionales',
-    description: 'Preparación para Cambridge, IELTS, TOEFL y Trinity con 94% de tasa de aprobación.',
+    description: 'Preparación para Cambridge, IELTS, TOEFL y Trinity.',
     link: '/examenes-internacionales',
   },
   {
@@ -67,31 +67,6 @@ const whatWeDoCards = [
     link: '/viajes-a-inglaterra',
   },
 ]
-
-function AnimatedCounter({ value, suffix = '' }: { value: number; suffix?: string }) {
-  const [count, setCount] = useState(0)
-
-  useEffect(() => {
-    const duration = 2000
-    const steps = 60
-    const increment = value / steps
-    let current = 0
-
-    const timer = setInterval(() => {
-      current += increment
-      if (current >= value) {
-        setCount(value)
-        clearInterval(timer)
-      } else {
-        setCount(Math.floor(current))
-      }
-    }, duration / steps)
-
-    return () => clearInterval(timer)
-  }, [value])
-
-  return <span>{count}{suffix}</span>
-}
 
 export default function About() {
   const [awardsLoaded, setAwardsLoaded] = useState(false)
@@ -141,15 +116,10 @@ export default function About() {
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  English Academy nació en 1999 de la pasión de Laura Fernández por la enseñanza 
-                  del idioma inglés. Lo que comenzó como clases particulares en su living, con 
-                  apenas cinco alumnos, se transformó con el tiempo en una de las academias de 
-                  inglés más reconocidas de Mar del Plata.
-                </p>
-                <p>
-                  Durante más de 25 años, hemos tenido el privilegio de formar a miles de 
-                  estudiantes que hoy utilizan el inglés en sus estudios universitarios, 
-                  sus carreras profesionales y sus viajes por el mundo.
+                  English Academy nació de la pasión de Laura Fernández por la enseñanza 
+                  del idioma inglés. Lo que comenzó como clases particulares en su living se 
+                  transformó con el tiempo en una de las academias de inglés más reconocidas 
+                  de Mar del Plata.
                 </p>
                 <p>
                   Nuestro compromiso con la excelencia académica y la atención personalizada 
@@ -172,10 +142,6 @@ export default function About() {
                   alt="Fundadora de English Academy"
                   className="w-full h-full object-cover"
                 />
-              </div>
-              <div className="absolute -bottom-6 -left-6 bg-accent p-6 rounded-xl shadow-lg">
-                <span className="text-4xl font-bold text-primary">25+</span>
-                <p className="text-primary/80 text-sm">años de experiencia</p>
               </div>
             </motion.div>
           </div>
@@ -348,59 +314,6 @@ export default function About() {
                 </Link>
               </motion.div>
             ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section 5 - En Números */}
-      <section className="py-20 lg:py-28 bg-primary">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              En Números
-            </h2>
-            <p className="text-lg text-white/80 max-w-2xl mx-auto">
-              Nuestra trayectoria habla por sí sola
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="grid grid-cols-2 lg:grid-cols-4 gap-8"
-          >
-            <div className="text-center">
-              <span className="text-5xl lg:text-6xl font-bold text-accent">
-                <AnimatedCounter value={siteConfig.stats.years} />
-              </span>
-              <p className="text-white/80 mt-2">años de experiencia</p>
-            </div>
-            <div className="text-center">
-              <span className="text-5xl lg:text-6xl font-bold text-accent">
-                <AnimatedCounter value={siteConfig.stats.students} />
-              </span>
-              <p className="text-white/80 mt-2">alumnos formados</p>
-            </div>
-            <div className="text-center">
-              <span className="text-5xl lg:text-6xl font-bold text-accent">
-                <AnimatedCounter value={siteConfig.stats.passRate} suffix="%" />
-              </span>
-              <p className="text-white/80 mt-2">tasa de aprobación</p>
-            </div>
-            <div className="text-center">
-              <span className="text-5xl lg:text-6xl font-bold text-accent">
-                <AnimatedCounter value={siteConfig.stats.trips} />
-              </span>
-              <p className="text-white/80 mt-2">viajes realizados</p>
-            </div>
           </motion.div>
         </div>
       </section>

@@ -2,18 +2,6 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
-  PieChart,
-  Pie,
-  Cell,
-  LineChart,
-  Line,
 } from 'recharts'
 import {
   Globe,
@@ -25,8 +13,7 @@ import {
   Award,
 } from 'lucide-react'
 import { PageMeta } from '@/components/layout/PageMeta'
-import { siteConfig } from '@/data/siteConfig'
-import { cefrLevels, exams, comparisonTable, examStats, examProcess } from '@/data/exams'
+import { cefrLevels, exams, comparisonTable, examProcess } from '@/data/exams'
 import { pageMeta } from '@/data/pageMeta'
 
 const containerVariants = {
@@ -56,8 +43,6 @@ const processIcons: Record<string, React.ElementType> = {
   FileQuestion,
   Award,
 }
-
-const COLORS = ['#1e3a5f', '#2d5a8f', '#3d7abf', '#4d9aef', '#c9a227', '#d4b94a']
 
 export default function Exams() {
   const [activeExam, setActiveExam] = useState(0)
@@ -421,121 +406,6 @@ export default function Exams() {
           </motion.div>
         </div>
       </section>
-
-      {/* Section 5 - Estadísticas */}
-      {siteConfig.showExamStats && (
-        <section className="py-20 lg:py-28 bg-white">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
-                Nuestros resultados
-              </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Estadísticas que respaldan nuestra trayectoria en la preparación de exámenes
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-              {/* Chart 1 - Approval Rates */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-                className="bg-white p-6 rounded-xl shadow-md border"
-              >
-                <h3 className="text-lg font-semibold text-primary mb-4 text-center">
-                  Tasa de aprobación por examen
-                </h3>
-                <ResponsiveContainer width="100%" height={250}>
-                  <BarChart data={examStats.approvalRates}>
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="exam" />
-                    <YAxis domain={[0, 100]} />
-                    <Tooltip formatter={(value) => `${value}%`} />
-                    <Bar
-                      dataKey="rate"
-                      fill="#c9a227"
-                      radius={[4, 4, 0, 0]}
-                      label={{ position: 'top', formatter: (v: number) => `${v}%` }}
-                    />
-                  </BarChart>
-                </ResponsiveContainer>
-              </motion.div>
-
-              {/* Chart 2 - Level Distribution */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-                className="bg-white p-6 rounded-xl shadow-md border"
-              >
-                <h3 className="text-lg font-semibold text-primary mb-4 text-center">
-                  Distribución de niveles actuales
-                </h3>
-                <ResponsiveContainer width="100%" height={250}>
-                  <PieChart>
-                    <Pie
-                      data={examStats.levelDistribution}
-                      cx="50%"
-                      cy="50%"
-                      innerRadius={60}
-                      outerRadius={80}
-                      paddingAngle={5}
-                      dataKey="count"
-                      label={({ level, count }) => `${level}: ${count}`}
-                    >
-                      {examStats.levelDistribution.map((_entry, index) => (
-                        <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                      ))}
-                    </Pie>
-                    <Tooltip />
-                  </PieChart>
-                </ResponsiveContainer>
-                <p className="text-center text-sm text-gray-500 mt-2">
-                  Total: {examStats.levelDistribution.reduce((acc, curr) => acc + curr.count, 0)} alumnos activos
-                </p>
-              </motion.div>
-            </div>
-
-            {/* Chart 3 - Yearly Passed */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="bg-white p-6 rounded-xl shadow-md border"
-            >
-              <h3 className="text-lg font-semibold text-primary mb-4 text-center">
-                Evolución de aprobados por año
-              </h3>
-              <ResponsiveContainer width="100%" height={300}>
-                <LineChart data={examStats.yearlyPassed}>
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="year" />
-                  <YAxis />
-                  <Tooltip />
-                  <Line
-                    type="monotone"
-                    dataKey="passed"
-                    stroke="#1e3a5f"
-                    strokeWidth={3}
-                    dot={{ fill: '#c9a227', strokeWidth: 2, r: 6 }}
-                    activeDot={{ r: 8 }}
-                  />
-                </LineChart>
-              </ResponsiveContainer>
-            </motion.div>
-          </div>
-        </section>
-      )}
 
       {/* Section 6 - Proceso de Preparación */}
       <section className="py-20 lg:py-28 bg-cream">

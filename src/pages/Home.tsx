@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ChevronDown, ChevronLeft, ChevronRight, GraduationCap, FileText, Plane, Calendar, Users, TrendingUp, Award } from 'lucide-react'
+import { ChevronDown, ChevronLeft, ChevronRight, GraduationCap, FileText, Plane, Award } from 'lucide-react'
 import { PageMeta } from '@/components/layout/PageMeta'
 import { siteConfig } from '@/data/siteConfig'
 import { testimonials } from '@/data/testimonials'
@@ -27,12 +27,6 @@ const itemVariants = {
     },
   },
 }
-
-const stats = [
-  { icon: Calendar, value: siteConfig.stats.years, label: 'años de experiencia' },
-  { icon: Users, value: siteConfig.stats.students, label: 'alumnos formados' },
-  { icon: TrendingUp, value: siteConfig.stats.passRate, label: '% tasa de aprobación', suffix: '%' },
-]
 
 const previewCards = [
   {
@@ -165,33 +159,6 @@ export default function Home() {
             <ChevronDown className="w-8 h-8" />
           </motion.div>
         </motion.div>
-      </section>
-
-      {/* Stats Strip */}
-      <section className="bg-accent py-12">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
-          >
-            {stats.map((stat, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center text-center"
-              >
-                <stat.icon className="w-10 h-10 text-primary mb-4" />
-                <span className="text-4xl lg:text-5xl font-bold text-primary">
-                  {stat.value}
-                  {stat.suffix}
-                </span>
-                <span className="text-primary/80 mt-2">{stat.label}</span>
-              </div>
-            ))}
-          </motion.div>
-        </div>
       </section>
 
       {/* Preview Cards */}

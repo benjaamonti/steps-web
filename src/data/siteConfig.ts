@@ -10,7 +10,6 @@ export const siteConfig = {
   mapsUrl: 'https://www.google.com/maps?q=Av.%20Fortunato%20de%20la%20Plaza%202667,%20B7603FLI%20Mar%20del%20Plata,%20Provincia%20de%20Buenos%20Aires&output=embed',
   whatsapp: '5492234389267',
   whatsappDefaultMessage: 'Hola, me comunico desde la web y quisiera obtener más información.',
-  showExamStats: true,
   contact: {
     address: 'Av. Fortunato de la Plaza 2667, B7603FLI Mar del Plata, Provincia de Buenos Aires',
     phone: '+54 9 2234389267',
@@ -24,11 +23,5 @@ export const siteConfig = {
     instagram: 'https://instagram.com/stepsmdp',
     facebook: 'https://facebook.com/steps.school.of.english',
     whatsapp: 'https://wa.me/5492234389267',
-  },
-  stats: {
-    years: 25,
-    students: 3500,
-    passRate: 94,
-    trips: 45,
   },
 }

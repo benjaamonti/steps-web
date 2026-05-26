@@ -12,7 +12,7 @@ export const team: TeamMember[] = [
     role: 'Directora y Fundadora',
     photo: '/images/team/laura.jpg',
     certifications: ['MA TESOL', 'DELTA', 'Cambridge CPE'],
-    bio: 'Fundó English Academy en 1999 con la visión de crear un espacio donde aprender inglés fuera una experiencia enriquecedora. Cuenta con más de 30 años de experiencia en la enseñanza del idioma.',
+    bio: 'Fundó English Academy con la visión de crear un espacio donde aprender inglés fuera una experiencia enriquecedora.',
   },
   {
     name: 'James Wilson',
@@ -26,7 +26,7 @@ export const team: TeamMember[] = [
     role: 'Profesora Senior - Adultos',
     photo: '/images/team/maria-elena.jpg',
     certifications: ['CELTA', 'Cambridge CAE', 'Diploma en Fonética'],
-    bio: 'Con 20 años de experiencia, se especializa en clases para adultos y preparación de exámenes avanzados. Su metodología dinámica motiva a los estudiantes a superarse constantemente.',
+    bio: 'Se especializa en clases para adultos y preparación de exámenes avanzados. Su metodología dinámica motiva a los estudiantes a superarse constantemente.',
   },
   {
     name: 'Tom Anderson',

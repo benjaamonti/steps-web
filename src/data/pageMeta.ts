@@ -8,13 +8,13 @@ export interface PageMetaProps {
 export const pageMeta: Record<string, PageMetaProps> = {
   '/': {
     title: 'Steps | School of English',
-    description: 'Academia de inglés en Mar del Plata con más de 25 años de experiencia. Clases para niños, adolescentes y adultos. Preparación para exámenes internacionales.',
+    description: 'Academia de inglés en Mar del Plata. Clases para niños, adolescentes y adultos. Preparación para exámenes internacionales.',
     image: '/images/og/og-home.jpg',
     url: 'https://www.englishacademymardelplata.com/',
   },
   '/nosotros': {
     title: 'Nosotros | Steps',
-    description: 'Conocé nuestra historia, misión y equipo de profesores. Más de 25 años formando estudiantes de inglés en Mar del Plata.',
+    description: 'Conocé nuestra historia, misión y equipo de profesores en Mar del Plata.',
     image: '/images/og/og-nosotros.jpg',
     url: 'https://www.englishacademymardelplata.com/nosotros',
   },
@@ -26,7 +26,7 @@ export const pageMeta: Record<string, PageMetaProps> = {
   },
   '/examenes-internacionales': {
     title: 'Exámenes Internacionales | Steps',
-    description: 'Preparación para exámenes Cambridge. Centro preparador oficial con 94% de tasa de aprobación.',
+    description: 'Preparación para exámenes Cambridge e internacionales.',
     image: '/images/og/og-examenes.jpg',
     url: 'https://www.englishacademymardelplata.com/examenes-internacionales',
   },

@@ -26,12 +26,6 @@ export interface Exam {
   ourPreparation: string
 }
 
-export interface ExamStats {
-  approvalRates: { exam: string; rate: number }[]
-  levelDistribution: { level: string; count: number }[]
-  yearlyPassed: { year: number; passed: number }[]
-}
-
 export interface ExamProcess {
   step: number
   icon: string
@@ -167,31 +161,6 @@ export const comparisonTable: ComparisonRow[] = [
   { exam: 'Trinity GESE', provider: 'Trinity College', levels: 'A1-C2', validity: 'Permanente', idealFor: 'Evaluación de speaking', highlighted: false },
   { exam: 'Trinity ISE', provider: 'Trinity College', levels: 'B1-C1', validity: 'Permanente', idealFor: 'Habilidades integradas', highlighted: false },
 ]
-
-export const examStats: ExamStats = {
-  approvalRates: [
-    { exam: 'KET', rate: 98 },
-    { exam: 'PET', rate: 96 },
-    { exam: 'FCE', rate: 94 },
-    { exam: 'CAE', rate: 88 },
-    { exam: 'IELTS', rate: 92 },
-    { exam: 'TOEFL', rate: 90 },
-  ],
-  levelDistribution: [
-    { level: 'A1-A2', count: 45 },
-    { level: 'B1', count: 120 },
-    { level: 'B2', count: 85 },
-    { level: 'C1-C2', count: 32 },
-  ],
-  yearlyPassed: [
-    { year: 2019, passed: 156 },
-    { year: 2020, passed: 98 },
-    { year: 2021, passed: 142 },
-    { year: 2022, passed: 178 },
-    { year: 2023, passed: 203 },
-    { year: 2024, passed: 218 },
-  ],
-}
 
 export const examProcess: ExamProcess[] = [
   {
