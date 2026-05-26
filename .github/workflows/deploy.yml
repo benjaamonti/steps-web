@@ -1,12 +1,12 @@
 name: Deploy to GitHub Pages
 
-on:
+#on:
   # Se ejecuta cada vez que haces push a la rama main
-  push:
-    branches: ["main"] # Cambia a "master" si tu rama principal se llama así
+ # push:
+  #  branches: ["main"] 
   workflow_dispatch:
 
-# Permisos necesarios para que GitHub Actions publique en Pages
+
 permissions:
   contents: read
   pages: write
