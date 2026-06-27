@@ -12,10 +12,9 @@ import {
   Map,
   Shield,
   UserCheck,
-  ChevronDown,
 } from 'lucide-react'
 import { PageMeta } from '@/components/layout/PageMeta'
-import { trips, whyEngland, tripIncludes } from '@/data/trips'
+import { whyEngland, tripIncludes } from '@/data/trips'
 import { testimonials } from '@/data/testimonials'
 import { pageMeta } from '@/data/pageMeta'
 import { Lightbox } from '@/components/ui/Lightbox'
@@ -71,16 +70,11 @@ const galleryImages = [
 ]
 
 export default function Trips() {
-  const [expandedTrip, setExpandedTrip] = useState<number | null>(null)
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [galleryLoaded, setGalleryLoaded] = useState(false)
 
   const tripTestimonials = testimonials.filter((t) => t.type === 'trip')
-
-  const toggleTrip = (index: number) => {
-    setExpandedTrip(expandedTrip === index ? null : index)
-  }
 
   const openLightbox = (index: number) => {
     setCurrentImageIndex(index)
@@ -241,104 +235,7 @@ export default function Trips() {
         </div>
       </section>
 
-      {/* Section 3 - Nuestros Destinos */}
-      <section className="py-20 lg:py-28 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
-              Nuestros Destinos
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Elegí entre las ciudades más emblemáticas de Inglaterra
-            </p>
-          </motion.div>
 
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
-          >
-            {trips.map((trip, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
-              >
-                <div className="aspect-video overflow-hidden">
-                  <img
-                    src={trip.image}
-                    alt={trip.destination}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-xl font-semibold text-primary">
-                      {trip.destination}
-                    </h3>
-                    <span className="text-sm bg-accent/20 text-primary px-3 py-1 rounded-full">
-                      {trip.duration}
-                    </span>
-                  </div>
-                  <p className="text-gray-600 text-sm mb-2">
-                    <span className="font-medium">Edades:</span> {trip.ageRange}
-                  </p>
-                  <p className="text-gray-600 text-sm mb-4">
-                    <span className="font-medium">Próxima salida:</span> {trip.nextDate}
-                  </p>
-
-                  {/* Highlights */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {trip.highlights.slice(0, 3).map((highlight, hIndex) => (
-                      <span
-                        key={hIndex}
-                        className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded"
-                      >
-                        {highlight}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Expandable Includes */}
-                  <button
-                    onClick={() => toggleTrip(index)}
-                    className="w-full flex items-center justify-between text-[#d65661] hover:text-[#b54650] font-medium transition-colors duration-200"
-                  >
-                    <span>¿Qué incluye?</span>
-                    <ChevronDown
-                      className={`w-5 h-5 transition-transform duration-300 ${
-                        expandedTrip === index ? 'rotate-180' : ''
-                      }`}
-                    />
-                  </button>
-                  <div
-                    className={`overflow-hidden transition-all duration-300 ${
-                      expandedTrip === index ? 'max-h-96 mt-4' : 'max-h-0'
-                    }`}
-                  >
-                    <ul className="space-y-2">
-                      {trip.includes.map((item, iIndex) => (
-                        <li key={iIndex} className="flex items-center text-sm text-gray-600">
-                          <span className="w-1.5 h-1.5 bg-accent rounded-full mr-2" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
 
       {/* Section 4 - Qué incluye el viaje */}
       <section className="py-20 lg:py-28 bg-cream">

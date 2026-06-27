@@ -175,14 +175,16 @@ export default function Contact() {
 
               {/* Opening Hours */}
               <motion.div variants={itemVariants} className="bg-cream p-8 rounded-2xl">
-                <h3 className="text-xl font-bold text-primary mb-6 flex items-center">
-                  <Clock className="w-6 h-6 text-[#d65661] mr-2" />
+                <h3 className="text-xl font-bold text-primary mb-6">
                   Horarios de atención
                 </h3>
-                <ul className="space-y-3">
+                <ul className="space-y-4">
                   {siteConfig.hours.map((hour, index) => (
-                    <li key={index} className="flex justify-between">
-                      <span className="text-gray-600">{hour.day}</span>
+                    <li key={index} className="flex items-center justify-between">
+                      <div className="flex items-center space-x-4">
+                        <Clock className="w-6 h-6 text-[#d65661] flex-shrink-0" />
+                        <span className="text-gray-600">{hour.day}</span>
+                      </div>
                       <span className="font-medium text-primary">{hour.time}</span>
                     </li>
                   ))}
@@ -190,17 +192,17 @@ export default function Contact() {
               </motion.div>
 
               {/* Social Links */}
-              <motion.div variants={itemVariants}>
-                <h3 className="text-lg font-bold text-primary mb-4">Seguinos</h3>
-                <div className="flex space-x-4">
+              <motion.div variants={itemVariants} className="bg-cream p-8 rounded-2xl">
+                <h3 className="text-xl font-bold text-primary mb-6">Seguinos</h3>
+                <div className="flex flex-col space-y-4">
                   {siteConfig.social.instagram && (
                     <a
                       href={siteConfig.social.instagram}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center space-x-2 text-gray-600 hover:text-primary transition-colors duration-200"
+                      className="flex items-center space-x-4 text-gray-600 hover:text-[#d65661] transition-colors duration-200"
                     >
-                      <Instagram className="w-6 h-6 text-[#d65661]" />
+                      <Instagram className="w-6 h-6 text-[#d65661] flex-shrink-0" />
                       <span>@stepsmdp</span>
                     </a>
                   )}
@@ -209,9 +211,9 @@ export default function Contact() {
                       href={siteConfig.social.facebook}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center space-x-2 text-gray-600 hover:text-primary transition-colors duration-200"
+                      className="flex items-center space-x-4 text-gray-600 hover:text-[#d65661] transition-colors duration-200"
                     >
-                      <Facebook className="w-6 h-6 text-[#d65661]" />
+                      <Facebook className="w-6 h-6 text-[#d65661] flex-shrink-0" />
                       <span>@steps.school.of.english</span>
                     </a>
                   )}
