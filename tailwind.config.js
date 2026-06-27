@@ -78,6 +78,12 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
         "caret-blink": "caret-blink 1.25s ease-out infinite",
       },
+      fontFamily: {
+        sans: ['Poppins', 'system-ui', 'sans-serif'],
+        serif: ['Lora', 'Georgia', 'serif'],
+        display: ['Permanent Marker', 'cursive'],
+        mono: ['Liberation Mono', 'monospace'],
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
