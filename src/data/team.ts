@@ -32,7 +32,7 @@ export const team: TeamMember[] = [
     name: 'Tom Anderson',
     role: 'Profesor - Teens & Exams',
     photo: '/images/team/tom.jpg',
-    certifications: ['CELTA', 'Trinity CertTESOL', 'PGCE'],
+    certifications: ['CELTA', 'PGCE'],
     bio: 'Nativo de Londres. Apasionado por trabajar con adolescentes, logra que las clases sean divertidas y efectivas. Especialista en preparación FCE y CAE.',
   },
   {

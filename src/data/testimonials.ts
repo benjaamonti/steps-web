@@ -41,13 +41,7 @@ export const testimonials: Testimonial[] = [
     photo: '/images/testimonials/carolina.jpg',
     type: 'class',
   },
-  {
-    quote: 'Conseguí mi certificado IELTS con banda 7.5, lo que me permitió ingresar a la universidad en Australia. La preparación intensiva valió cada minuto.',
-    author: 'Diego Fernández',
-    role: 'IELTS Academic 2023',
-    photo: '/images/testimonials/diego.jpg',
-    type: 'exam',
-  },
+
   {
     quote: 'Londres superó todas mis expectativas. Las clases en la escuela local, la familia anfitriona y las excursiones hicieron que el aprendizaje fuera natural y divertido.',
     author: 'Valentina López',

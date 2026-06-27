@@ -56,7 +56,7 @@ const whatWeDoCards = [
   {
     icon: FileText,
     title: 'Exámenes Internacionales',
-    description: 'Preparación para Cambridge, IELTS, TOEFL y Trinity.',
+    description: 'Preparación para Cambridge.',
     link: '/examenes-internacionales',
   },
   {

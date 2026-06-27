@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import {
@@ -13,7 +12,7 @@ import {
   Award,
 } from 'lucide-react'
 import { PageMeta } from '@/components/layout/PageMeta'
-import { cefrLevels, exams, comparisonTable, examProcess } from '@/data/exams'
+import { cefrLevels, examProcess } from '@/data/exams'
 import { pageMeta } from '@/data/pageMeta'
 
 const containerVariants = {
@@ -45,10 +44,6 @@ const processIcons: Record<string, React.ElementType> = {
 }
 
 export default function Exams() {
-  const [activeExam, setActiveExam] = useState(0)
-
-  const currentExam = exams[activeExam]
-
   return (
     <>
       <PageMeta {...pageMeta['/examenes-internacionales']} />
@@ -223,189 +218,7 @@ export default function Exams() {
         </div>
       </section>
 
-      {/* Section 3 - Comparativa de Exámenes */}
-      <section className="py-20 lg:py-28 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
-              ¿Qué examen es el indicado para vos?
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Compará las diferentes opciones y elegí la que mejor se adapte a tus objetivos
-            </p>
-          </motion.div>
 
-          {/* Exam Tabs */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="flex flex-wrap justify-center gap-2 mb-8"
-          >
-            {exams.map((exam, index) => (
-              <button
-                key={exam.name}
-                onClick={() => setActiveExam(index)}
-                className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
-                  activeExam === index
-                    ? 'bg-primary text-white'
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                }`}
-              >
-                {exam.name}
-              </button>
-            ))}
-          </motion.div>
-
-          {/* Exam Detail Card */}
-          <motion.div
-            key={activeExam}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3 }}
-            className="bg-cream rounded-2xl p-8 lg:p-12"
-          >
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div>
-                <div className="flex items-center space-x-4 mb-6">
-                  <img
-                    src={currentExam.logo}
-                    alt={currentExam.name}
-                    className="h-12 object-contain"
-                  />
-                  <div>
-                    <h3 className="text-2xl font-bold text-primary">
-                      {currentExam.name}
-                    </h3>
-                    <p className="text-gray-500">{currentExam.provider}</p>
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  <div>
-                    <span className="font-semibold text-primary">Tipo:</span>
-                    <span className="text-gray-600 ml-2">{currentExam.type}</span>
-                  </div>
-                  <div>
-                    <span className="font-semibold text-primary">Formato:</span>
-                    <span className="text-gray-600 ml-2">{currentExam.format}</span>
-                  </div>
-                  <div>
-                    <span className="font-semibold text-primary">Validez:</span>
-                    <span className="text-gray-600 ml-2">{currentExam.validity}</span>
-                  </div>
-                  <div>
-                    <span className="font-semibold text-primary">Reconocido por:</span>
-                    <span className="text-gray-600 ml-2">{currentExam.recognizedBy}</span>
-                  </div>
-                </div>
-
-                <div className="mt-6">
-                  <h4 className="font-semibold text-primary mb-2">Habilidades evaluadas:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {currentExam.skills.map((skill, index) => (
-                      <span
-                        key={index}
-                        className="bg-white px-3 py-1 rounded-full text-sm text-gray-600"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <h4 className="font-semibold text-primary mb-4">Niveles disponibles:</h4>
-                <div className="space-y-3">
-                  {currentExam.levels.map((level, index) => (
-                    <div key={index} className="bg-white p-4 rounded-lg">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <span className="font-semibold text-primary">{level.code}</span>
-                          <span className="text-gray-500 ml-2">{level.fullName}</span>
-                        </div>
-                        <span className="bg-accent/20 text-primary px-2 py-1 rounded text-sm">
-                          {level.cefr}
-                        </span>
-                      </div>
-                      <p className="text-gray-500 text-sm mt-1">{level.idealFor}</p>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-6 p-4 bg-primary/10 rounded-lg">
-                  <h4 className="font-semibold text-primary mb-2">Nuestra preparación:</h4>
-                  <p className="text-gray-600 text-sm">{currentExam.ourPreparation}</p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section 4 - Tabla Comparativa */}
-      <section className="py-20 lg:py-28 bg-cream">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
-              Comparativa rápida
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Resumen de las características principales de cada examen
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="overflow-x-auto"
-          >
-            <table className="w-full min-w-[700px]">
-              <thead>
-                <tr className="bg-primary text-white">
-                  <th className="px-4 py-3 text-left rounded-tl-lg">Examen</th>
-                  <th className="px-4 py-3 text-left">Organismo</th>
-                  <th className="px-4 py-3 text-left">Niveles</th>
-                  <th className="px-4 py-3 text-left">Validez</th>
-                  <th className="px-4 py-3 text-left rounded-tr-lg">Ideal para</th>
-                </tr>
-              </thead>
-              <tbody>
-                {comparisonTable.map((row, index) => (
-                  <tr
-                    key={index}
-                    className={`${
-                      row.highlighted ? 'bg-accent/20' : index % 2 === 0 ? 'bg-white' : 'bg-gray-50'
-                    } hover:bg-accent/10 transition-colors duration-200`}
-                  >
-                    <td className="px-4 py-3 font-medium text-primary">{row.exam}</td>
-                    <td className="px-4 py-3 text-gray-600">{row.provider}</td>
-                    <td className="px-4 py-3 text-gray-600">{row.levels}</td>
-                    <td className="px-4 py-3 text-gray-600">{row.validity}</td>
-                    <td className="px-4 py-3 text-gray-600">{row.idealFor}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </motion.div>
-        </div>
-      </section>
 
       {/* Section 6 - Proceso de Preparación */}
       <section className="py-20 lg:py-28 bg-cream">
@@ -448,9 +261,7 @@ export default function Exams() {
                     <div className="w-24 h-24 mx-auto bg-primary rounded-full flex items-center justify-center mb-4 relative z-10">
                       <IconComponent className="w-10 h-10 text-white" />
                     </div>
-                    <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-8 h-8 bg-accent rounded-full flex items-center justify-center text-primary font-bold text-sm z-20">
-                      {step.step}
-                    </div>
+
                     <h3 className="font-semibold text-primary mb-2">{step.title}</h3>
                     <p className="text-gray-600 text-sm">{step.description}</p>
                   </motion.div>
