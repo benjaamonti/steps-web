@@ -12,7 +12,7 @@ export const siteConfig = {
   whatsappDefaultMessage: 'Hola, me comunico desde la web y quisiera obtener más información.',
   contact: {
     address: 'Av. Fortunato de la Plaza 2667, B7603FLI Mar del Plata, Provincia de Buenos Aires',
-    phone: '+54 9 2234389267',
+    phone: '223 484-2215',
     email: 'info@steps.com.ar',
   },
   hours: [

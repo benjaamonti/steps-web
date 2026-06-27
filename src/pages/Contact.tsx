@@ -86,9 +86,9 @@ export default function Contact() {
                 className="group flex items-center gap-4 rounded-2xl border border-whatsapp/20 bg-white p-6 shadow-lg transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"
                 aria-label={`Abrir WhatsApp de ${siteConfig.businessName}`}
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-whatsapp/10 text-accent transition-colors duration-200 group-hover:bg-whatsapp">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-whatsapp/10 text-[#d65661] transition-colors duration-200 group-hover:bg-whatsapp">
                   <svg
-                    className="h-7 w-7 text-accent"
+                    className="h-7 w-7 text-[#d65661]"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
@@ -152,7 +152,7 @@ export default function Contact() {
                       <span className="font-medium text-primary">Teléfono</span>
                       <a
                         href={`tel:${siteConfig.contact.phone}`}
-                        className="block text-gray-600 hover:text-accent transition-colors duration-200"
+                        className="block text-gray-600 hover:text-[#d65661] transition-colors duration-200"
                       >
                         {siteConfig.contact.phone}
                       </a>
@@ -164,7 +164,7 @@ export default function Contact() {
                       <span className="font-medium text-primary">Email</span>
                       <a
                         href={`mailto:${siteConfig.contact.email}`}
-                        className="block text-gray-600 hover:text-accent transition-colors duration-200"
+                        className="block text-gray-600 hover:text-[#d65661] transition-colors duration-200"
                       >
                         {siteConfig.contact.email}
                       </a>
@@ -200,8 +200,8 @@ export default function Contact() {
                       rel="noopener noreferrer"
                       className="flex items-center space-x-2 text-gray-600 hover:text-primary transition-colors duration-200"
                     >
-                      <Instagram className="w-6 h-6" />
-                      <span>Instagram</span>
+                      <Instagram className="w-6 h-6 text-[#d65661]" />
+                      <span>@stepsmdp</span>
                     </a>
                   )}
                   {siteConfig.social.facebook && (
@@ -211,8 +211,8 @@ export default function Contact() {
                       rel="noopener noreferrer"
                       className="flex items-center space-x-2 text-gray-600 hover:text-primary transition-colors duration-200"
                     >
-                      <Facebook className="w-6 h-6" />
-                      <span>Facebook</span>
+                      <Facebook className="w-6 h-6 text-[#d65661]" />
+                      <span>@steps.school.of.english</span>
                     </a>
                   )}
                 </div>
