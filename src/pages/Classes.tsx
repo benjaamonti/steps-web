@@ -119,7 +119,7 @@ export default function Classes() {
                   variants={itemVariants}
                   className="bg-cream p-6 rounded-xl"
                 >
-                  <IconComponent className="w-10 h-10 text-accent mb-4" />
+                  <IconComponent className="w-10 h-10 text-[#d65661] mb-4" />
                   <h3 className="text-lg font-semibold text-primary mb-2">
                     {pillar.title}
                   </h3>

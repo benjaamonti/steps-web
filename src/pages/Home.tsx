@@ -201,7 +201,7 @@ export default function Home() {
                 </div>
                 <div className="p-6">
                   <div className="flex items-center space-x-3 mb-3">
-                    <card.icon className="w-6 h-6 text-accent" />
+                    <card.icon className="w-6 h-6 text-[#d65661]" />
                     <h3 className="text-xl font-semibold text-primary">
                       {card.title}
                     </h3>
@@ -250,7 +250,7 @@ export default function Home() {
           >
             <div className="relative bg-cream rounded-2xl p-8 lg:p-12">
               {/* Quote Icon */}
-              <div className="absolute top-6 left-6 text-accent/30">
+              <div className="absolute top-6 left-6 text-[#d65661]/30">
                 <svg
                   className="w-16 h-16"
                   fill="currentColor"
@@ -336,7 +336,7 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             className="text-center"
           >
-            <Award className="w-16 h-16 text-accent mx-auto mb-6" />
+            <Award className="w-16 h-16 text-[#d65661] mx-auto mb-6" />
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               ¿Listo para empezar?
             </h2>

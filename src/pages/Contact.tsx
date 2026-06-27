@@ -140,14 +140,14 @@ export default function Contact() {
                 </h3>
                 <ul className="space-y-4">
                   <li className="flex items-start space-x-4">
-                    <MapPin className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" />
+                    <MapPin className="w-6 h-6 text-[#d65661] flex-shrink-0 mt-0.5" />
                     <div>
                       <span className="font-medium text-primary">Dirección</span>
                       <p className="text-gray-600">{siteConfig.contact.address}</p>
                     </div>
                   </li>
                   <li className="flex items-center space-x-4">
-                    <Phone className="w-6 h-6 text-accent flex-shrink-0" />
+                    <Phone className="w-6 h-6 text-[#d65661] flex-shrink-0" />
                     <div>
                       <span className="font-medium text-primary">Teléfono</span>
                       <a
@@ -159,7 +159,7 @@ export default function Contact() {
                     </div>
                   </li>
                   <li className="flex items-center space-x-4">
-                    <Mail className="w-6 h-6 text-accent flex-shrink-0" />
+                    <Mail className="w-6 h-6 text-[#d65661] flex-shrink-0" />
                     <div>
                       <span className="font-medium text-primary">Email</span>
                       <a
@@ -176,7 +176,7 @@ export default function Contact() {
               {/* Opening Hours */}
               <motion.div variants={itemVariants} className="bg-cream p-8 rounded-2xl">
                 <h3 className="text-xl font-bold text-primary mb-6 flex items-center">
-                  <Clock className="w-6 h-6 text-accent mr-2" />
+                  <Clock className="w-6 h-6 text-[#d65661] mr-2" />
                   Horarios de atención
                 </h3>
                 <ul className="space-y-3">

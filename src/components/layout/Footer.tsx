@@ -106,11 +106,11 @@ export function Footer() {
             <h3 className="text-lg font-semibold text-white mb-4">Contacto</h3>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 text-[#d65661] flex-shrink-0 mt-0.5" />
                 <span className="text-white/80 text-sm">{siteConfig.contact.address}</span>
               </li>
               <li className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-accent flex-shrink-0" />
+                <Phone className="w-5 h-5 text-[#d65661] flex-shrink-0" />
                 <a
                   href={`tel:${siteConfig.contact.phone}`}
                   className="text-white/80 hover:text-accent transition-colors duration-200 text-sm"
@@ -119,7 +119,7 @@ export function Footer() {
                 </a>
               </li>
               <li className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-accent flex-shrink-0" />
+                <Mail className="w-5 h-5 text-[#d65661] flex-shrink-0" />
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
                   className="text-white/80 hover:text-accent transition-colors duration-200 text-sm"
@@ -136,7 +136,7 @@ export function Footer() {
             <ul className="space-y-3">
               {siteConfig.hours.map((hour, index) => (
                 <li key={index} className="flex items-start space-x-3">
-                  <Clock className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                  <Clock className="w-5 h-5 text-[#d65661] flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="text-white font-medium text-sm">{hour.day}</span>
                     <span className="text-white/80 text-sm block">{hour.time}</span>

@@ -165,7 +165,7 @@ export default function About() {
             className="text-center max-w-4xl mx-auto"
           >
             <div className="flex items-center justify-center mb-6">
-              <Target className="w-10 h-10 text-accent" />
+              <Target className="w-10 h-10 text-[#d65661]" />
             </div>
             <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-8">
               Nuestra Misión
@@ -189,7 +189,7 @@ export default function About() {
                   variants={itemVariants}
                   className="bg-white p-6 rounded-xl shadow-md"
                 >
-                  <pillar.icon className="w-10 h-10 text-accent mx-auto mb-4" />
+                  <pillar.icon className="w-10 h-10 text-[#d65661] mx-auto mb-4" />
                   <h3 className="text-lg font-semibold text-primary mb-2">
                     {pillar.title}
                   </h3>
@@ -228,7 +228,7 @@ export default function About() {
               className="order-1 lg:order-2"
             >
               <div className="flex items-center mb-6">
-                <Eye className="w-10 h-10 text-accent mr-4" />
+                <Eye className="w-10 h-10 text-[#d65661] mr-4" />
                 <h2 className="text-3xl lg:text-4xl font-bold text-primary">
                   Nuestra Visión
                 </h2>
@@ -287,7 +287,7 @@ export default function About() {
                 variants={itemVariants}
                 className="group bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 border-transparent hover:border-accent"
               >
-                <card.icon className="w-12 h-12 text-accent mb-6" />
+                <card.icon className="w-12 h-12 text-[#d65661] mb-6" />
                 <h3 className="text-xl font-semibold text-primary mb-3">
                   {card.title}
                 </h3>
