@@ -310,7 +310,7 @@ export default function Trips() {
                   {/* Expandable Includes */}
                   <button
                     onClick={() => toggleTrip(index)}
-                    className="w-full flex items-center justify-between text-accent hover:text-accent-700 font-medium transition-colors duration-200"
+                    className="w-full flex items-center justify-between text-[#d65661] hover:text-[#b54650] font-medium transition-colors duration-200"
                   >
                     <span>¿Qué incluye?</span>
                     <ChevronDown

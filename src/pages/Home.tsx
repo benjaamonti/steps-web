@@ -209,7 +209,7 @@ export default function Home() {
                   <p className="text-gray-600 mb-4">{card.description}</p>
                   <Link
                     to={card.link}
-                    className="inline-flex items-center text-accent hover:text-accent-700 font-medium transition-colors duration-200"
+                    className="inline-flex items-center text-[#d65661] hover:text-[#b54650] font-medium transition-colors duration-200"
                   >
                     Ver más
                     <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-200" />
@@ -291,7 +291,7 @@ export default function Home() {
               <div className="flex items-center justify-center space-x-4 mt-8">
                 <button
                   onClick={prevTestimonial}
-                  className="p-2 rounded-full bg-white shadow-md hover:shadow-lg transition-shadow duration-200 text-primary hover:text-accent"
+                  className="p-2 rounded-full bg-white shadow-md hover:shadow-lg transition-shadow duration-200 text-primary hover:text-[#d65661]"
                   aria-label="Testimonio anterior"
                 >
                   <ChevronLeft className="w-5 h-5" />
@@ -315,7 +315,7 @@ export default function Home() {
 
                 <button
                   onClick={nextTestimonial}
-                  className="p-2 rounded-full bg-white shadow-md hover:shadow-lg transition-shadow duration-200 text-primary hover:text-accent"
+                  className="p-2 rounded-full bg-white shadow-md hover:shadow-lg transition-shadow duration-200 text-primary hover:text-[#d65661]"
                   aria-label="Siguiente testimonio"
                 >
                   <ChevronRight className="w-5 h-5" />

@@ -294,7 +294,7 @@ export default function About() {
                 <p className="text-gray-600 mb-6">{card.description}</p>
                 <Link
                   to={card.link}
-                  className="inline-flex items-center text-accent hover:text-accent-700 font-medium transition-colors duration-200"
+                  className="inline-flex items-center text-[#d65661] hover:text-[#b54650] font-medium transition-colors duration-200"
                 >
                   Ver más
                   <svg

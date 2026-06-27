@@ -201,7 +201,7 @@ export default function Exams() {
                   </p>
                 </div>
                 {level.highlighted && (
-                  <div className="hidden sm:flex items-center space-x-2 text-accent">
+                  <div className="hidden sm:flex items-center space-x-2 text-[#d65661]">
                     <Award className="w-5 h-5" />
                     <span className="text-sm font-medium">Preparamos</span>
                   </div>

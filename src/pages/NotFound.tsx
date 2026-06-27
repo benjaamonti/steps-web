@@ -68,7 +68,7 @@ export default function NotFound() {
           <div className="text-lg text-gray-500">
             <p>
               Volviendo al inicio en{' '}
-              <span className="font-bold text-accent text-2xl">{countdown}</span>...
+              <span className="font-bold text-[#d65661] text-2xl">{countdown}</span>...
             </p>
           </div>
 

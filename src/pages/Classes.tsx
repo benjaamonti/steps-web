@@ -194,7 +194,7 @@ export default function Classes() {
                         <div className="p-4">
                           <h4 className="font-semibold text-primary">{level.level}</h4>
                           {level.ageRange && (
-                            <p className="text-sm text-accent">{level.ageRange}</p>
+                            <p className="text-sm text-[#d65661]">{level.ageRange}</p>
                           )}
                           <p className="text-gray-600 text-sm mt-2 line-clamp-3">
                             {level.description}
@@ -245,7 +245,7 @@ export default function Classes() {
                 >
                   <span className="font-medium text-primary">{item.question}</span>
                   <ChevronDown
-                    className={`w-5 h-5 text-accent transition-transform duration-300 ${
+                    className={`w-5 h-5 text-[#d65661] transition-transform duration-300 ${
                       openFaqIndex === index ? 'rotate-180' : ''
                     }`}
                   />
