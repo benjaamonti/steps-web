@@ -99,9 +99,6 @@ export default function Contact() {
                 <div>
                   <p className="text-lg font-semibold text-primary">WhatsApp</p>
                   <p className="text-sm text-gray-600">Escribinos directo al chat</p>
-                  <p className="mt-1 text-sm font-medium text-whatsapp">
-                    wa.me/{siteConfig.whatsapp}
-                  </p>
                 </div>
               </motion.a>
 
