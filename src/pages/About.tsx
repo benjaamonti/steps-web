@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { Target, Eye, Award, GraduationCap, FileText, Plane, HeartHandshake, Lightbulb, ShieldCheck, UsersRound, Heart } from 'lucide-react'
+import { Target, Eye, Award, Gem, HeartHandshake, Lightbulb, ShieldCheck, UsersRound, Heart } from 'lucide-react'
 import { PageMeta } from '@/components/layout/PageMeta'
 import { awards, isOfficialExamCenter } from '@/data/awards'
 import { pageMeta } from '@/data/pageMeta'
@@ -30,7 +29,7 @@ const itemVariants = {
 
 const coreValues = [
   {
-    icon: Award,
+    icon: Gem,
     title: 'Calidad',
     description: 'Mejora continua de las clases y del material de estudio.',
   },
@@ -61,27 +60,6 @@ const coreValues = [
   },
 ]
 
-const whatWeDoCards = [
-  {
-    icon: GraduationCap,
-    title: 'Nuestras Clases',
-    description: 'Clases para todas las edades y niveles, con metodología comunicativa y profesores certificados.',
-    link: '/nuestras-clases',
-  },
-  {
-    icon: FileText,
-    title: 'Exámenes Internacionales',
-    description: 'Preparación para Cambridge.',
-    link: '/examenes-internacionales',
-  },
-  {
-    icon: Plane,
-    title: 'Viajes a Inglaterra',
-    description: 'Viajes de inmersión lingüística para vivir el idioma en su contexto cultural original.',
-    link: '/viajes-a-inglaterra',
-  },
-]
-
 export default function About() {
   const [awardsLoaded, setAwardsLoaded] = useState(false)
 
@@ -97,7 +75,7 @@ export default function About() {
       <PageMeta {...pageMeta['/nosotros']} />
 
       {/* Page Hero */}
-      <section className="pt-32 pb-16 bg-primary">
+      <section className="pt-28 pb-12 bg-primary">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -116,7 +94,7 @@ export default function About() {
       </section>
 
       {/* Section 1 - Quiénes Somos */}
-      <section className="py-20 lg:py-28 bg-white">
+      <section className="py-12 lg:py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -130,15 +108,15 @@ export default function About() {
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  English Academy nació de la pasión de Laura Fernández por la enseñanza 
-                  del idioma inglés. Lo que comenzó como clases particulares en su living se 
-                  transformó con el tiempo en una de las academias de inglés más reconocidas 
+                  English Academy nació de la pasión de Laura Fernández por la enseñanza
+                  del idioma inglés. Lo que comenzó como clases particulares en su living se
+                  transformó con el tiempo en una de las academias de inglés más reconocidas
                   de Mar del Plata.
                 </p>
                 <p>
-                  Nuestro compromiso con la excelencia académica y la atención personalizada 
-                  nos ha permitido mantenernos como referentes en la enseñanza del idioma, 
-                  adaptándonos a los cambios tecnológicos sin perder la esencia de un trato 
+                  Nuestro compromiso con la excelencia académica y la atención personalizada
+                  nos ha permitido mantenernos como referentes en la enseñanza del idioma,
+                  adaptándonos a los cambios tecnológicos sin perder la esencia de un trato
                   cercano y humano.
                 </p>
               </div>
@@ -163,7 +141,7 @@ export default function About() {
       </section>
 
       {/* Section 2 - Misión */}
-      <section className="py-20 lg:py-28 bg-cream relative overflow-hidden">
+      <section className="py-12 lg:py-16 bg-cream relative overflow-hidden">
         {/* Decorative Quote */}
         <div className="absolute top-10 left-10 text-primary/5">
           <svg className="w-64 h-64" fill="currentColor" viewBox="0 0 24 24">
@@ -179,10 +157,10 @@ export default function About() {
             transition={{ duration: 0.5 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <div className="flex items-center justify-center mb-6">
+            <div className="flex items-center justify-center mb-4">
               <Target className="w-10 h-10 text-[#d65661]" />
             </div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-8">
+            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">
               Nuestra Misión
             </h2>
             <p className="text-xl text-gray-700 leading-relaxed font-medium">
@@ -193,7 +171,7 @@ export default function About() {
       </section>
 
       {/* Section 3 - Visión */}
-      <section className="py-20 lg:py-28 bg-white">
+      <section className="py-12 lg:py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -202,10 +180,10 @@ export default function About() {
             transition={{ duration: 0.5 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <div className="flex items-center justify-center mb-6">
+            <div className="flex items-center justify-center mb-4">
               <Eye className="w-10 h-10 text-[#d65661]" />
             </div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-8">
+            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">
               Nuestra Visión
             </h2>
             <p className="text-xl text-gray-700 leading-relaxed font-medium">
@@ -216,14 +194,14 @@ export default function About() {
       </section>
 
       {/* Section 3.5 - Nuestros Valores */}
-      <section className="py-20 lg:py-28 bg-cream relative overflow-hidden">
+      <section className="py-12 lg:py-16 bg-cream relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-center max-w-3xl mx-auto mb-16"
+            className="text-center max-w-3xl mx-auto mb-10"
           >
             <div className="flex items-center justify-center mb-6">
               <Award className="w-10 h-10 text-[#d65661]" />
@@ -261,76 +239,15 @@ export default function About() {
         </div>
       </section>
 
-      {/* Section 4 - Qué Hacemos */}
-      <section className="py-20 lg:py-28 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
-              Qué Hacemos
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Ofrecemos una variedad de servicios diseñados para ayudarte a dominar el inglés
-            </p>
-          </motion.div>
-
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
-          >
-            {whatWeDoCards.map((card, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                className="group bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 border-transparent hover:border-accent"
-              >
-                <card.icon className="w-12 h-12 text-[#d65661] mb-6" />
-                <h3 className="text-xl font-semibold text-primary mb-3">
-                  {card.title}
-                </h3>
-                <p className="text-gray-600 mb-6">{card.description}</p>
-                <Link
-                  to={card.link}
-                  className="inline-flex items-center text-[#d65661] hover:text-[#b54650] font-medium transition-colors duration-200"
-                >
-                  Ver más
-                  <svg
-                    className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
-                </Link>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
       {/* Section 7 - Reconocimientos y Avales */}
-      <section className="py-20 lg:py-28 bg-cream">
+      <section className="py-12 lg:py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-center mb-16"
+            className="text-center mb-10"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
               Reconocimientos y Avales
