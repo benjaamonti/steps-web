@@ -33,7 +33,7 @@ const itemVariants = {
 }
 
 export default function Contact() {
-  const whatsappUrl = `https://wa.me/${siteConfig.whatsapp}`
+  const whatsappUrl = siteConfig.whatsappUrl
 
   return (
     <>
@@ -203,7 +203,7 @@ export default function Contact() {
                       className="flex items-center space-x-4 text-gray-600 hover:text-[#d65661] transition-colors duration-200"
                     >
                       <Instagram className="w-6 h-6 text-[#d65661] flex-shrink-0" />
-                      <span>@stepsmdp</span>
+                      <span>{siteConfig.social.instagramHandle}</span>
                     </a>
                   )}
                   {siteConfig.social.facebook && (
@@ -214,7 +214,7 @@ export default function Contact() {
                       className="flex items-center space-x-4 text-gray-600 hover:text-[#d65661] transition-colors duration-200"
                     >
                       <Facebook className="w-6 h-6 text-[#d65661] flex-shrink-0" />
-                      <span>@steps.school.of.english</span>
+                      <span>{siteConfig.social.facebookHandle}</span>
                     </a>
                   )}
                 </div>

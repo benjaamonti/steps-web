@@ -31,8 +31,7 @@ export function Footer() {
               />
             </Link>
             <p className="mt-4 text-white/80 text-sm leading-relaxed">
-              Más de 25 años formando estudiantes de inglés en Mar del Plata. 
-              Clases para todas las edades, exámenes internacionales y viajes de inmersión.
+              {siteConfig.experienceText}
             </p>
             
           </div>
@@ -89,7 +88,7 @@ export function Footer() {
                     rel="noopener noreferrer"
                     className="text-white/80 hover:text-[#d65661] transition-colors duration-200 text-sm"
                   >
-                    @stepsmdp
+                    {siteConfig.social.instagramHandle}
                   </a>
                 </li>
               )}
@@ -102,7 +101,7 @@ export function Footer() {
                     rel="noopener noreferrer"
                     className="text-white/80 hover:text-[#d65661] transition-colors duration-200 text-sm"
                   >
-                    @steps.school.of.english
+                    {siteConfig.social.facebookHandle}
                   </a>
                 </li>
               )}
@@ -122,7 +121,7 @@ export function Footer() {
                     rel="noopener noreferrer"
                     className="text-white/80 hover:text-[#d65661] transition-colors duration-200 text-sm"
                   >
-                    +54 9 223 438-9267
+                    {siteConfig.contact.whatsappDisplay}
                   </a>
                 </li>
               )}
