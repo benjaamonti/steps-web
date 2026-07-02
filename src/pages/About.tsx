@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { Target, Eye, BookOpen, Award, Users, GraduationCap, FileText, Plane} from 'lucide-react'
+import { Target, Eye, Award, GraduationCap, FileText, Plane, HeartHandshake, Lightbulb, ShieldCheck, UsersRound } from 'lucide-react'
 import { PageMeta } from '@/components/layout/PageMeta'
 import { awards, isOfficialExamCenter } from '@/data/awards'
 import { pageMeta } from '@/data/pageMeta'
@@ -28,21 +28,31 @@ const itemVariants = {
   },
 }
 
-const missionPillars = [
+const coreValues = [
   {
-    icon: BookOpen,
-    title: 'Excelencia académica',
-    description: 'Nos comprometemos a ofrecer la más alta calidad en la enseñanza del idioma inglés.',
+    icon: Award,
+    title: 'Calidad',
+    description: 'Mejora continua de las clases y del material de estudio.',
   },
   {
-    icon: Users,
-    title: 'Atención personalizada',
-    description: 'Cada alumno es único. Adaptamos nuestra metodología a sus necesidades y objetivos.',
+    icon: HeartHandshake,
+    title: 'Empatía',
+    description: 'Comprensión de los tiempos de aprendizaje de cada estudiante.',
   },
   {
-    icon: Target,
-    title: 'Resultados medibles',
-    description: 'Trabajamos con objetivos claros para que cada alumno vea su progreso constantemente.',
+    icon: Lightbulb,
+    title: 'Innovación',
+    description: 'Uso de herramientas nuevas y dinámicas modernas en el aula.',
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Compromiso',
+    description: 'Responsabilidad con el progreso de las personas que estudian en el instituto.',
+  },
+  {
+    icon: UsersRound,
+    title: 'Inclusión',
+    description: 'Creación de un ambiente de respeto para todos los alumnos.',
   },
 ]
 
@@ -170,33 +180,9 @@ export default function About() {
             <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-8">
               Nuestra Misión
             </h2>
-            <p className="text-xl text-gray-700 leading-relaxed mb-12">
-              Brindar una educación de calidad en el idioma inglés que permita a nuestros 
-              alumnos comunicarse efectivamente en el mundo globalizado de hoy, desarrollando 
-              no solo habilidades lingüísticas sino también confianza y pensamiento crítico.
+            <p className="text-xl text-gray-700 leading-relaxed font-medium">
+              Facilitar el dominio del idioma inglés para niños y jóvenes, ofreciendo clases dinámicas y metodologías innovadoras con un trato cercano, garantizando que cada estudiante adquiera las competencias necesarias en inglés para alcanzar sus propios objetivos.
             </p>
-
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="grid grid-cols-1 md:grid-cols-3 gap-8"
-            >
-              {missionPillars.map((pillar, index) => (
-                <motion.div
-                  key={index}
-                  variants={itemVariants}
-                  className="bg-white p-6 rounded-xl shadow-md"
-                >
-                  <pillar.icon className="w-10 h-10 text-[#d65661] mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold text-primary mb-2">
-                    {pillar.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm">{pillar.description}</p>
-                </motion.div>
-              ))}
-            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -204,60 +190,74 @@ export default function About() {
       {/* Section 3 - Visión */}
       <section className="py-20 lg:py-28 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="order-2 lg:order-1"
-            >
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
-                <img
-                  src="/images/classes/methodology.jpg"
-                  alt="Nuestra visión"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="order-1 lg:order-2"
-            >
-              <div className="flex items-center mb-6">
-                <Eye className="w-10 h-10 text-[#d65661] mr-4" />
-                <h2 className="text-3xl lg:text-4xl font-bold text-primary">
-                  Nuestra Visión
-                </h2>
-              </div>
-              <div className="space-y-4 text-gray-600 leading-relaxed">
-                <p>
-                  Ser reconocidos como la academia de inglés líder en Mar del Plata, 
-                  distinguida por la calidad de nuestra enseñanza, los resultados de 
-                  nuestros alumnos y nuestro compromiso con la comunidad.
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <div className="flex items-center justify-center mb-6">
+              <Eye className="w-10 h-10 text-[#d65661]" />
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-8">
+              Nuestra Visión
+            </h2>
+            <p className="text-xl text-gray-700 leading-relaxed font-medium">
+              Ser el instituto de inglés de referencia en Mar del Plata por la calidad de las clases y el trato con los alumnos, para que más personas tengan mejores oportunidades de estudio y trabajo.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Section 3.5 - Nuestros Valores */}
+      <section className="py-20 lg:py-28 bg-cream relative overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center max-w-3xl mx-auto mb-16"
+          >
+            <div className="flex items-center justify-center mb-6">
+              <Award className="w-10 h-10 text-[#d65661]" />
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-primary">
+              Nuestros Valores
+            </h2>
+          </motion.div>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
+          >
+            {coreValues.map((value, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-primary/5 flex flex-col items-center text-center group"
+              >
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors duration-300">
+                  <value.icon className="w-8 h-8 text-[#d65661]" />
+                </div>
+                <h3 className="text-xl font-bold text-primary mb-3">
+                  {value.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  {value.description}
                 </p>
-                <p>
-                  Visualizamos un futuro donde cada persona que pase por nuestras aulas 
-                  no solo domine el idioma inglés, sino que también desarrolle las 
-                  herramientas necesarias para alcanzar sus sueños personales y profesionales 
-                  en un mundo cada vez más conectado.
-                </p>
-                <p>
-                  Aspiramos a seguir creciendo, incorporando las últimas tecnologías 
-                  educativas y metodologías de enseñanza, sin perder nunca el trato 
-                  personalizado que nos caracteriza.
-                </p>
-              </div>
-            </motion.div>
-          </div>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
       {/* Section 4 - Qué Hacemos */}
-      <section className="py-20 lg:py-28 bg-cream">
+      <section className="py-20 lg:py-28 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
