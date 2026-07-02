@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { Target, Eye, Award, GraduationCap, FileText, Plane, HeartHandshake, Lightbulb, ShieldCheck, UsersRound } from 'lucide-react'
+import { Target, Eye, Award, GraduationCap, FileText, Plane, HeartHandshake, Lightbulb, ShieldCheck, UsersRound, Heart } from 'lucide-react'
 import { PageMeta } from '@/components/layout/PageMeta'
 import { awards, isOfficialExamCenter } from '@/data/awards'
 import { pageMeta } from '@/data/pageMeta'
@@ -53,6 +53,11 @@ const coreValues = [
     icon: UsersRound,
     title: 'Inclusión',
     description: 'Creación de un ambiente de respeto para todos los alumnos.',
+  },
+  {
+    icon: Heart,
+    title: 'Confianza',
+    description: 'Creación de un espacio seguro donde el estudiante se sienta libre de practicar y equivocarse al hablar sin ser juzgado.',
   },
 ]
 
