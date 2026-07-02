@@ -20,10 +20,10 @@ export const awards: Award[] = [
     description: 'Miembro de la asociación de escuelas de inglés del Reino Unido.',
   },
   {
-    name: 'AILA',
-    logo: '/images/awards/aila.png',
-    url: 'https://www.aila.info/',
-    description: 'Asociación Internacional de Lingüística Aplicada.',
+    name: 'Oxford University Press',
+    logo: '/images/awards/oxford.png',
+    url: 'https://elt.oup.com/feature/global/oxford-quality',
+    description: 'Centro colaborador de Oxford University Press.',
   },
   {
     name: 'APIBA',
