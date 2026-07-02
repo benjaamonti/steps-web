@@ -10,7 +10,28 @@ interface PageMetaProps {
 
 export function PageMeta({ title, description, image, url }: PageMetaProps) {
   const ogImage = image || siteConfig.ogImage
-  const canonicalUrl = url || 'https://www.englishacademymardelplata.com'
+  const canonicalUrl = url || siteConfig.siteUrl
+
+  const schemaOrg = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": siteConfig.businessName,
+    "url": siteConfig.siteUrl,
+    "logo": `${siteConfig.siteUrl}/images/logo.svg`,
+    "description": siteConfig.metaDescription,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": siteConfig.contact.addressStreet,
+      "addressLocality": siteConfig.contact.addressLocality,
+      "addressRegion": siteConfig.contact.addressRegion,
+      "addressCountry": siteConfig.contact.addressCountry
+    },
+    "telephone": siteConfig.contact.phone,
+    "sameAs": [
+      siteConfig.social.instagram,
+      siteConfig.social.facebook
+    ]
+  }
 
   return (
     <Helmet>
@@ -21,7 +42,7 @@ export function PageMeta({ title, description, image, url }: PageMetaProps) {
       {/* Open Graph */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={`https://www.englishacademymardelplata.com${ogImage}`} />
+      <meta property="og:image" content={`${siteConfig.siteUrl}${ogImage}`} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content="website" />
       <meta property="og:locale" content="es_AR" />
@@ -31,7 +52,12 @@ export function PageMeta({ title, description, image, url }: PageMetaProps) {
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={`https://www.englishacademymardelplata.com${ogImage}`} />
+      <meta name="twitter:image" content={`${siteConfig.siteUrl}${ogImage}`} />
+
+      {/* Schema.org JSON-LD */}
+      <script type="application/ld+json">
+        {JSON.stringify(schemaOrg)}
+      </script>
     </Helmet>
   )
 }

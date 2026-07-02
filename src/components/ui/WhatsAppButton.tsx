@@ -9,9 +9,7 @@ export function WhatsAppButton() {
     return null
   }
 
-  const whatsappUrl = `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(
-    siteConfig.whatsappDefaultMessage
-  )}`
+  const whatsappUrl = siteConfig.whatsappUrl
 
   return (
     <motion.a

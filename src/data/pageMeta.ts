@@ -1,3 +1,5 @@
+import { siteConfig } from './siteConfig'
+
 export interface PageMetaProps {
   title: string
   description: string
@@ -7,39 +9,40 @@ export interface PageMetaProps {
 
 export const pageMeta: Record<string, PageMetaProps> = {
   '/': {
-    title: 'Steps | School of English',
+    title: `${siteConfig.businessName} | School of English`,
     description: 'Academia de inglés en Mar del Plata. Clases para niños, adolescentes y adultos. Preparación para exámenes internacionales.',
     image: '/images/og/og-home.jpg',
-    url: 'https://www.englishacademymardelplata.com/',
+    url: `${siteConfig.siteUrl}/`,
   },
   '/nosotros': {
-    title: 'Nosotros | Steps',
+    title: `Nosotros | ${siteConfig.businessName}`,
     description: 'Conocé nuestra historia, misión y equipo de profesores en Mar del Plata.',
     image: '/images/og/og-nosotros.jpg',
-    url: 'https://www.englishacademymardelplata.com/nosotros',
+    url: `${siteConfig.siteUrl}/nosotros`,
   },
   '/nuestras-clases': {
-    title: 'Nuestras Clases | Steps',
+    title: `Nuestras Clases | ${siteConfig.businessName}`,
     description: 'Clases de inglés para todas las edades y niveles. Metodología comunicativa con profesores nativos y certificados.',
     image: '/images/og/og-clases.jpg',
-    url: 'https://www.englishacademymardelplata.com/nuestras-clases',
+    url: `${siteConfig.siteUrl}/nuestras-clases`,
   },
   '/examenes-internacionales': {
-    title: 'Exámenes Internacionales | Steps',
+    title: `Exámenes Internacionales | ${siteConfig.businessName}`,
     description: 'Preparación para exámenes Cambridge e internacionales.',
     image: '/images/og/og-examenes.jpg',
-    url: 'https://www.englishacademymardelplata.com/examenes-internacionales',
+    url: `${siteConfig.siteUrl}/examenes-internacionales`,
   },
   '/viajes-a-inglaterra': {
-    title: 'Viajes a Inglaterra | Steps',
+    title: `Viajes a Inglaterra | ${siteConfig.businessName}`,
     description: 'Viajes de inmersión lingüística a Inglaterra. Viví el idioma en Londres, Oxford, Cambridge y más destinos.',
     image: '/images/og/og-viajes.jpg',
-    url: 'https://www.englishacademymardelplata.com/viajes-a-inglaterra',
+    url: `${siteConfig.siteUrl}/viajes-a-inglaterra`,
   },
   '/contacto': {
-    title: 'Contacto | Steps',
+    title: `Contacto | ${siteConfig.businessName}`,
     description: 'Contactanos para más información sobre nuestras clases, exámenes internacionales y viajes a Inglaterra.',
     image: '/images/og/og-contacto.jpg',
-    url: 'https://www.englishacademymardelplata.com/contacto',
+    url: `${siteConfig.siteUrl}/contacto`,
   },
 }
+
