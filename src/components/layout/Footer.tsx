@@ -59,7 +59,14 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-[#d65661] flex-shrink-0 mt-0.5" />
-                <span className="text-white/80 text-sm">{siteConfig.contact.address}</span>
+                <a
+                  href={siteConfig.contact.googleMapsLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-[#d65661] transition-colors duration-200 text-sm"
+                >
+                  {siteConfig.contact.address}
+                </a>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-[#d65661] flex-shrink-0" />

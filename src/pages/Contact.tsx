@@ -86,7 +86,7 @@ export default function Contact() {
                 className="group flex items-center gap-4 rounded-2xl border border-whatsapp/20 bg-white p-6 shadow-lg transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"
                 aria-label={`Abrir WhatsApp de ${siteConfig.businessName}`}
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-whatsapp/10 text-[#d65661] transition-colors duration-200 group-hover:bg-whatsapp">
+                <div className="flex h-14 w-14 items-center justify-center text-[#d65661]">
                   <svg
                     className="h-7 w-7 text-[#d65661]"
                     fill="currentColor"
@@ -140,7 +140,14 @@ export default function Contact() {
                     <MapPin className="w-6 h-6 text-[#d65661] flex-shrink-0 mt-0.5" />
                     <div>
                       <span className="font-medium text-primary">Dirección</span>
-                      <p className="text-gray-600">{siteConfig.contact.address}</p>
+                      <a
+                        href={siteConfig.contact.googleMapsLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block text-gray-600 hover:text-[#d65661] transition-colors duration-200"
+                      >
+                        {siteConfig.contact.address}
+                      </a>
                     </div>
                   </li>
                   <li className="flex items-center space-x-4">

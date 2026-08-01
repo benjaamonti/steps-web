@@ -11,6 +11,7 @@ const addressLocality = 'Mar del Plata'
 const addressRegion = 'Provincia de Buenos Aires'
 const addressCountry = 'AR'
 const fullAddress = `${addressStreet}, ${addressPostalCode} ${addressLocality}, ${addressRegion}`
+const googleMapsLink = 'https://www.google.com/maps/place/Steps/@-38.0577611,-57.5545955,19z/data=!3m1!4b1!4m6!3m5!1s0x9584dc21fb829133:0x3edb2b36ec40ceda!8m2!3d-38.0577622!4d-57.5539518!16s%2Fg%2F1hc95gqt4'
 
 // Contact & Social Usernames (without '@' or link prefixes)
 const phone = '223 484-2215'
@@ -48,6 +49,7 @@ export const siteConfig = {
     phone,
     email,
     whatsappDisplay,
+    googleMapsLink,
   },
   hours: [
     { day: 'Lunes a Viernes', time: '9:00 - 21:00' },
