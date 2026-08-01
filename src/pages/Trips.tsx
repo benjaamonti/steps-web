@@ -97,14 +97,8 @@ export default function Trips() {
       <PageMeta {...pageMeta['/viajes-a-inglaterra']} />
 
       {/* Page Hero */}
-      <section className="relative pt-32 pb-16 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(/images/trips/hero-england.jpg)' }}
-        >
-          <div className="absolute inset-0 bg-primary/80" />
-        </div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="pt-32 pb-16 bg-primary">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
