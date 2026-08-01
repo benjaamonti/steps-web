@@ -52,8 +52,12 @@ export const siteConfig = {
     googleMapsLink,
   },
   hours: [
-    { day: 'Lunes a Viernes', time: '9:00 - 21:00' },
-    { day: 'Sábados', time: '9:00 - 13:00' },
+    { day: 'Lunes', time: '9:30 a. m. - 12 p. m. / 3 - 8 p. m.' },
+    { day: 'Martes', time: '9:30 a. m. - 12 p. m. / 3 - 8:30 p. m.' },
+    { day: 'Miércoles', time: '9:30 a. m. - 12 p. m. / 3 - 8 p. m.' },
+    { day: 'Jueves', time: '9:30 a. m. - 12 p. m. / 3 - 8:30 p. m.' },
+    { day: 'Viernes', time: '9:30 a. m. - 12 p. m. / 3:30 - 8 p. m.' },
+    { day: 'Sábado y Domingo', time: 'Cerrado' },
   ],
   social: {
     instagram: `https://instagram.com/${instagramUsername}`,
