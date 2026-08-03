@@ -62,7 +62,6 @@ export default function Home() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: 'url(/images/hero/hero.jpg)' }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/70 to-primary/90" />
         </div>
 
         {/* Content */}
