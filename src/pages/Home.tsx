@@ -1,10 +1,8 @@
-import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ChevronDown, ChevronLeft, ChevronRight, GraduationCap, FileText, Plane, Award } from 'lucide-react'
+import { ChevronDown, ChevronRight, GraduationCap, FileText, Plane, Award } from 'lucide-react'
 import { PageMeta } from '@/components/layout/PageMeta'
 import { siteConfig } from '@/data/siteConfig'
-import { testimonials } from '@/data/testimonials'
 import { pageMeta } from '@/data/pageMeta'
 
 const containerVariants = {
@@ -53,37 +51,6 @@ const previewCards = [
 ]
 
 export default function Home() {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0)
-  const [isPaused, setIsPaused] = useState(false)
-  const intervalRef = useRef<ReturnType<typeof setTimeout> | null>(null)
-
-  useEffect(() => {
-    if (!isPaused) {
-      intervalRef.current = setInterval(() => {
-        setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
-      }, 5000)
-    }
-    return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current)
-    }
-  }, [isPaused])
-
-  const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
-  }
-
-  const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-  }
-
-  const getInitials = (name: string) => {
-    return name
-      .split(' ')
-      .map((n) => n[0])
-      .join('')
-      .toUpperCase()
-  }
-
   return (
     <>
       <PageMeta {...pageMeta['/']} />
