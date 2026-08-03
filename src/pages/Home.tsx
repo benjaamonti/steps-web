@@ -112,18 +112,6 @@ export default function Home() {
             >
               {siteConfig.tagline}
             </motion.h1>
-            <motion.p
-              variants={itemVariants}
-              className="text-xl sm:text-2xl text-white/90 mb-4"
-            >
-              Te ayudamos a alcanzar tus mejores resultados con una metodología dinámica y efectiva.
-            </motion.p>
-            <motion.p
-              variants={itemVariants}
-              className="text-lg text-white/80 mb-10"
-            >
-              Preparate para tu futuro con nosotros en Mar del Plata.
-            </motion.p>
             <motion.div
               variants={itemVariants}
               className="flex flex-col sm:flex-row items-center justify-center gap-4"
@@ -132,13 +120,13 @@ export default function Home() {
                 to="/nuestras-clases"
                 className="w-full sm:w-auto px-8 py-4 bg-accent text-primary font-semibold rounded-lg hover:bg-accent-400 transition-colors duration-200 text-center"
               >
-                Ver nuestras clases
+                Nuestras clases
               </Link>
               <Link
                 to="/contacto"
                 className="w-full sm:w-auto px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-colors duration-200 text-center backdrop-blur-sm"
               >
-                Contáctanos
+                Contactanos
               </Link>
             </motion.div>
           </motion.div>
@@ -175,7 +163,7 @@ export default function Home() {
               ¿Qué ofrecemos?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Descubrí todas las opciones que tenemos para ayudarte a dominar el inglés
+              Descubrí todas las opciones que tenemos para vos
             </p>
           </motion.div>
 
@@ -221,111 +209,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Carousel */}
-      <section className="py-20 lg:py-28 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
-              Lo que dicen nuestros alumnos
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Historias reales de quienes confiaron en nosotros
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="max-w-4xl mx-auto"
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
-          >
-            <div className="relative bg-cream rounded-2xl p-8 lg:p-12">
-              {/* Quote Icon */}
-              <div className="absolute top-6 left-6 text-[#d65661]/30">
-                <svg
-                  className="w-16 h-16"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg>
-              </div>
-
-              {/* Testimonial Content */}
-              <div className="relative z-10 text-center">
-                <p className="text-lg lg:text-xl text-gray-700 italic mb-8 leading-relaxed">
-                  "{testimonials[currentTestimonial].quote}"
-                </p>
-
-                <div className="flex flex-col items-center">
-                  {testimonials[currentTestimonial].photo ? (
-                    <img
-                      src={testimonials[currentTestimonial].photo}
-                      alt={testimonials[currentTestimonial].author}
-                      className="w-16 h-16 rounded-full object-cover mb-4"
-                    />
-                  ) : (
-                    <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-white text-xl font-semibold mb-4">
-                      {getInitials(testimonials[currentTestimonial].author)}
-                    </div>
-                  )}
-                  <h4 className="font-semibold text-primary">
-                    {testimonials[currentTestimonial].author}
-                  </h4>
-                  <p className="text-gray-500 text-sm">
-                    {testimonials[currentTestimonial].role}
-                  </p>
-                </div>
-              </div>
-
-              {/* Navigation */}
-              <div className="flex items-center justify-center space-x-4 mt-8">
-                <button
-                  onClick={prevTestimonial}
-                  className="p-2 rounded-full bg-white shadow-md hover:shadow-lg transition-shadow duration-200 text-primary hover:text-[#d65661]"
-                  aria-label="Testimonio anterior"
-                >
-                  <ChevronLeft className="w-5 h-5" />
-                </button>
-
-                {/* Dots */}
-                <div className="flex space-x-2">
-                  {testimonials.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentTestimonial(index)}
-                      className={`w-2.5 h-2.5 rounded-full transition-colors duration-200 ${
-                        index === currentTestimonial
-                          ? 'bg-accent'
-                          : 'bg-gray-300 hover:bg-gray-400'
-                      }`}
-                      aria-label={`Ir al testimonio ${index + 1}`}
-                    />
-                  ))}
-                </div>
-
-                <button
-                  onClick={nextTestimonial}
-                  className="p-2 rounded-full bg-white shadow-md hover:shadow-lg transition-shadow duration-200 text-primary hover:text-[#d65661]"
-                  aria-label="Siguiente testimonio"
-                >
-                  <ChevronRight className="w-5 h-5" />
-                </button>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* CTA Banner */}
       <section className="py-20 lg:py-28 bg-primary">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -338,17 +221,16 @@ export default function Home() {
           >
             <Award className="w-16 h-16 text-[#d65661] mx-auto mb-6" />
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              ¿Listo para empezar?
+              ¿Empezamos?
             </h2>
             <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-              Contactanos hoy mismo y descubrí el curso de inglés perfecto para vos.
-              Tu primera clase de prueba es gratuita.
+              ¡Contactanos para empezar tu nivelación!
             </p>
             <Link
               to="/contacto"
               className="inline-block px-8 py-4 bg-accent text-primary font-semibold rounded-lg hover:bg-accent-400 transition-colors duration-200"
             >
-              Contactanos ahora
+              ¡Escribinos!
             </Link>
           </motion.div>
         </div>
