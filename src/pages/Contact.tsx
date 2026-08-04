@@ -102,6 +102,35 @@ export default function Contact() {
                 </div>
               </motion.a>
 
+              {/* Social Links */}
+              <motion.div variants={itemVariants} className="mt-8 bg-cream p-8 rounded-2xl">
+                <h3 className="text-xl font-bold text-primary mb-6">Seguinos</h3>
+                <div className="flex flex-col space-y-4">
+                  {siteConfig.social.instagram && (
+                    <a
+                      href={siteConfig.social.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-4 text-gray-600 hover:text-[#d65661] transition-colors duration-200"
+                    >
+                      <Instagram className="w-6 h-6 text-[#d65661] flex-shrink-0" />
+                      <span>{siteConfig.social.instagramHandle}</span>
+                    </a>
+                  )}
+                  {siteConfig.social.facebook && (
+                    <a
+                      href={siteConfig.social.facebook}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-4 text-gray-600 hover:text-[#d65661] transition-colors duration-200"
+                    >
+                      <Facebook className="w-6 h-6 text-[#d65661] flex-shrink-0" />
+                      <span>{siteConfig.social.facebookHandle}</span>
+                    </a>
+                  )}
+                </div>
+              </motion.div>
+
               {/* Map */}
               <motion.div variants={itemVariants} className="mt-8 rounded-2xl overflow-hidden bg-cream">
                 <div className="p-6 pb-4">
@@ -195,34 +224,7 @@ export default function Contact() {
                 </ul>
               </motion.div>
 
-              {/* Social Links */}
-              <motion.div variants={itemVariants} className="bg-cream p-8 rounded-2xl">
-                <h3 className="text-xl font-bold text-primary mb-6">Seguinos</h3>
-                <div className="flex flex-col space-y-4">
-                  {siteConfig.social.instagram && (
-                    <a
-                      href={siteConfig.social.instagram}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-4 text-gray-600 hover:text-[#d65661] transition-colors duration-200"
-                    >
-                      <Instagram className="w-6 h-6 text-[#d65661] flex-shrink-0" />
-                      <span>{siteConfig.social.instagramHandle}</span>
-                    </a>
-                  )}
-                  {siteConfig.social.facebook && (
-                    <a
-                      href={siteConfig.social.facebook}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-4 text-gray-600 hover:text-[#d65661] transition-colors duration-200"
-                    >
-                      <Facebook className="w-6 h-6 text-[#d65661] flex-shrink-0" />
-                      <span>{siteConfig.social.facebookHandle}</span>
-                    </a>
-                  )}
-                </div>
-              </motion.div>
+
             </motion.div>
           </div>
         </div>

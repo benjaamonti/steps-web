@@ -14,12 +14,6 @@ export const pageMeta: Record<string, PageMetaProps> = {
     image: '/images/og/og-home.jpg',
     url: `${siteConfig.siteUrl}/`,
   },
-  '/nosotros': {
-    title: `Nosotros | ${siteConfig.businessName}`,
-    description: 'Conocé nuestra historia, misión y equipo de profesores en Mar del Plata.',
-    image: '/images/og/og-nosotros.jpg',
-    url: `${siteConfig.siteUrl}/nosotros`,
-  },
   '/nuestras-clases': {
     title: `Nuestras Clases | ${siteConfig.businessName}`,
     description: 'Clases de inglés para todas las edades y niveles. Metodología comunicativa con profesores nativos y certificados.',

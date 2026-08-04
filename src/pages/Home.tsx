@@ -116,6 +116,49 @@ export default function Home() {
         </motion.div>
       </section>
 
+      {/* About Us Section */}
+      <section className="py-20 lg:py-28 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="w-full lg:w-1/2"
+            >
+              <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">
+                Quiénes somos
+              </h2>
+              <div className="space-y-4 text-lg text-gray-600">
+                <p>
+                  Con años de experiencia en la enseñanza del idioma inglés, nos dedicamos a brindar un espacio donde el aprendizaje se convierte en una experiencia enriquecedora y dinámica.
+                </p>
+                <p>
+                  Nuestra historia se basa en el compromiso con cada uno de nuestros alumnos, acompañándolos paso a paso para que puedan alcanzar sus metas y comunicarse con confianza en un mundo globalizado.
+                </p>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="w-full lg:w-1/2"
+            >
+              <div className="aspect-video lg:aspect-[4/3] rounded-2xl overflow-hidden shadow-xl relative">
+                <img 
+                  src="/images/about/history.jpg" 
+                  alt="Quiénes somos" 
+                  className="absolute inset-0 w-full h-full object-cover" 
+                />
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Preview Cards */}
       <section className="py-20 lg:py-28 bg-cream">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

@@ -6,12 +6,10 @@ import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 
 // Pages
 import Home from '@/pages/Home'
-import About from '@/pages/About'
 import Classes from '@/pages/Classes'
 import Exams from '@/pages/Exams'
 import Trips from '@/pages/Trips'
 import Contact from '@/pages/Contact'
-import Privacy from '@/pages/Privacy'
 import NotFound from '@/pages/NotFound'
 
 function Layout() {
@@ -39,10 +37,6 @@ export const router = createBrowserRouter(
           element: <Home />,
         },
         {
-          path: 'nosotros',
-          element: <About />,
-        },
-        {
           path: 'nuestras-clases',
           element: <Classes />,
         },
@@ -57,10 +51,6 @@ export const router = createBrowserRouter(
         {
           path: 'contacto',
           element: <Contact />,
-        },
-        {
-          path: 'privacidad',
-          element: <Privacy />,
         },
         {
           path: '*',

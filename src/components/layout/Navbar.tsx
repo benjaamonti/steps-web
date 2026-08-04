@@ -6,7 +6,6 @@ import { siteConfig } from '@/data/siteConfig'
 
 const navLinks = [
   { path: '/', label: 'Inicio' },
-  { path: '/nosotros', label: 'Nosotros' },
   { path: '/nuestras-clases', label: 'Nuestras Clases' },
   { path: '/examenes-internacionales', label: 'Exámenes Internacionales' },
   { path: '/viajes-a-inglaterra', label: 'Viajes a Inglaterra' },
