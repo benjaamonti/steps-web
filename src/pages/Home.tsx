@@ -128,7 +128,7 @@ export default function Home() {
               className="w-full lg:w-1/2"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">
-                Quiénes somos
+                ¿Quiénes somos?
               </h2>
               <div className="space-y-4 text-lg text-gray-600">
                 <p>
@@ -139,7 +139,7 @@ export default function Home() {
                 </p>
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -148,10 +148,10 @@ export default function Home() {
               className="w-full lg:w-1/2"
             >
               <div className="aspect-video lg:aspect-[4/3] rounded-2xl overflow-hidden shadow-xl relative">
-                <img 
-                  src="/images/about/history.jpg" 
-                  alt="Quiénes somos" 
-                  className="absolute inset-0 w-full h-full object-cover" 
+                <img
+                  src="/images/about/history.jpg"
+                  alt="Quiénes somos"
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
             </motion.div>
