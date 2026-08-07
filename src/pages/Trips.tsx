@@ -394,7 +394,7 @@ export default function Trips() {
       </section>
 
       {/* Section 7 - CTA */}
-      <section className="py-20 lg:py-28 bg-accent">
+      <section className="py-20 lg:py-28 bg-primary">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -403,16 +403,16 @@ export default function Trips() {
             transition={{ duration: 0.5 }}
             className="text-center"
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               ¿Querés que tu hijo viva esta experiencia?
             </h2>
-            <p className="text-lg text-primary/80 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
               Contactanos para recibir información sobre las próximas salidas, 
               requisitos y proceso de inscripción.
             </p>
             <Link
               to="/contacto?subject=Viajes+a+Inglaterra"
-              className="inline-block px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors duration-200"
+              className="inline-block px-8 py-4 bg-accent text-primary font-semibold rounded-lg hover:bg-accent-400 transition-colors duration-200"
             >
               Solicitar información
             </Link>

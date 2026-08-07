@@ -14,7 +14,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-primary text-white">
+    <footer className="bg-[#16495d] text-white border-t border-white/10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Logo & Description */}
@@ -32,7 +32,7 @@ export function Footer() {
             <p className="mt-4 text-white/80 text-sm leading-relaxed">
               {siteConfig.experienceText}
             </p>
-            
+
           </div>
 
           {/* Navigation Links */}

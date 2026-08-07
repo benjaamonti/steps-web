@@ -125,7 +125,7 @@ export default function Exams() {
             >
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="/images/exams/Award.jpg"
+                  src="/images/exams/certificate.jpg"
                   alt="Certificado internacional"
                   className="w-full h-full object-cover"
                 />
