@@ -100,24 +100,25 @@ export default function Home() {
         </div>
 
         {/* Scroll Indicator */}
-        <motion.div
+        <motion.button
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer focus:outline-none"
+          onClick={() => document.getElementById('about-us')?.scrollIntoView({ behavior: 'smooth' })}
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="text-white/60"
+            className="text-white/60 hover:text-white transition-colors duration-200"
           >
             <ChevronDown className="w-8 h-8" />
           </motion.div>
-        </motion.div>
+        </motion.button>
       </section>
 
       {/* About Us Section */}
-      <section className="py-20 lg:py-28 bg-white">
+      <section id="about-us" className="py-20 lg:py-28 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
             <motion.div
