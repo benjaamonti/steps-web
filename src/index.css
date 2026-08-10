@@ -51,6 +51,11 @@
   html {
     scroll-behavior: smooth;
   }
+  
+  /* Fix 1px gaps between sections on mobile browsers (sub-pixel rendering issue) */
+  section {
+    margin-bottom: -1px;
+  }
 }
 
 @layer utilities {

@@ -14,7 +14,7 @@ import NotFound from '@/pages/NotFound'
 
 function Layout() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-[100dvh] flex flex-col">
       <ScrollToTop />
       <Navbar />
       <main className="flex-1">
