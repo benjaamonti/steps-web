@@ -205,12 +205,12 @@ export default function Contact() {
                 </h3>
                 <ul className="space-y-4">
                   {siteConfig.hours.map((hour, index) => (
-                    <li key={index} className="flex items-center justify-between">
+                    <li key={index} className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-4">
                       <div className="flex items-center space-x-4">
                         <Clock className="w-6 h-6 text-[#d65661] flex-shrink-0" />
-                        <span className="text-gray-600">{hour.day}</span>
+                        <span className="text-gray-600 font-medium sm:font-normal">{hour.day}</span>
                       </div>
-                      <span className="font-medium text-primary">{hour.time}</span>
+                      <span className="font-medium text-primary pl-10 sm:pl-0 text-sm sm:text-base">{hour.time}</span>
                     </li>
                   ))}
                 </ul>
