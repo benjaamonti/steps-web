@@ -1,8 +1,10 @@
-import { useState, type ElementType } from 'react'
+import type { ElementType } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { MessageCircle, Users, BookOpen, Target, ChevronDown } from 'lucide-react'
+import { MessageCircle, Users, BookOpen, Target } from 'lucide-react'
 import { PageMeta } from '@/components/layout/PageMeta'
+import { Gallery, type GalleryImage } from '@/components/ui/Gallery'
+import { FaqList } from '@/components/ui/FaqList'
 import { methodology, classLevels, faq } from '@/data/classes'
 import { pageMeta } from '@/data/pageMeta'
 
@@ -34,13 +36,18 @@ const levelGroups = [
   { key: 'exams', title: 'Exams', badge: 'E', badgeClass: 'bg-primary text-white' },
 ] as const
 
+const projectImages: GalleryImage[] = [
+  { src: '/images/classes/projects/1.jpg', alt: 'Animals Open Class de Kids con las familias' },
+  { src: '/images/classes/projects/2.jpg', alt: 'Kids 3 y una clase inspirada en Matilda' },
+  { src: '/images/classes/projects/3.jpg', alt: 'Kids 2 y su Family Cooking Book' },
+  { src: '/images/classes/projects/4.jpg', alt: 'Kids 4 convierte el Playroom en sala de teatro' },
+  { src: '/images/classes/projects/5.jpg', alt: 'Kids 3 y sus maquetas inspiradas en Elementos' },
+  { src: '/images/classes/projects/6.jpg', alt: 'Country Fair de 1st Level' },
+  { src: '/images/classes/projects/7.jpg', alt: 'Talk show de 3rd Level' },
+  { src: '/images/classes/projects/8.jpg', alt: 'Mock trial de 5th Level' },
+]
+
 export default function Classes() {
-  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null)
-
-  const toggleFaq = (index: number) => {
-    setOpenFaqIndex(openFaqIndex === index ? null : index)
-  }
-
   const iconMap: Record<string, ElementType> = {
     MessageCircle,
     Users,
@@ -64,7 +71,7 @@ export default function Classes() {
               Nuestras Clases
             </h1>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">
-              Clases de inglés para todas las edades y niveles. Aprendé de manera efectiva y divertida.
+              Clases presenciales de inglés para chicos y adolescentes en Mar del Plata, organizadas por edad y nivel.
             </p>
           </motion.div>
         </div>
@@ -96,7 +103,7 @@ export default function Classes() {
               <div className="aspect-video rounded-2xl overflow-hidden shadow-xl">
                 <img
                   src="/images/classes/methodology.jpg"
-                  alt="Nuestra metodología"
+                  alt="Alumnos usando la pantalla interactiva del aula"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -128,6 +135,27 @@ export default function Classes() {
               )
             })}
           </motion.div>
+        </div>
+      </section>
+
+      <section className="py-20 lg:py-28 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
+              Proyectos y Open Classes
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Durante el año cada grupo prepara un proyecto en inglés y lo comparte con las familias.
+            </p>
+          </motion.div>
+
+          <Gallery images={projectImages} />
         </div>
       </section>
 
@@ -187,15 +215,12 @@ export default function Classes() {
                         <div className="aspect-[4/3] overflow-hidden">
                           <img
                             src={level.image}
-                            alt={level.level}
+                            alt={`Alumnos de ${level.level} en Steps`}
                             className="w-full h-full object-cover"
                           />
                         </div>
                         <div className="p-4">
                           <h4 className="font-semibold text-primary">{level.level}</h4>
-                          {level.ageRange && (
-                            <p className="text-sm text-[#d65661]">{level.ageRange}</p>
-                          )}
                           <p className="text-gray-600 text-sm mt-2 line-clamp-3">
                             {level.description}
                           </p>
@@ -227,39 +252,7 @@ export default function Classes() {
             </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="max-w-3xl mx-auto space-y-4"
-          >
-            {faq.map((item, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-lg shadow-sm overflow-hidden"
-              >
-                <button
-                  onClick={() => toggleFaq(index)}
-                  className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-colors duration-200"
-                >
-                  <span className="font-medium text-primary">{item.question}</span>
-                  <ChevronDown
-                    className={`w-5 h-5 text-[#d65661] transition-transform duration-300 ${
-                      openFaqIndex === index ? 'rotate-180' : ''
-                    }`}
-                  />
-                </button>
-                <div
-                  className={`overflow-hidden transition-all duration-300 ${
-                    openFaqIndex === index ? 'max-h-96' : 'max-h-0'
-                  }`}
-                >
-                  <p className="px-6 pb-4 text-gray-600">{item.answer}</p>
-                </div>
-              </div>
-            ))}
-          </motion.div>
+          <FaqList items={faq} />
         </div>
       </section>
 

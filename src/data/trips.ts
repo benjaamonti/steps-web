@@ -1,3 +1,5 @@
+import type { FAQ } from './classes'
+
 export interface Trip {
   destination: string
   duration: string
@@ -141,55 +143,78 @@ export const trips: Trip[] = [
 export const whyEngland: WhyEnglandItem[] = [
   {
     icon: 'Landmark',
-    title: 'Origen del idioma',
-    description: 'Inglaterra es el lugar donde nació el idioma inglés. Aprender aquí significa sumergirse en la cultura que dio origen a la lengua.',
+    title: 'Preparación previa',
+    description: 'Antes de viajar nos juntamos en Steps para conocer la historia y la cultura de Inglaterra y Francia, con viajeros de años anteriores. Es un sello de nuestros viajes.',
   },
   {
     icon: 'GraduationCap',
-    title: 'Escuelas con hablantes nativos',
-    description: 'Las escuelas cuentan con profesores nativos certificados que garantizan una enseñanza de calidad y acento auténtico.',
+    title: 'Clases en una summer school',
+    description: 'Dos semanas de clases de inglés en un colegio británico, con compañeros de otros países.',
   },
   {
     icon: 'Globe',
-    title: 'Experiencia cultural única',
-    description: 'Desde museos mundialmente famosos hasta pueblos históricos, cada día es una oportunidad de aprendizaje cultural.',
+    title: 'Excursiones',
+    description: 'Oxford, Cambridge, Bath, Londres, Canterbury, Stratford-upon-Avon, los estudios de Harry Potter y Stonehenge, según el año.',
   },
   {
     icon: 'Rocket',
-    title: 'Salto de nivel en semanas',
-    description: 'La inmersión total permite progresar el equivalente a un año de clases regulares en solo 2-3 semanas.',
+    title: 'Group leaders de Steps',
+    description: 'Los group leaders de Steps, entre ellos John, acompañan al grupo durante todo el viaje.',
   },
 ]
 
 export const tripIncludes: TripInclude[] = [
   {
     icon: 'Plane',
-    title: 'Vuelo internacional',
-    description: 'Pasajes de ida y vuelta con equipaje incluido.',
+    title: 'Organización',
+    description: 'Junto a Together, que organiza viajes de estudio desde 1986.',
   },
   {
     icon: 'Home',
     title: 'Alojamiento',
-    description: 'Familia anfitriona cuidadosamente seleccionada o residencia.',
+    description: 'Residencia en el colegio donde hacen la summer school.',
   },
   {
     icon: 'BookOpen',
-    title: 'Clases en escuela local',
-    description: '20 lecciones semanales con profesores nativos certificados.',
+    title: 'Clases',
+    description: 'Clases de inglés en la summer school durante dos semanas.',
   },
   {
     icon: 'Map',
-    title: 'Excursiones',
-    description: 'Visitas culturales y actividades incluidas en el programa.',
+    title: 'Actividades y excursiones',
+    description: 'Actividades por la tarde y visitas a ciudades y lugares históricos.',
   },
   {
     icon: 'Shield',
-    title: 'Seguro completo',
-    description: 'Cobertura médica, de equipaje y cancelación del viaje.',
+    title: 'Preparación',
+    description: 'Reuniones en Mar del Plata antes de viajar.',
   },
   {
     icon: 'UserCheck',
-    title: 'Coordinador',
-    description: 'Acompañante de la academia durante todo el viaje.',
+    title: 'Acompañamiento',
+    description: 'Group leaders de Steps durante todo el viaje.',
+  },
+]
+
+export const tripFaq: FAQ[] = [
+  {
+    question: '¿Quién puede viajar?',
+    answer: 'Chicos que tengan entre 13 y 17 años al momento de viajar y estén en 3rd Level o un nivel superior.',
+  },
+  {
+    question: '¿Cuándo es el próximo viaje?',
+    answer: 'En julio de 2028. Antes hacemos una reunión informativa para contar el destino, las fechas, el programa de estudios y las actividades. Escribinos por WhatsApp para coordinar una entrevista.',
+  },
+  {
+    question: '¿Quién acompaña al grupo?',
+    answer: 'Group leaders de Steps, entre ellos John, que viajan con los chicos durante todo el viaje. Antes de cada viaje participan de la capacitación para líderes que organiza Together.',
+  },
+  {
+    question: '¿Cómo se preparan antes de viajar?',
+    answer: 'Nos juntamos en Steps para conocer la historia y la cultura de Inglaterra y Francia, con viajeros de años anteriores. En la última reunión con las familias entregamos la documentación y repasamos las excursiones y las reglas en destino.',
+  },
+  {
+    question: '¿Dónde se alojan?',
+    answer: 'En la residencia del colegio donde hacen la summer school, junto a chicos de otros países.',
   },
 ]

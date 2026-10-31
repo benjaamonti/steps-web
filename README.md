@@ -1,470 +1,228 @@
-# English Academy - Sitio Web Oficial
-
-Sitio web de la academia de inglés English Academy, ubicada en Mar del Plata, Argentina.
-
-## 🗺️ Rutas de la web
-
-| URL                         | Archivo                   | Descripción                              |
-|-----------------------------|---------------------------|------------------------------------------|
-| /                           | pages/Home.tsx            | Hero, highlights, previews, testimonios  |
-| /nosotros                   | pages/About.tsx           | 7 secciones: historia, misión, visión,   |
-|                             |                           | qué hacemos, stats, equipo, reconocim.   |
-| /nuestras-clases            | pages/Classes.tsx         | Metodología, niveles kids/teens/adults   |
-| /examenes-internacionales   | pages/Exams.tsx           | CEFR, comparativa, tabla, stats, proceso |
-| /viajes-a-inglaterra        | pages/Trips.tsx           | Inmersión, destinos, galería, quotes     |
-| /contacto                   | pages/Contact.tsx         | Builder WhatsApp, info, mapa             |
-| /privacidad                 | pages/Privacy.tsx         | Política de privacidad                   |
-| *                           | pages/NotFound.tsx        | Auto-redirect a / con countdown 3s       |
-
-### Para agregar una nueva ruta:
-
-1. Crear componente en `src/pages/`
-2. Agregar entrada en `src/router/index.tsx`
-3. Agregar NavLink en `src/components/layout/Navbar.tsx`
-4. Agregar entrada en `src/data/pageMeta.ts`
-
-## ⚙️ siteConfig.ts - fuente única de verdad
-
-| Campo | Qué controla | Ejemplo |
-|-------|--------------|---------|
-| `businessName` | Nombre de la academia | `'English Academy'` |
-| `tagline` | Slogan principal | `'Aprendé inglés de verdad...'` |
-| `tabTitle` | Título de pestaña | `'English Academy \| Academia...'` |
-| `metaDescription` | Meta descripción SEO | `'Academia de inglés en Mar del Plata...'` |
-| `primaryColor` | Color principal (hex) | `'#1d3d5d'` |
-| `accentColor` | Color de acento (hex) | `'#e47f71'` |
-| `themeColor` | Color del tema móvil | `'#1d3d5d'` |
-| `whatsapp` | Número sin + | `'5492236123456'` |
-| `whatsappDefaultMessage` | Mensaje por defecto WA | `'Hola, me comunico desde la web...'` |
-| `showExamStats` | Mostrar/ocultar gráficos | `true` / `false` |
-| `contact.address` | Dirección física | `'Calle Falsa 123...'` |
-| `contact.phone` | Teléfono | `'+54 9 2236 123456'` |
-| `contact.email` | Email | `'info@...'` |
-| `hours` | Horarios de atención | Array de objetos |
-| `social.instagram` | URL Instagram | `'https://instagram.com/...'` |
-| `social.facebook` | URL Facebook | `'https://facebook.com/...'` |
-| `stats.years` | Años de experiencia | `25` |
-| `stats.students` | Alumnos formados | `3500` |
-| `stats.passRate` | % tasa aprobación | `94` |
-| `stats.trips` | Viajes realizados | `45` |
-
-## 🖼️ Cómo cambiar el LOGO
-
-### Opción A - Logo de texto (default)
-
-Editar `businessName` en `src/data/siteConfig.ts`:
-
-```typescript
-export const siteConfig = {
-  businessName: 'Tu Nombre', // Cambiar esto
-  // ...
-}
-```
-
-### Opción B - Logo imagen
-
-1. Reemplazar `/public/images/logo.svg` con tu logo
-2. Editar `src/components/layout/Navbar.tsx`:
-
-```tsx
-// Reemplazar esto:
-<span className="text-xl lg:text-2xl font-bold">
-  {siteConfig.businessName}
-</span>
-
-// Por esto:
-<img 
-  src="/images/logo.svg" 
-  alt={siteConfig.businessName}
-  className="h-8 lg:h-10"
-/>
-```
-
-## 🦸 Cómo cambiar el HERO
-
-### Imagen:
-Reemplazar `/public/images/hero/hero.jpg`
-
-**Recomendaciones:**
-- Resolución: 1920×1080px mínimo
-- Formato: JPG o WebP
-- Tamaño: < 500KB
-- Contenido: Imagen relacionada con educación/inglés
-
-### Texto:
-Editar en `src/data/siteConfig.ts`:
-
-```typescript
-export const siteConfig = {
-  tagline: 'Tu nuevo slogan aquí',
-  // ...
-}
-```
-
-### CTAs:
-Editar en `src/pages/Home.tsx`, buscar la sección Hero y modificar:
-
-```tsx
-<Link to="/nuestras-clases">Ver nuestras clases</Link>
-<Link to="/contacto">Contáctanos</Link>
-```
-
-## 🪟 Título de la pestaña del navegador
-
-Controlado por `siteConfig.tabTitle`:
-
-```typescript
-export const siteConfig = {
-  tabTitle: 'English Academy | Academia de Inglés en Mar del Plata',
-  // ...
-}
-```
-
-## 🌐 Redes sociales
-
-Configurar en `siteConfig.social`:
-
-```typescript
-export const siteConfig = {
-  social: {
-    instagram: 'https://instagram.com/tuusuario',
-    facebook: 'https://facebook.com/tuusuario',
-    whatsapp: 'https://wa.me/5492236XXXXXX',
-  },
-  // ...
-}
-```
-
-**Aparecen en:**
-- Navbar (iconos)
-- Sección Equipo en /nosotros (con labels)
-- Columna derecha de /contacto (con labels)
-- Footer (con labels)
-
-**Para ocultar un ícono:** dejar vacío `''`
-
-## 💬 WhatsApp
-
-| Configuración | Descripción | Ejemplo |
-|---------------|-------------|---------|
-| `siteConfig.whatsapp` | Número sin + | `'5492236123456'` |
-| `siteConfig.whatsappDefaultMessage` | Mensaje botón flotante | `'Hola, me comunico desde la web...'` |
-
-El builder de `/contacto` genera el mensaje dinámicamente — no requiere cambios.
-
-## 📊 Estadísticas de exámenes
-
-### Para ocultar la sección:
-
-```typescript
-export const siteConfig = {
-  showExamStats: false, // Oculta gráficos
-  // ...
-}
-```
-
-### Para actualizar datos:
-
-Editar `src/data/exams.ts`:
-
-```typescript
-export const examStats = {
-  approvalRates: [
-    { exam: 'KET', rate: 98 },
-    { exam: 'PET', rate: 96 },
-    // ...
-  ],
-  levelDistribution: [
-    { level: 'A1-A2', count: 45 },
-    // ...
-  ],
-  yearlyPassed: [
-    { year: 2024, passed: 218 },
-    // ...
-  ],
-}
-```
-
-### Para eliminar definitivamente:
-
-1. Borrar `src/components/sections/ExamStats.tsx` (si existe)
-2. `npm uninstall recharts`
-3. Eliminar bloque `stats` de `exams.ts`
-4. Eliminar `showExamStats` de `siteConfig.ts`
-
-## 🏆 Reconocimientos — awards.ts
-
-```typescript
-export const awards: Award[] = [
-  {
-    name: 'Cambridge Assessment English',
-    logo: '/images/awards/cambridge.png',
-    url: 'https://www.cambridgeenglish.org/',
-    description: 'Centro preparador oficial',
-  },
-  // ...
-]
-```
-
-**Logos:** PNG o SVG con fondo transparente, alto mínimo 80px, < 100KB.
-
-**Carpeta:** `/public/images/awards/`
-
-## 👥 Equipo — team.ts
-
-```typescript
-export const team: TeamMember[] = [
-  {
-    name: 'Laura Fernández',
-    role: 'Directora',
-    photo: '/images/team/laura.jpg',
-    certifications: ['MA TESOL', 'DELTA'],
-    bio: 'Fundó English Academy en 1999...',
-  },
-  // ...
-]
-```
-
-**Fotos:** Cuadradas, 400×400px, JPG optimizado.
-
-## 📸 Testimonios — testimonials.ts
-
-```typescript
-export const testimonials: Testimonial[] = [
-  {
-    quote: 'La metodología me permitió avanzar rápidamente...',
-    author: 'María González',
-    role: 'Alumna',
-    photo: '/images/testimonials/maria.jpg', // Opcional
-    type: 'class', // 'class' | 'exam' | 'trip'
-    // Solo para type: 'trip':
-    age: '16 años',
-    destination: 'Oxford',
-    year: '2023',
-  },
-  // ...
-]
-```
-
-**Fotos:** 200×200px cuadradas. Dejar `photo: ''` para avatar con iniciales.
-
-⚠️ **Importante:** Obtener consentimiento escrito antes de publicar fotos de personas. Consentimiento de padres/tutores obligatorio para menores.
-
-## 📸 Fotos de clases — /public/images/classes/
-
-```
-/public/images/classes/
-├── methodology.jpg        # Horizontal, 16:9, mínimo 1280×720px
-├── kids/                  # Escenas de aula, cálidas y reales
-│   ├── starter.jpg
-│   ├── elementary.jpg
-│   ├── preintermediate.jpg
-│   ├── intermediate.jpg
-│   └── upperintermediate.jpg
-└── adults/
-    ├── elementary.jpg
-    ├── preintermediate.jpg
-    ├── intermediate.jpg
-    ├── upperintermediate.jpg
-    ├── advanced.jpg
-    └── conversation.jpg
-```
-
-⚠️ **Importante:** Autorización de padres/tutores obligatoria para fotos de menores.
-
-## 🔖 Favicon
-
-Reemplazar archivos placeholder en `/public/`:
-
-- `favicon.ico` — 32×32px
-- `favicon.svg` — Vector para navegadores modernos
-- `apple-touch-icon.png` — 180×180px para iOS
-- `favicon-96x96.png` — 96×96px para Android
-
-**Herramienta recomendada:** https://realfavicongenerator.net
-
-`siteConfig.themeColor` → color de barra en Chrome mobile.
-
-## 🌐 Dominio y CNAME
-
-1. Editar `public/CNAME` con el dominio real (una línea, sin https://):
-
-```
-www.tudominio.com
-```
-
-2. Editar `public/robots.txt`:
-
-```
-Sitemap: https://www.tudominio.com/sitemap.xml
-```
-
-3. Editar `VITE_SITE_URL` en `.env`:
-
-```
-VITE_SITE_URL=https://www.tudominio.com
-```
-
-4. Configurar DNS:
-   - CNAME: `www` → `USERNAME.github.io`
-   - O registros A para dominio apex:
-     - 185.199.108.153
-     - 185.199.109.153
-     - 185.199.110.153
-     - 185.199.111.153
-
-## 🔍 SEO
-
-### Schema.org en index.html
-
-Reemplazar todos los `PLACEHOLDER_` con datos reales:
-
-```html
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  "name": "English Academy",
-  "url": "https://www.tudominio.com",
-  "logo": "https://www.tudominio.com/images/logo.svg",
-  // ...
-}
-</script>
-```
-
-### Meta tags por página
-
-Editar `src/data/pageMeta.ts`:
-
-```typescript
-export const pageMeta: Record<string, PageMetaProps> = {
-  '/': {
-    title: 'Título de la home',
-    description: 'Descripción SEO',
-    image: '/images/og/og-home.jpg',
-    url: 'https://www.tudominio.com/',
-  },
-  // ...
-}
-```
-
-### OG Images
-
-Reemplazar placeholders en `/public/images/og/`:
-
-- `og-home.jpg` — 1200×630px
-- `og-nosotros.jpg`
-- `og-clases.jpg`
-- `og-examenes.jpg`
-- `og-viajes.jpg`
-- `og-contacto.jpg`
-- `og-default.jpg`
-
-## 🚀 Deploy
-
-### Desarrollo local:
-
-```bash
-npm install
-npm run dev
-```
-
-### Build:
-
-```bash
-npm run build
-```
-
-### Deploy a GitHub Pages:
-
-```bash
-npm run deploy
-```
-
-### Checklist primer deploy:
-
-- [ ] Dominio real en `public/CNAME`
-- [ ] PLACEHOLDER_DOMAIN reemplazado en `robots.txt` e `index.html`
-- [ ] `VITE_SITE_URL` configurado en `.env`
-- [ ] GitHub Pages habilitado: Settings → Pages → Branch: gh-pages
-- [ ] Dominio personalizado configurado en Settings → Pages
-- [ ] "Enforce HTTPS" activado cuando propague el DNS
-
-## 📁 Estructura del proyecto
-
-```
-/
-├── public/
-│   ├── CNAME
-│   ├── 404.html
-│   ├── robots.txt
-│   ├── favicon.*
-│   ├── apple-touch-icon.png
-│   └── images/
-│       ├── hero/
-│       ├── og/
-│       ├── classes/
-│       ├── exams/
-│       ├── trips/
-│       ├── team/
-│       ├── awards/
-│       └── testimonials/
-├── src/
-│   ├── components/
-│   │   ├── layout/
-│   │   │   ├── Navbar.tsx
-│   │   │   ├── Footer.tsx
-│   │   │   ├── PageMeta.tsx
-│   │   │   └── ScrollToTop.tsx
-│   │   └── ui/
-│   │       ├── WhatsAppButton.tsx
-│   │       ├── BackToTop.tsx
-│   │       ├── Lightbox.tsx
-│   │       └── skeletons/
-│   ├── pages/
-│   │   ├── Home.tsx
-│   │   ├── About.tsx
-│   │   ├── Classes.tsx
-│   │   ├── Exams.tsx
-│   │   ├── Trips.tsx
-│   │   ├── Contact.tsx
-│   │   ├── Privacy.tsx
-│   │   └── NotFound.tsx
-│   ├── data/
-│   │   ├── siteConfig.ts
-│   │   ├── pageMeta.ts
-│   │   ├── classes.ts
-│   │   ├── exams.ts
-│   │   ├── trips.ts
-│   │   ├── awards.ts
-│   │   ├── team.ts
-│   │   └── testimonials.ts
-│   ├── hooks/
-│   │   └── useScrollReveal.ts
-│   ├── router/
-│   │   └── index.tsx
-│   ├── App.tsx
-│   ├── main.tsx
-│   └── index.css
-├── .env.example
-├── vite.config.ts
-├── tailwind.config.ts
-├── package.json
-└── README.md
-```
-
-## 🛠️ Tecnologías
-
-- **React 18** + TypeScript
-- **Vite** — bundler y dev server
-- **Tailwind CSS** — estilos
-- **shadcn/ui** — componentes UI
-- **React Router v6** — enrutamiento
-- **Framer Motion** — animaciones
-- **Recharts** — gráficos (exámenes)
-- **react-helmet-async** — meta tags
-- **vite-plugin-sitemap** — sitemap.xml
-
-## 📄 Licencia
-
-Este proyecto es propiedad de English Academy. Todos los derechos reservados.
+# Steps School of English · sitio web
+
+Sitio de Steps, escuela de inglés para chicos y adolescentes en Mar del Plata. React + TypeScript + Vite + Tailwind, publicado en GitHub Pages en `benjamonti.me` (pronto `steps.com.ar`).
+
+## Pendientes
+
+### TODO en el código
+
+Están marcados con `TODO`; buscalos en el proyecto.
+
+- [ ] `src/data/classes.ts`: preguntas frecuentes por completar: ¿Cuánto cuesta? · ¿Qué libros usan? · ¿Hay cursos para adultos? · ¿Sigue el curso online de B2 First?
+- [ ] `src/data/testimonials.ts`: los testimonios de viaje 2 y 3 (Sofi y Eze) son resúmenes. Reemplazarlos por la cita exacta de los videos de Instagram y confirmar el permiso de las familias.
+
+### Para hacer
+
+- [ ] Subir las imágenes que faltan (sección Imágenes → Falta subir).
+- [ ] Migrar el dominio a `steps.com.ar` (sección Dominio).
+- [ ] Volver a mostrar "Lo que dicen quienes viajaron" cuando tengas los testimonios. Los textos van en `src/data/testimonials.ts`; la sección está comentada en `Trips.tsx`: descomentá el bloque, el import de `testimonials` y la línea de `tripTestimonials`.
+
+### Textos para revisar
+
+- [ ] Ahora se preparan A1, A2 y B1 además de B2 y C1, pero estos textos nombran solo B2 First y C1 Advanced, y algunos mencionan Movers:
+  - Tarjeta "Exámenes Internacionales" de Inicio (`previewCards` en `Home.tsx`).
+  - Pregunta "¿Qué pasa después de 6th Level?" (`classes.ts`).
+  - Descripción de Kids 4 (`classes.ts`): "pueden rendir Movers".
+- [ ] Exámenes: el botón final dice "Solicitar diagnóstico gratuito", pero el texto ya no dice que sea gratis.
+- [ ] Footer: dice "Más de 25 años formando estudiantes…" (`experienceYears` en `siteConfig.ts`) y ¿Quiénes somos? dice "más de 30 años".
+- [ ] SEO: las descripciones de `src/data/pageMeta.ts` siguen con texto de la plantilla ("niños, adolescentes y adultos", "profesores nativos y certificados", "Londres, Oxford, Cambridge y más destinos").
+- [ ] Página 404: el título de la pestaña dice "Página no encontrada | English Academy" (`NotFound.tsx`).
+
+### Mejoras sugeridas
+
+- [ ] Niveles: `line-clamp-3` en `Classes.tsx` corta las descripciones a 3 líneas. Con los textos actuales se cortan 4 tarjetas en un celular de 390px (Kids 1, Kids 3, Kids 4 y Juniors 1), 13 a 640px y 8 a 1024px. Con `line-clamp-5` se ven completas en todos los anchos (medido de 360 a 1440px).
+- [ ] Exámenes: el paso 5 del proceso ("Entrega de certificados") muestra el mismo ícono que el paso 1, porque `'Certificate'` no está en `processIcons` (`Exams.tsx`).
+- [ ] Galerías: al ampliar una foto, el alt es genérico ("Imagen 3"); las miniaturas sí tienen el correcto. Se cambia en `Lightbox.tsx`.
+- [ ] Limpieza: borrar las imágenes sin uso y los restos de la plantilla (secciones al final).
+
+## Comandos
+
+| Comando | Para qué |
+|---|---|
+| `npm install` | Instalar dependencias (la primera vez) |
+| `npm run dev` | Ver el sitio en local mientras editás |
+| `npm run build` | Compilar a `dist/`. Si compila sin errores, se puede publicar |
+| `npm run preview` | Ver la versión compilada |
+| `npm run lint` | Revisar el código |
+
+**Publicar:** es automático. Cada push a `main` corre `.github/workflows/deploy.yml`, que compila y sube el sitio a GitHub Pages.
+
+## Páginas
+
+| URL | Archivo | Secciones, en orden |
+|---|---|---|
+| `/` | `src/pages/Home.tsx` | Hero · ¿Quiénes somos? · Reconocimientos · ¿Qué ofrecemos? · ¿Empezamos? |
+| `/nuestras-clases` | `src/pages/Classes.tsx` | Encabezado · Nuestra Metodología · Proyectos y Open Classes · Nuestros Niveles · Preguntas Frecuentes · Llamado final |
+| `/examenes-internacionales` | `src/pages/Exams.tsx` | Encabezado · ¿Qué son los Exámenes Internacionales? · Niveles MCER · Proceso de Preparación · Llamado final |
+| `/viajes-a-inglaterra` | `src/pages/Trips.tsx` | Encabezado · ¿Qué es un Viaje de Inmersión? · Por qué viajar con Steps · Qué incluye el viaje · Galería · Testimonios (comentada por ahora) · Preguntas frecuentes · Llamado final |
+| `/contacto` | `src/pages/Contact.tsx` | Encabezado · WhatsApp, redes y mapa · Datos de contacto y horarios |
+| cualquier otra | `src/pages/NotFound.tsx` | 404 que vuelve al inicio a los 3 segundos |
+
+## Dónde está cada texto
+
+Los títulos de sección, bajadas, párrafos y llamados finales están escritos directo en cada página (`src/pages/`). Las listas (tarjetas, niveles, ítems, preguntas) están en `src/data/` o en un array al principio de la página. Para encontrar un texto, lo más rápido es buscarlo en todo el proyecto (Ctrl+Shift+F en VS Code).
+
+| Qué | Dónde |
+|---|---|
+| Teléfono, email, dirección, WhatsApp, Instagram, Facebook, horarios y mapa | `src/data/siteConfig.ts` |
+| Mensaje que se precarga al abrir WhatsApp | `siteConfig.ts` → `whatsappDefaultMessage` |
+| Frase grande del hero | `siteConfig.ts` → `tagline` |
+| Frase del footer ("Más de 25 años…") | `siteConfig.ts` → `experienceYears` (el número) y `experienceText` (la frase) |
+| Franja de reconocimientos y tarjetas de "¿Qué ofrecemos?" | `recognitions` y `previewCards`, al principio de `Home.tsx` |
+| Metodología, niveles (descripción y foto) y preguntas de Clases | `src/data/classes.ts`. En la tarjeta de cada nivel se ven hasta 3 líneas de descripción (`line-clamp-3` en `Classes.tsx`) |
+| Nombres de los grupos de niveles (Kids, Juniors, Teens, Exams) | `levelGroups`, al principio de `Classes.tsx` |
+| Fotos de "Proyectos y Open Classes" | `projectImages`, al principio de `Classes.tsx` |
+| Niveles MCER y pasos del proceso | `src/data/exams.ts`. `highlighted: true` pinta la fila de azul y le agrega "Preparamos" |
+| "Por qué viajar con Steps", "Qué incluye el viaje" y preguntas del viaje | `src/data/trips.ts` → `whyEngland`, `tripIncludes`, `tripFaq` |
+| Fotos de la galería de viajes | `galleryImages`, al principio de `Trips.tsx` |
+| Testimonios | `src/data/testimonials.ts`. Solo se usan los `type: 'trip'`, en Viajes (la sección está comentada por ahora) |
+| Título de la pestaña y texto que aparece en Google y al compartir el link | `src/data/pageMeta.ts`, uno por página |
+| Menú de arriba | `navLinks` en `src/components/layout/Navbar.tsx` |
+| Footer | `src/components/layout/Footer.tsx` (tiene su propia lista `navLinks`) |
+| Colores | `tailwind.config.ts` (`primary`, `accent`, `cream`). El coral de íconos y links (`#d65661`) y el fondo del footer (`#16495d`) están escritos directo en los componentes |
+
+**Íconos:** los ítems de `src/data/` dicen qué ícono usan (`icon: 'Users'`, con los nombres de [lucide.dev](https://lucide.dev/icons)). Si ponés uno nuevo, agregalo también al mapa de íconos de la página (`iconMap`, `processIcons`, `whyEnglandIcons` o `includeIcons`); si no está en el mapa, se muestra el ícono por defecto.
+
+## Imágenes
+
+Todas van en `public/images/`, y las rutas de esta sección son relativas a esa carpeta. En el código se escriben sin `public`: el archivo `public/images/home/clases.jpg` es `/images/home/clases.jpg`.
+
+- Usá el nombre exacto, en minúsculas y con la misma extensión. En GitHub Pages `Foto.JPG` y `foto.jpg` son archivos distintos.
+- Las fotos de iPhone suelen venir en `.heic`, que no todos los navegadores muestran: exportalas como JPG.
+- Las fotos del celular pesan varios MB. Antes de subirlas, achicalas a unos 1600 px de ancho (el hero, 1920 px) y comprimilas, por ejemplo con squoosh.app.
+- Las fotos se recortan para llenar el formato indicado, así que conviene que lo importante quede en el centro.
+- Para cambiar una foto que ya está, reemplazá el archivo con el mismo nombre. Si le cambiás el nombre o la carpeta, cambiá también la ruta en el archivo que indica cada sección.
+
+### Falta subir
+
+Hasta que estén, en esos lugares se ve una imagen rota.
+
+- [x] `awards/oxford-quality.png`
+- [ ] `awards/cambridge-preparation-centre.png`
+- [ ] `home/clases.jpg`, `home/examenes.jpg` y `home/viajes.jpg`
+- [ ] `classes/projects/1.jpg` a `8.jpg`
+- [ ] `classes/levels/`: las 16 fotos de niveles
+
+### Inicio (rutas en `src/pages/Home.tsx`)
+
+| Archivo | Qué va | Formato |
+|---|---|---|
+| `hero/hero.jpg` | Fondo del hero | Pantalla completa |
+| `about/history.jpg` | ¿Quiénes somos? | 16:9 en celular, 4:3 en compu |
+| `awards/oxford-quality.png` | Logo Oxford Quality | 64 px de alto, ancho libre. PNG con fondo transparente o blanco |
+| `awards/cambridge-preparation-centre.png` | Logo Cambridge English Preparation Centre | Igual que el anterior |
+| `home/clases.jpg` | Tarjeta "Nuestras Clases": Little Steps en una Open Class | 16:9 |
+| `home/examenes.jpg` | Tarjeta "Exámenes Internacionales": alumnos con sus certificados de Cambridge | 16:9 |
+| `home/viajes.jpg` | Tarjeta "Viajes a Inglaterra": alumnos de Steps en Londres | 16:9 |
+
+### Nuestras Clases (rutas en `src/pages/Classes.tsx` y `src/data/classes.ts`)
+
+| Archivo | Qué va | Formato |
+|---|---|---|
+| `classes/methodology.jpg` | Metodología: alumnos usando la pantalla interactiva | 16:9 |
+| `classes/projects/1.jpg` a `8.jpg` | Galería "Proyectos y Open Classes" (lista abajo) | Cuadrada; al tocarla se ve entera |
+| `classes/levels/*.jpg` | Una foto por nivel (lista abajo) | 4:3 |
+
+Proyectos, en orden:
+
+1. Animals Open Class de Kids con las familias
+2. Kids 3 y una clase inspirada en Matilda
+3. Kids 2 y su Family Cooking Book
+4. Kids 4 convierte el Playroom en sala de teatro
+5. Kids 3 y sus maquetas inspiradas en Elementos
+6. Country Fair de 1st Level
+7. Talk show de 3rd Level
+8. Mock trial de 5th Level
+
+Niveles: `little-steps.jpg`, `first-steps.jpg`, `kids-1.jpg`, `kids-2.jpg`, `kids-3.jpg`, `kids-4.jpg`, `juniors-1.jpg`, `juniors-2.jpg`, `1st-level.jpg`, `2nd-level.jpg`, `3rd-level.jpg`, `4th-level.jpg`, `5th-level.jpg`, `6th-level.jpg`, `b2-first.jpg`, `c1-advanced.jpg`.
+
+### Exámenes Internacionales (ruta en `src/pages/Exams.tsx`)
+
+| Archivo | Qué va | Formato |
+|---|---|---|
+| `exams/certificate.jpg` | ¿Qué son los Exámenes Internacionales?: entrega de certificados en Steps | 4:3 |
+
+### Viajes a Inglaterra (rutas en `src/pages/Trips.tsx`)
+
+| Archivo | Qué va | Formato |
+|---|---|---|
+| `trips/immersion.jpg` | ¿Qué es un Viaje de Inmersión?: el grupo en el viaje 2026 | 4:3 |
+| `trips/gallery/1.jpg` a `8.jpg` | Galería (lista abajo) | Cuadrada; al tocarla se ve entera |
+
+Galería, en orden:
+
+1. Oxford, Bridge of Sighs
+2. Oxford, Radcliffe Camera
+3. Grupo de Steps con su bandera, 2026
+4. Chinatown, Londres
+5. King's College, Cambridge
+6. Sacré-Cœur, París
+7. Stonehenge
+8. Torre Eiffel, París
+
+### Generales
+
+| Archivo | Qué es | Ruta en |
+|---|---|---|
+| `logo.svg` | Logo del menú y del footer (en el footer se ve blanco) | `Navbar.tsx`, `Footer.tsx` |
+| `og/og-home.jpg`, `og-clases.jpg`, `og-examenes.jpg`, `og-viajes.jpg`, `og-contacto.jpg` | Vista previa al compartir el link de cada página (WhatsApp, redes). 1200×630 | `src/data/pageMeta.ts` |
+| `og/og-default.jpg` | Vista previa de las páginas sin imagen propia (la 404) | `siteConfig.ts` → `ogImage` |
+| Favicons, en `public/` y no en `images/`: `favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`, `apple-touch-icon.png`, `android-chrome-192x192.png`, `android-chrome-512x512.png` | Ícono de la pestaña y del acceso directo en el celular | `index.html`, `public/site.webmanifest` |
+
+### Imágenes sin uso
+
+No aparecen en ninguna página; se pueden borrar sin romper nada:
+
+- Carpetas enteras: `team/`, `testimonials/`, `classes/kids/`, `classes/adults/`
+- En `exams/`: todo menos `certificate.jpg`
+- En `hero/`: todo menos `hero.jpg`
+- En `trips/`: todo menos `immersion.jpg` y `gallery/`
+- `og/og-nosotros.jpg`
+
+## Componentes propios
+
+| Archivo | Qué hace |
+|---|---|
+| `src/components/ui/Gallery.tsx` | Grilla de fotos con visor ampliado. La usan Clases y Viajes; recibe `images` (`src` y `alt` de cada foto) |
+| `src/components/ui/FaqList.tsx` | Preguntas desplegables. La usan Clases y Viajes; recibe `items` (`question` y `answer`) |
+| `src/components/ui/WhatsAppButton.tsx` | Botón flotante de WhatsApp, solo en celular |
+| `src/components/layout/PageMeta.tsx` | Título de la pestaña, descripción y datos para Google y redes |
+| `src/components/layout/Navbar.tsx`, `Footer.tsx` | Menú y pie de página |
+
+Si cambiás `Gallery.tsx` o `FaqList.tsx`, el cambio se ve en las dos páginas. El resto de `src/components/ui/` son componentes de la librería shadcn que el sitio no usa.
+
+## Dominio
+
+Hoy el sitio está en `https://benjamonti.me` (`www.benjamonti.me` redirige ahí). `steps.qzz.io` era un dominio de prueba y ya no se usa. Pronto se migra a `steps.com.ar`.
+
+Para migrar:
+
+1. En el proveedor del dominio, apuntar el DNS a GitHub Pages: registros A a `185.199.108.153`, `185.199.109.153`, `185.199.110.153` y `185.199.111.153`, y un CNAME de `www` a `<usuario>.github.io`.
+2. GitHub → Settings → Pages → Custom domain: poner el dominio nuevo. Esto es lo que define dónde se publica; Pages admite un solo dominio, así que `benjamonti.me` deja de mostrar el sitio.
+3. Cambiar el dominio en el código y hacer push:
+   - `vite.config.ts` → `siteUrl`: dominio de `sitemap.xml` y `robots.txt`.
+   - `src/data/siteConfig.ts` → `siteUrl`: links canónicos e imágenes al compartir.
+   - `public/CNAME`: con el deploy por GitHub Actions no se usa, pero conviene dejarlo igual para no confundirse.
+4. Cuando el DNS propague, activar "Enforce HTTPS" en Settings → Pages.
+
+`sitemap.xml` y `robots.txt` no están en `public/`: los genera `vite-plugin-sitemap` en cada build, con la configuración de `vite.config.ts`.
+
+`public/404.html` y el script de `index.html` hacen que funcionen las URLs internas en GitHub Pages (por ejemplo, entrar directo a `/contacto`). No hace falta tocarlos.
+
+## Agregar una página
+
+1. Crear el archivo en `src/pages/`.
+2. Agregar la ruta en `src/router/index.tsx`.
+3. Agregar el link en `navLinks` de `Navbar.tsx` y de `Footer.tsx`.
+4. Agregar título y descripción en `src/data/pageMeta.ts`.
+5. Agregar la URL en `dynamicRoutes` de `vite.config.ts`, para el sitemap.
+
+## Restos de la plantilla
+
+El sitio arrancó de una plantilla genérica. Esto quedó en el código pero no se muestra en ningún lado, así que editarlo no cambia nada:
+
+- `src/data/awards.ts` y `src/data/team.ts`
+- `trips` en `src/data/trips.ts`; `exams` y `comparisonTable` en `src/data/exams.ts`
+- En `testimonials.ts`: los testimonios `type: 'class'` y `'exam'`, y el campo `photo`
+- En `siteConfig.ts`: `tabTitle`, `primaryColor`, `accentColor` y `themeColor`. El color de la barra del navegador en celular está en `index.html` y en `site.webmanifest`
+- `src/App.css` e `info.md`

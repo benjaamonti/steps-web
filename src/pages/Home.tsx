@@ -26,26 +26,44 @@ const itemVariants = {
   },
 }
 
+const recognitions = [
+  {
+    logo: '/images/awards/oxford-quality.png',
+    alt: 'Oxford Quality, Oxford University Press',
+    title: 'Programa Oxford Quality',
+    description: 'Seleccionados por Oxford University Press por nuestra calidad académica.',
+  },
+  {
+    logo: '/images/awards/cambridge-preparation-centre.png',
+    alt: 'Cambridge English Preparation Centre',
+    title: 'Centro de preparación oficial de Cambridge',
+    description: 'Preparamos e inscribimos a nuestros alumnos a través de Buenos Aires Open Centre, y fuimos sede de exámenes en Steps.',
+  },
+]
+
 const previewCards = [
   {
     icon: GraduationCap,
     title: 'Nuestras Clases',
-    description: 'Clases para niños, adolescentes con grupos reducidos.',
-    image: '/images/classes/methodology.jpg',
+    description: 'Niveles para chicos y adolescentes, de Little Steps a 6th Level. Grupos reducidos, pantallas interactivas, proyectos y Open Classes con las familias.',
+    image: '/images/home/clases.jpg',
+    alt: 'Little Steps en una Open Class',
     link: '/nuestras-clases',
   },
   {
     icon: FileText,
     title: 'Exámenes Internacionales',
-    description: 'Te brindamos las herramientas necesarias para certificar tu nivel de inglés a nivel internacional. Cursos para B1 Preliminary, B2 First y C1 Advanced',
-    image: '/images/exams/certificate.jpg',
+    description: 'Preparación para B2 First y C1 Advanced de la Universidad de Cambridge: tres clases semanales de 90 minutos, simulacros y seguimiento personalizado.',
+    image: '/images/home/examenes.jpg',
+    alt: 'Alumnos con sus certificados de Cambridge',
     link: '/examenes-internacionales',
   },
   {
     icon: Plane,
     title: 'Viajes a Inglaterra',
-    description: 'Viajes de estudio al Reino Unido.',
-    image: '/images/trips/immersion.jpg',
+    description: 'Dos semanas en una summer school británica, excursiones por Inglaterra y, en muchos viajes, cierre en París. Para chicos de 13 a 17 años. Próximo viaje: julio 2028.',
+    image: '/images/home/viajes.jpg',
+    alt: 'Alumnos de Steps en Londres',
     link: '/viajes-a-inglaterra',
   },
 ]
@@ -133,10 +151,10 @@ export default function Home() {
               </h2>
               <div className="space-y-4 text-lg text-gray-600">
                 <p>
-                  Con años de experiencia en la enseñanza del idioma inglés, nos dedicamos a brindar un espacio donde el aprendizaje se convierte en una experiencia enriquecedora y dinámica.
+                  Steps es una escuela de inglés para chicos y adolescentes en Mar del Plata. Hace más de 30 años que Miss Carol y John enseñan inglés, y hoy lo hacen junto a un equipo de teachers que acompaña a cada grupo desde Little Steps hasta los exámenes internacionales.
                 </p>
                 <p>
-                  Nuestra historia se basa en el compromiso con cada uno de nuestros alumnos, acompañándolos paso a paso para que puedan alcanzar sus metas y comunicarse con confianza en un mundo globalizado.
+                  En Steps se aprende haciendo. Cada grupo prepara proyectos en inglés (obras de teatro, museos, ferias, debates) y abrimos el aula a las familias en nuestras Open Classes para mostrar lo que aprendieron. Trabajamos con grupos reducidos y atención personalizada.
                 </p>
               </div>
             </motion.div>
@@ -160,6 +178,35 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Recognitions 
+      <section className="py-20 lg:py-28 bg-cream">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+          >
+            {recognitions.map((item, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                className="bg-white p-6 rounded-xl text-center"
+              >
+                <img
+                  src={item.logo}
+                  alt={item.alt}
+                  className="h-16 w-auto object-contain mx-auto mb-4"
+                />
+                <h3 className="font-semibold text-primary mb-2">{item.title}</h3>
+                <p className="text-gray-600 text-sm">{item.description}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section> */}
+
       {/* Preview Cards */}
       <section className="py-20 lg:py-28 bg-cream">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -174,7 +221,7 @@ export default function Home() {
               ¿Qué ofrecemos?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Descubrí todas las opciones que tenemos para vos
+              Clases para cada edad, preparación para los exámenes de Cambridge y viajes de estudio a Inglaterra.
             </p>
           </motion.div>
 
@@ -194,7 +241,7 @@ export default function Home() {
                 <div className="aspect-video overflow-hidden">
                   <img
                     src={card.image}
-                    alt={card.title}
+                    alt={card.alt}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>

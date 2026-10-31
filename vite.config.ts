@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 import sitemap from 'vite-plugin-sitemap'
 
-const siteUrl = process.env.VITE_SITE_URL ?? 'https://steps.qzz.io'
+const siteUrl = process.env.VITE_SITE_URL ?? 'https://benjamonti.me'
 
 export default defineConfig({
   base: '/',
@@ -11,24 +11,22 @@ export default defineConfig({
     react(),
     sitemap({
       hostname: siteUrl,
+      // '/' no va acá: el plugin ya la toma de index.html
       dynamicRoutes: [
-        '/',
-        '/nosotros',
         '/nuestras-clases',
         '/examenes-internacionales',
         '/viajes-a-inglaterra',
         '/contacto',
-        '/privacidad',
       ],
+      exclude: ['/404'],
+      robots: [{ userAgent: '*', allow: '/', disallow: '/404' }],
       changefreq: 'monthly',
       priority: {
         '/': 1.0,
         '/nuestras-clases': 0.9,
         '/examenes-internacionales': 0.9,
         '/viajes-a-inglaterra': 0.8,
-        '/nosotros': 0.7,
         '/contacto': 0.7,
-        '/privacidad': 0.3,
       },
       lastmod: new Date(),
     }),

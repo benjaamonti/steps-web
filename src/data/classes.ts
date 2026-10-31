@@ -7,7 +7,6 @@ export interface MethodologyPillar {
 export interface ClassLevel {
   group: 'kids' | 'juniors' | 'teens' | 'exams'
   level: string
-  ageRange?: string
   description: string
   image: string
 }
@@ -18,27 +17,27 @@ export interface FAQ {
 }
 
 export const methodology = {
-  intro: 'Nuestra metodología se basa en el enfoque comunicativo, donde el alumno es el protagonista de su aprendizaje. Creemos que aprender un idioma va más allá de memorizar reglas gramaticales: se trata de comunicarse de manera efectiva en situaciones reales.',
+  intro: 'En Steps el inglés se usa desde la primera clase. Cada nivel trabaja con proyectos que terminan en algo concreto: una obra de teatro, un museo, un noticiero, una feria de países o un juicio simulado. Así los chicos usan el idioma para crear, presentar y compartir.',
   pillars: [
     {
       icon: 'MessageCircle',
-      title: 'Enfoque Comunicativo',
-      description: 'Priorizamos la comunicación real desde el primer día. Los alumnos practican speaking y listening en cada clase.',
+      title: 'Aprender jugando',
+      description: 'Juegos, canciones y cuentos en los niveles Kids. En Teens siguen aprendiendo con juegos, pero mucho más complejos.',
     },
     {
       icon: 'Users',
-      title: 'Clases Reducidas',
-      description: 'Grupos de máximo 12 alumnos para garantizar atención personalizada y mayor participación.',
+      title: 'Open Classes',
+      description: 'Abrimos el aula para que las familias vean lo que aprendieron sus hijos y jueguen con ellos.',
     },
     {
       icon: 'BookOpen',
-      title: 'Materiales Actualizados',
-      description: 'Utilizamos libros de editoriales internacionales y material auténtico: videos, podcasts y artículos actuales.',
+      title: 'Pantallas interactivas',
+      description: 'Nuestras aulas tienen pantallas interactivas para trabajar con juegos, videos y actividades digitales en cada clase.',
     },
     {
       icon: 'Target',
-      title: 'Objetivos Claros',
-      description: 'Cada curso tiene metas definidas según el Marco Común Europeo de Referencia (MCER).',
+      title: 'Proyectos en cada nivel',
+      description: 'Masterchef Kids, Zootopia, Matilda, Bake Off, talk shows, debates y mock trials: cada grupo tiene su proyecto del año.',
     },
   ] as MethodologyPillar[],
 }
@@ -48,140 +47,127 @@ export const classLevels: ClassLevel[] = [
   {
     group: 'kids',
     level: 'Little Steps',
-    ageRange: '6-7 años',
-    description: 'Primer acercamiento al inglés con juegos, canciones y actividades guiadas para construir confianza desde el inicio.',
-    image: '/images/classes/kids/starter.jpg',
+    description: 'Primer contacto con el inglés a través de cuentos, juegos y canciones. A fin de año preparan una Open Class para sus familias.',
+    image: '/images/classes/levels/little-steps.jpg',
   },
   {
     group: 'kids',
     level: 'First Steps',
-    ageRange: '7-8 años',
-    description: 'Consolidación de vocabulario básico, rutinas simples y primeras estructuras para comunicarse en clase.',
-    image: '/images/classes/kids/elementary.jpg',
+    description: 'Nivel exclusivo para chicos de segundo grado. Aprenden jugando, con clases dinámicas y participativas.',
+    image: '/images/classes/levels/first-steps.jpg',
   },
   {
     group: 'kids',
     level: 'Kids 1',
-    ageRange: '8-9 años',
-    description: 'Desarrollo de comprensión oral y escrita con actividades dinámicas y vocabulario cotidiano.',
-    image: '/images/classes/kids/preintermediate.jpg',
+    description: 'Nivel inicial para chicos de 3º y 4º grado. Cocinan en Masterchef Kids, arman el Big Sandwich de Pete the Cat y hacen obras de teatro.',
+    image: '/images/classes/levels/kids-1.jpg',
   },
   {
     group: 'kids',
     level: 'Kids 2',
-    ageRange: '9-10 años',
-    description: 'Avance en lectura, escritura y expresión oral con mayor autonomía y práctica guiada.',
-    image: '/images/classes/kids/intermediate.jpg',
+    description: 'Trabajan con películas como Zootopia y The Lego Movie, arman su Family Cooking Book y se animan a un Talent Show.',
+    image: '/images/classes/levels/kids-2.jpg',
   },
   {
     group: 'kids',
     level: 'Kids 3',
-    ageRange: '10-11 años',
-    description: 'Profundización de contenidos y estructuras para ganar fluidez y seguridad al comunicarse.',
-    image: '/images/classes/kids/upperintermediate.jpg',
+    description: 'Leen y actúan Matilda, inventan su propia ciudad con If I Were a City… e investigan animales marinos y la historia de Mar del Plata.',
+    image: '/images/classes/levels/kids-3.jpg',
   },
   {
     group: 'kids',
     level: 'Kids 4',
-    ageRange: '11-12 años',
-    description: 'Nivel de cierre de la etapa kids con más lectura, producción oral y preparación para juniors.',
-    image: '/images/classes/kids/intermediate.jpg',
+    description: 'Escriben textos comparativos sobre animales, montan su propio museo y pueden rendir Movers, el examen de Cambridge para chicos.',
+    image: '/images/classes/levels/kids-4.jpg',
   },
   // Juniors
   {
     group: 'juniors',
     level: 'Juniors 1',
-    ageRange: '12-13 años',
-    description: 'Transición hacia niveles más analíticos, con foco en comunicación, gramática y vocabulario ampliado.',
-    image: '/images/classes/adults/preintermediate.jpg',
+    description: 'El paso de Kids a Teens, con más lectura y vocabulario. En Juniors resolvieron junto a sus familias el misterio de The Canterville Ghost.',
+    image: '/images/classes/levels/juniors-1.jpg',
   },
   {
     group: 'juniors',
     level: 'Juniors 2',
-    ageRange: '13-14 años',
-    description: 'Desarrollo de fluidez, comprensión lectora y producción escrita para consolidar el paso a teens.',
-    image: '/images/classes/adults/intermediate.jpg',
+    description: 'Investigan y presentan su propio Museo de Animales Argentinos, todo en inglés.',
+    image: '/images/classes/levels/juniors-2.jpg',
   },
   // Teens
   {
     group: 'teens',
     level: '1st level',
-    ageRange: '14-15 años',
-    description: 'Inicio del ciclo teens con práctica integral de las cuatro habilidades y comunicación más espontánea.',
-    image: '/images/classes/adults/elementary.jpg',
+    description: 'Arrancan Teens con la World Fair: investigan un país y lo presentan con comidas, música y juegos.',
+    image: '/images/classes/levels/1st-level.jpg',
   },
   {
     group: 'teens',
     level: '2nd level',
-    ageRange: '15-16 años',
-    description: 'Profundización de gramática, lectura y speaking con mayor independencia en el uso del idioma.',
-    image: '/images/classes/adults/preintermediate.jpg',
+    description: 'Hacen noticieros de cuentos clásicos (Fairy Tale News), campañas y una Time Capsule del año.',
+    image: '/images/classes/levels/2nd-level.jpg',
   },
   {
     group: 'teens',
     level: '3rd level',
-    ageRange: '16-17 años',
-    description: 'Mayor precisión y fluidez para expresarse en contextos académicos y cotidianos con soltura.',
-    image: '/images/classes/adults/intermediate.jpg',
+    description: 'Talk shows, sketches de comedia y su propio noticiero. Desde este nivel pueden sumarse al viaje a Inglaterra.',
+    image: '/images/classes/levels/3rd-level.jpg',
   },
   {
     group: 'teens',
     level: '4th level',
-    ageRange: '17 años',
-    description: 'Consolidación del nivel intermedio alto con énfasis en comprensión y producción más compleja.',
-    image: '/images/classes/adults/upperintermediate.jpg',
+    description: 'Bake Off y Cookie Competition, versiones propias de cuentos clásicos y un Game Day que organizan para Kids 2 y Kids 3.',
+    image: '/images/classes/levels/4th-level.jpg',
   },
   {
     group: 'teens',
     level: '5th level',
-    ageRange: '17+ años',
-    description: 'Preparación avanzada con foco en argumentación, escritura y comunicación académica.',
-    image: '/images/classes/adults/advanced.jpg',
+    description: 'Debates inspirados en Freedom Writers y mock trials, como el juicio por el robo del Louvre.',
+    image: '/images/classes/levels/5th-level.jpg',
   },
   {
     group: 'teens',
     level: '6th level',
-    ageRange: '17+ años',
-    description: 'Nivel de cierre teens para llegar con seguridad a la preparación de exámenes internacionales.',
-    image: '/images/classes/adults/conversation.jpg',
+    description: 'Escriben sus guiones y presentan obras de títeres para los niveles más chicos. Es el último nivel de Teens.',
+    image: '/images/classes/levels/6th-level.jpg',
   },
   {
     group: 'exams',
     level: 'B2 First',
-    description: 'Preparación específica para el examen B2 First con foco en estrategia, práctica y confianza en examen.',
-    image: '/images/exams/certificate.jpg',
+    description: 'Preparación específica con tres clases semanales de 90 minutos, simulacros y seguimiento personalizado.',
+    image: '/images/classes/levels/b2-first.jpg',
   },
   {
     group: 'exams',
     level: 'C1 Advanced',
-    description: 'Preparación específica para el examen C1 Advanced con práctica intensiva de todas las partes del examen.',
-    image: '/images/exams/hero-exams.jpg',
+    description: 'El examen que sigue a B2 First, con la misma modalidad: tres clases de 90 minutos por semana y simulacros de examen.',
+    image: '/images/classes/levels/c1-advanced.jpg',
   },
 ]
 
+// TODO FAQ pendientes de completar con datos de Steps: ¿Cuánto cuesta? · ¿Qué libros usan? · ¿Hay cursos para adultos? · ¿Sigue el curso online de B2 First?
 export const faq: FAQ[] = [
   {
-    question: '¿Cómo sé qué nivel me corresponde?',
-    answer: 'Realizamos una evaluación de nivel gratuita y sin compromiso. Consiste en una prueba escrita breve y una conversación con uno de nuestros profesores para evaluar tus habilidades de speaking. Al finalizar, te recomendamos el nivel más adecuado para vos.',
+    question: '¿Desde qué edad pueden empezar?',
+    answer: 'Little Steps es nuestro primer nivel, para los más chicos. First Steps es para chicos de 2º grado, y Kids 1 es el nivel inicial para chicos de 3º y 4º grado que empiezan con el inglés.',
   },
   {
-    question: '¿Cuántos alumnos hay por clase?',
-    answer: 'Nuestros grupos son reducidos, con un máximo de 12 alumnos por clase. Esto nos permite dar atención personalizada a cada estudiante y garantizar que todos participen activamente durante las clases.',
+    question: 'Mi hijo ya sabe inglés, ¿en qué nivel entra?',
+    answer: 'Escribinos por WhatsApp y coordinamos una nivelación para ubicarlo en el grupo que le corresponde.',
   },
   {
-    question: '¿Puedo cambiar de nivel durante el año?',
-    answer: 'Sí, si el profesor considera que has progresado lo suficiente como para pasar al siguiente nivel, podés cambiar en cualquier momento del año. No hay costo adicional por el cambio de nivel.',
+    question: '¿Cuándo empiezan y terminan las clases?',
+    answer: 'Las clases empiezan a principios de marzo y terminan en diciembre.',
   },
   {
-    question: '¿Hay clases de prueba?',
-    answer: 'Sí, ofrecemos una clase de prueba gratuita para que conozcas nuestra metodología y decidas si te gusta antes de inscribirte. Podés coordinarla contactándonos por WhatsApp o teléfono.',
+    question: '¿Cómo puedo ver lo que aprende mi hijo?',
+    answer: 'Durante el año cada grupo prepara una Open Class: las familias vienen al aula, juegan con los chicos y ven sus proyectos en inglés.',
   },
   {
-    question: '¿Qué materiales se usan?',
-    answer: 'Trabajamos con libros de editoriales internacionales reconocidas como Cambridge, Oxford y Pearson. Además, complementamos con material auténtico: artículos, videos, podcasts y recursos digitales interactivos.',
+    question: '¿Qué pasa después de 6th Level?',
+    answer: 'Pueden prepararse para B2 First y después para C1 Advanced, los exámenes de la Universidad de Cambridge. Antes, en Kids 4, los chicos también pueden rendir Movers.',
   },
   {
-    question: '¿Emiten certificados?',
-    answer: 'Sí, al finalizar cada nivel entregamos un certificado de asistencia y aprobación que indica el nivel alcanzado según el Marco Común Europeo de Referencia (MCER).',
+    question: '¿Dónde se rinden los exámenes de Cambridge?',
+    answer: 'Se rinden con Buenos Aires Open Centre, centro examinador de Cambridge, que elige una sede distinta cada año. Steps fue sede en años anteriores.',
   },
 ]

@@ -1,7 +1,7 @@
 // --- Base Configuration Values ---
 // Edit these core values to update contact info, handles, and URLs across the entire site.
 const businessName = 'Steps'
-const siteUrl = 'https://www.steps.qzz.io'
+const siteUrl = 'https://benjamonti.me'
 const experienceYears = 25
 
 // Address details

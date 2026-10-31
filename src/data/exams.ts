@@ -47,7 +47,7 @@ export const cefrLevels: CefrLevel[] = [
     code: 'A1',
     label: 'Beginner',
     description: 'Puede comprender y usar expresiones familiares y cotidianas.',
-    highlighted: false,
+    highlighted: true,
   },
   {
     code: 'A2',
@@ -77,7 +77,7 @@ export const cefrLevels: CefrLevel[] = [
     code: 'C2',
     label: 'Proficiency',
     description: 'Puede comprender prácticamente todo lo que escucha o lee con facilidad.',
-    highlighted: true,
+    highlighted: false,
   },
 ]
 
@@ -118,30 +118,30 @@ export const examProcess: ExamProcess[] = [
     step: 1,
     icon: 'ClipboardCheck',
     title: 'Diagnóstico inicial',
-    description: 'Evaluamos tu nivel actual y definimos qué examen y cuándo es el ideal para vos.',
+    description: 'Evaluamos tu nivel y definimos qué examen te conviene y cuándo rendirlo.',
   },
   {
     step: 2,
     icon: 'Calendar',
-    title: 'Plan de preparación',
-    description: 'Diseñamos un plan personalizado con clases específicas y material oficial del examen.',
+    title: 'Preparación',
+    description: 'Tres clases semanales de 90 minutos, en grupos reducidos y con seguimiento personalizado.',
   },
   {
     step: 3,
     icon: 'FileQuestion',
     title: 'Simulacros',
-    description: 'Practicás con exámenes reales de años anteriores en condiciones de examen.',
+    description: 'Practicás con exámenes completos en condiciones reales.',
   },
   {
     step: 4,
     icon: 'Award',
     title: 'Examen oficial',
-    description: 'Te inscribimos y acompañamos hasta el día del examen en el centro oficial.',
+    description: 'Rendís con Cambridge a través de Buenos Aires Open Centre.',
   },
   {
     step: 5,
     icon: 'Certificate',
-    title: 'Resultado y certificación',
-    description: 'Recibís tu certificado oficial reconocido internacionalmente.',
+    title: 'Entrega de certificados',
+    description: 'Celebramos cada certificado en Steps, con las familias.',
   },
 ]

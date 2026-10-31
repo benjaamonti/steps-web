@@ -5,7 +5,6 @@ import {
 import {
   Globe,
   FileText,
-  GraduationCap,
   ClipboardCheck,
   Calendar,
   FileQuestion,
@@ -61,8 +60,8 @@ export default function Exams() {
               Exámenes Internacionales
             </h1>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">
-              Preparación para las certificaciones más reconocidas del mundo. 
-              Abrí puertas a universidades, empleos y oportunidades internacionales.
+              Preparamos a nuestros alumnos para rendir exámenes de inglés
+              respaldados por la Universidad de Cambridge.
             </p>
           </motion.div>
         </div>
@@ -83,20 +82,14 @@ export default function Exams() {
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Los exámenes internacionales son certificaciones oficiales que acreditan 
-                  tu nivel de inglés de manera objetiva y estandarizada. A diferencia de 
-                  las notas escolares, estas certificaciones son reconocidas por universidades, 
-                  empleadores y gobiernos de todo el mundo.
+                  Los exámenes de Cambridge certifican tu nivel de inglés de manera oficial
+                  y con un estándar internacional. Los reconocen más de 25.000 universidades,
+                  empresas y gobiernos de todo el mundo, y el certificado no vence.
                 </p>
                 <p>
-                  Las certificaciones Cambridge, por ejemplo, tienen validez permanente: 
-                  una vez que aprobás, tu certificado no vence. Esto significa que podés 
-                  usarlo toda tu vida para demostrar tu dominio del idioma.
-                </p>
-                <p>
-                  Estas certificaciones son aceptadas por más de 25,000 instituciones 
-                  en todo el mundo, incluyendo universidades de prestigio como Harvard, 
-                  Oxford y Cambridge, así como empresas multinacionales y organismos gubernamentales.
+                  Trabajamos junto a Buenos Aires Open Centre, centro examinador de Cambridge,
+                  y Steps ya fue sede de exámenes para nuestros alumnos y para estudiantes de
+                  otras instituciones.
                 </p>
               </div>
 
@@ -110,10 +103,6 @@ export default function Exams() {
                   <FileText className="w-5 h-5" />
                   <span className="font-medium text-sm">Validez permanente</span>
                 </div>
-                <div className="flex items-center space-x-2 bg-accent/20 text-primary px-4 py-2 rounded-full">
-                  <GraduationCap className="w-5 h-5" />
-                  <span className="font-medium text-sm">+25,000 instituciones</span>
-                </div>
               </div>
             </motion.div>
             <motion.div
@@ -126,7 +115,7 @@ export default function Exams() {
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
                 <img
                   src="/images/exams/certificate.jpg"
-                  alt="Certificado internacional"
+                  alt="Entrega de certificados de Cambridge en Steps"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -198,17 +187,6 @@ export default function Exams() {
               </motion.div>
             ))}
           </motion.div>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-            className="text-center text-gray-500 mt-8 text-sm"
-          >
-            Los niveles A2-B2 corresponden a KET, PET y FCE de Cambridge. 
-            Los niveles C1-C2 corresponden a CAE y CPE.
-          </motion.p>
         </div>
       </section>
 
@@ -280,8 +258,8 @@ export default function Exams() {
               ¿Qué examen es el tuyo?
             </h2>
             <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-              Hacemos un diagnóstico gratuito para orientarte sobre cuál es el examen 
-              más adecuado para tu nivel y objetivos.
+              Escribinos y te orientamos sobre cuál es el examen más adecuado para tu
+              nivel y tus objetivos.
             </p>
             <Link
               to="/contacto?subject=Exámenes+Internacionales"

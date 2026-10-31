@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import {
@@ -14,11 +13,11 @@ import {
   UserCheck,
 } from 'lucide-react'
 import { PageMeta } from '@/components/layout/PageMeta'
-import { whyEngland, tripIncludes } from '@/data/trips'
-import { testimonials } from '@/data/testimonials'
+import { whyEngland, tripIncludes, tripFaq } from '@/data/trips'
+// import { testimonials } from '@/data/testimonials'
 import { pageMeta } from '@/data/pageMeta'
-import { Lightbox } from '@/components/ui/Lightbox'
-import { SkeletonImage } from '@/components/ui/skeletons/SkeletonImage'
+import { Gallery, type GalleryImage } from '@/components/ui/Gallery'
+import { FaqList } from '@/components/ui/FaqList'
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -58,39 +57,19 @@ const includeIcons: Record<string, React.ElementType> = {
 }
 
 // Gallery images
-const galleryImages = [
-  '/images/trips/gallery/1.jpg',
-  '/images/trips/gallery/2.jpg',
-  '/images/trips/gallery/3.jpg',
-  '/images/trips/gallery/4.jpg',
-  '/images/trips/gallery/5.jpg',
-  '/images/trips/gallery/6.jpg',
-  '/images/trips/gallery/7.jpg',
-  '/images/trips/gallery/8.jpg',
+const galleryImages: GalleryImage[] = [
+  { src: '/images/trips/gallery/1.jpg', alt: 'Oxford, Bridge of Sighs' },
+  { src: '/images/trips/gallery/2.jpg', alt: 'Oxford, Radcliffe Camera' },
+  { src: '/images/trips/gallery/3.jpg', alt: 'Grupo de Steps con su bandera, 2026' },
+  { src: '/images/trips/gallery/4.jpg', alt: 'Chinatown, Londres' },
+  { src: '/images/trips/gallery/5.jpg', alt: 'King\'s College, Cambridge' },
+  { src: '/images/trips/gallery/6.jpg', alt: 'Sacré-Cœur, París' },
+  { src: '/images/trips/gallery/7.jpg', alt: 'Stonehenge' },
+  { src: '/images/trips/gallery/8.jpg', alt: 'Torre Eiffel, París' },
 ]
 
 export default function Trips() {
-  const [lightboxOpen, setLightboxOpen] = useState(false)
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
-  const [galleryLoaded, setGalleryLoaded] = useState(false)
-
-  const tripTestimonials = testimonials.filter((t) => t.type === 'trip')
-
-  const openLightbox = (index: number) => {
-    setCurrentImageIndex(index)
-    setLightboxOpen(true)
-  }
-
-  const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % galleryImages.length)
-  }
-
-  const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length)
-  }
-
-  // Simulate gallery loading
-  setTimeout(() => setGalleryLoaded(true), 500)
+  // const tripTestimonials = testimonials.filter((t) => t.type === 'trip')
 
   return (
     <>
@@ -109,8 +88,8 @@ export default function Trips() {
               Viajes a Inglaterra
             </h1>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">
-              Viví el idioma en su contexto cultural original. Una experiencia 
-              transformadora que acelera tu aprendizaje.
+              Dos semanas de clases en una summer school británica, excursiones por
+              Inglaterra y, en muchos viajes, cierre en París. Para chicos de 13 a 17 años.
             </p>
           </motion.div>
         </div>
@@ -131,21 +110,19 @@ export default function Trips() {
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Un viaje de inmersión lingüística es mucho más que un viaje turístico. 
-                  Es una experiencia educativa donde vivís el idioma inglés las 24 horas 
-                  del día: en las clases, con tu familia anfitriona, en las excursiones 
-                  y en cada interacción cotidiana.
+                  Steps organiza viajes educativos al Reino Unido junto a Together. El grupo
+                  viaja en julio y pasa dos semanas en una summer school internacional: clases
+                  de inglés, actividades por la tarde, chicos de otros países y excursiones.
                 </p>
                 <p>
-                  A diferencia del turismo tradicional, donde el inglés puede ser opcional, 
-                  en un viaje de inmersión te ves obligado a comunicarte en inglés constantemente. 
-                  Esta necesidad real de comunicación acelera el aprendizaje de manera exponencial.
+                  En 2026 el grupo estuvo en Leighton Park Summer School, en Reading. En 2022
+                  y 2024 viajamos a Bishop's Stortford College, y en 2019 a Clifton College,
+                  en Bristol.
                 </p>
                 <p>
-                  Nuestros viajes están diseñados para estudiantes de 13 a 18 años con nivel 
-                  intermedio de inglés. La combinación de clases formales en escuelas locales 
-                  con hablantes nativos y la experiencia de vida diaria en Inglaterra produce 
-                  un "salto de nivel" que normalmente llevaría años de clases regulares.
+                  Pueden viajar chicos de entre 13 y 17 años al momento del viaje que estén en
+                  3rd Level o un nivel superior. El próximo viaje es en julio de 2028: el grupo
+                  ya está confirmado y todavía hay lugar.
                 </p>
               </div>
             </motion.div>
@@ -159,7 +136,7 @@ export default function Trips() {
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
                 <img
                   src="/images/trips/immersion.jpg"
-                  alt="Viaje de inmersión"
+                  alt="Grupo de Steps durante el viaje 2026"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -179,10 +156,10 @@ export default function Trips() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
-              Por qué Inglaterra
+              Por qué viajar con Steps
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              El lugar perfecto para vivir una experiencia lingüística auténtica
+              Un viaje que preparamos y acompañamos de principio a fin
             </p>
           </motion.div>
 
@@ -191,7 +168,7 @@ export default function Trips() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-6"
           >
             {whyEngland.map((item, index) => {
               const IconComponent = whyEnglandIcons[item.icon] || Globe
@@ -209,22 +186,6 @@ export default function Trips() {
                 </motion.div>
               )
             })}
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="bg-primary/5 p-8 rounded-2xl"
-          >
-            <p className="text-gray-700 text-center leading-relaxed">
-              Un viaje de inmersión a Inglaterra no solo mejora tu inglés: te abre 
-              la mente a nuevas culturas, te da independencia y confianza, y crea 
-              recuerdos que duran toda la vida. Muchos de nuestros alumnos describen 
-              el viaje como "la mejor experiencia de mi vida" y "un antes y un después" 
-              en su relación con el idioma.
-            </p>
           </motion.div>
         </div>
       </section>
@@ -292,54 +253,12 @@ export default function Trips() {
             </p>
           </motion.div>
 
-          {!galleryLoaded ? (
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {Array.from({ length: 8 }).map((_, index) => (
-                <SkeletonImage key={index} aspectRatio="aspect-square" />
-              ))}
-            </div>
-          ) : (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-4"
-            >
-              {galleryImages.map((image, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: index * 0.05 }}
-                  className="aspect-square overflow-hidden rounded-lg cursor-pointer group"
-                  onClick={() => openLightbox(index)}
-                >
-                  <img
-                    src={image}
-                    alt={`Galería ${index + 1}`}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                    loading="lazy"
-                  />
-                </motion.div>
-              ))}
-            </motion.div>
-          )}
+          <Gallery images={galleryImages} />
         </div>
       </section>
 
-      {/* Lightbox */}
-      <Lightbox
-        images={galleryImages}
-        currentIndex={currentImageIndex}
-        isOpen={lightboxOpen}
-        onClose={() => setLightboxOpen(false)}
-        onNext={nextImage}
-        onPrev={prevImage}
-      />
-
-      {/* Section 6 - Testimonios */}
+      {/* Section 6 - Testimonios: oculta hasta tener las citas (ver TODO en src/data/testimonials.ts).
+          Para mostrarla, descomentá este bloque, el import de testimonials y tripTestimonials.
       <section className="py-20 lg:py-28 bg-cream">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -370,7 +289,6 @@ export default function Trips() {
                 variants={itemVariants}
                 className="relative bg-white p-8 rounded-xl shadow-md border-l-4 border-accent"
               >
-                {/* Decorative Quote */}
                 <div className="absolute top-4 right-4 text-[#d65661]/20">
                   <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
@@ -392,8 +310,31 @@ export default function Trips() {
           </motion.div>
         </div>
       </section>
+      */}
 
-      {/* Section 7 - CTA */}
+      {/* Section 7 - Preguntas frecuentes */}
+      <section className="py-20 lg:py-28 bg-cream">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
+              Preguntas frecuentes
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Lo que más nos preguntan las familias sobre el viaje
+            </p>
+          </motion.div>
+
+          <FaqList items={tripFaq} />
+        </div>
+      </section>
+
+      {/* Section 8 - CTA */}
       <section className="py-20 lg:py-28 bg-primary">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -407,8 +348,8 @@ export default function Trips() {
               ¿Querés que tu hijo viva esta experiencia?
             </h2>
             <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-              Contactanos para recibir información sobre las próximas salidas, 
-              requisitos y proceso de inscripción.
+              Ya estamos preparando el viaje de julio 2028. Escribinos y te contamos
+              fechas, requisitos y cuándo es la próxima reunión informativa.
             </p>
             <Link
               to="/contacto?subject=Viajes+a+Inglaterra"
