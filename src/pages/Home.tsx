@@ -26,7 +26,7 @@ const itemVariants = {
   },
 }
 
-const recognitions = [
+{/* const recognitions = [
   {
     logo: '/images/awards/oxford-quality.png',
     alt: 'Oxford Quality, Oxford University Press',
@@ -39,7 +39,7 @@ const recognitions = [
     title: 'Centro de preparación oficial de Cambridge',
     description: 'Preparamos e inscribimos a nuestros alumnos a través de Buenos Aires Open Centre, y fuimos sede de exámenes en Steps.',
   },
-]
+] */}
 
 const previewCards = [
   {
