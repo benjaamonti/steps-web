@@ -148,19 +148,19 @@ export const classLevels: ClassLevel[] = [
 export const faq: FAQ[] = [
   {
     question: '¿Desde qué edad pueden empezar?',
-    answer: 'Little Steps es nuestro primer nivel, para los más chicos. First Steps es para chicos de 2º grado, y Kids 1 es el nivel inicial para chicos de 3º y 4º grado que empiezan con el inglés.',
+    answer: 'A partir de primer grado de escuela primaria',
   },
   {
     question: 'Mi hijo ya sabe inglés, ¿en qué nivel entra?',
-    answer: 'Escribinos por WhatsApp y coordinamos una nivelación para ubicarlo en el grupo que le corresponde.',
+    answer: 'El primer paso es determinar cuánto es lo que sabe. Escribinos por Whatsapp y coordinamos para realizar una nivelación para ubicarlo en el grupo que le corresponde.',
   },
   {
-    question: '¿Cuándo empiezan y terminan las clases?',
-    answer: 'Las clases empiezan a principios de marzo y terminan en diciembre.',
+    question: '¿Cuándo comienzan y terminan las clases?',
+    answer: 'Las clases comienzan el mismo día que las escuelas primarias y terminan a mediados de diciembre.',
   },
   {
     question: '¿Cómo puedo ver lo que aprende mi hijo?',
-    answer: 'Durante el año cada grupo prepara una Open Class: las familias vienen al aula, juegan con los chicos y ven sus proyectos en inglés.',
+    answer: 'Enviamos un boletín trimestral donde te informamos del progreso en las distintas habilidades de la lengua.Durante el año cada grupo prepara una Open Class: las familias vienen al aula, juegan con los chicos y ven sus proyectos en inglés.',
   },
   {
     question: '¿Qué pasa después de 6th Level?',
