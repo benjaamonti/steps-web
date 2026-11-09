@@ -151,7 +151,7 @@ export default function Home() {
               </h2>
               <div className="space-y-4 text-lg text-gray-600">
                 <p>
-                  Steps es una escuela de inglés para chicos y adolescentes en Mar del Plata. Hace más de 30 años que Miss Carol y John enseñan inglés, y hoy lo hacen junto a un equipo de teachers que acompaña a cada grupo desde Little Steps hasta los exámenes internacionales.
+                  Steps es una instituto de inglés para niños y adolescentes en Mar del Plata, con más de 30 años de trayectoria.
                 </p>
                 <p>
                   En Steps se aprende haciendo. Cada grupo prepara proyectos en inglés (obras de teatro, museos, ferias, debates) y abrimos el aula a las familias en nuestras Open Classes para mostrar lo que aprendieron. Trabajamos con grupos reducidos y atención personalizada.
