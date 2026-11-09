@@ -53,7 +53,7 @@ const previewCards = [
   {
     icon: FileText,
     title: 'Exámenes Internacionales',
-    description: 'Preparación de exánmenes internacionales de la Universidad de Cambridge.',
+    description: 'Preparación de exámenes internacionales de la Universidad de Cambridge.',
     image: '/images/home/examenes.jpg',
     alt: 'Alumnos con sus certificados de Cambridge',
     link: '/examenes-internacionales',
