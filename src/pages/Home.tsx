@@ -61,7 +61,7 @@ const previewCards = [
   {
     icon: Plane,
     title: 'Viajes a Inglaterra',
-    description: 'Dos semanas en una summer school británica, excursiones por Inglaterra y, en muchos viajes, cierre en París. Para chicos de 13 a 17 años. Próximo viaje: julio 2028.',
+    description: 'Dos semanas en una summer school británica, excursiones por Inglaterra y, en muchos viajes, cierre en París. Para niños de 13 a 17 años. Próximo viaje: julio 2028.',
     image: '/images/home/viajes.jpg',
     alt: 'Alumnos de Steps en Londres',
     link: '/viajes-a-inglaterra',
