@@ -71,7 +71,7 @@ export default function Classes() {
               Nuestras Clases
             </h1>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">
-              Clases presenciales de inglés para chicos y adolescentes en Mar del Plata, organizadas por edad y nivel.
+              Clases presenciales de inglés para niños y adolescentes en Mar del Plata, organizadas por edad y nivel.
             </p>
           </motion.div>
         </div>
