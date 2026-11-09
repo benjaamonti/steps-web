@@ -89,7 +89,7 @@ export default function Trips() {
             </h1>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">
               Dos semanas de clases en una summer school británica, excursiones por
-              Inglaterra y, en muchos viajes, cierre en París. Para chicos de 13 a 17 años.
+              Inglaterra y, en muchos viajes, cierre en París. Para niños de 13 a 17 años.
             </p>
           </motion.div>
         </div>
@@ -112,7 +112,7 @@ export default function Trips() {
                 <p>
                   Steps organiza viajes educativos al Reino Unido junto a Together. El grupo
                   viaja en julio y pasa dos semanas en una summer school internacional: clases
-                  de inglés, actividades por la tarde, chicos de otros países y excursiones.
+                  de inglés, actividades por la tarde, niños de otros países y excursiones.
                 </p>
                 <p>
                   En 2026 el grupo estuvo en Leighton Park Summer School, en Reading. En 2022
@@ -120,7 +120,7 @@ export default function Trips() {
                   en Bristol.
                 </p>
                 <p>
-                  Pueden viajar chicos de entre 13 y 17 años al momento del viaje que estén en
+                  Pueden viajar niños de entre 13 y 17 años al momento del viaje que estén en
                   3rd Level o un nivel superior. El próximo viaje es en julio de 2028: el grupo
                   ya está confirmado y todavía hay lugar.
                 </p>
