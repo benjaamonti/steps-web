@@ -1,6 +1,6 @@
 # Steps School of English · sitio web
 
-Sitio de Steps, escuela de inglés para chicos y adolescentes en Mar del Plata. React + TypeScript + Vite + Tailwind, publicado en GitHub Pages en `benjamonti.me` (pronto `steps.com.ar`).
+Sitio de Steps, instituto de inglés para chicos y adolescentes en Mar del Plata. React + TypeScript + Vite + Tailwind, publicado en GitHub Pages en `benjamonti.me` (pronto `steps.com.ar`).
 
 ## Pendientes
 
