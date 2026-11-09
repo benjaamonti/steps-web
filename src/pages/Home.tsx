@@ -221,7 +221,7 @@ export default function Home() {
               ¿Qué ofrecemos?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Clases para cada edad, preparación para los exámenes de Cambridge y viajes de estudio a Inglaterra.
+              Clases para cada edad, preparación para los exámenes Internacionales de la Universidad de Cambridge y viajes de estudio a Inglaterra.
             </p>
           </motion.div>
 
