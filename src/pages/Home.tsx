@@ -151,7 +151,7 @@ export default function Home() {
               </h2>
               <div className="space-y-4 text-lg text-gray-600">
                 <p>
-                  Steps es una instituto de inglés para niños y adolescentes en Mar del Plata, con más de 30 años de trayectoria.
+                  Steps es un instituto de inglés para niños y adolescentes en Mar del Plata, con más de 30 años de trayectoria.
                 </p>
                 <p>
                   En Steps se aprende haciendo. Cada grupo prepara proyectos en inglés (obras de teatro, museos, ferias, debates) y abrimos el aula a las familias en nuestras Open Classes para mostrar lo que aprendieron. Trabajamos con grupos reducidos y atención personalizada.
