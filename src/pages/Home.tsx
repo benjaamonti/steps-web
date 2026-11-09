@@ -45,7 +45,7 @@ const previewCards = [
   {
     icon: GraduationCap,
     title: 'Nuestras Clases',
-    description: 'Niveles para chicos y adolescentes, de Little Steps a 6th Level. Grupos reducidos, pantallas interactivas, proyectos y Open Classes con las familias.',
+    description: 'Niveles para niños y adolescentes, en grupos reducidos, con pantallas interactivas en todas nuestras aulas, proyectos y clases abiertas con las familias.',
     image: '/images/home/clases.jpg',
     alt: 'Little Steps en una Open Class',
     link: '/nuestras-clases',
@@ -53,7 +53,7 @@ const previewCards = [
   {
     icon: FileText,
     title: 'Exámenes Internacionales',
-    description: 'Preparación para B2 First y C1 Advanced de la Universidad de Cambridge: tres clases semanales de 90 minutos, simulacros y seguimiento personalizado.',
+    description: 'Preparación de exánmenes internacionales de la Universidad de Cambridge.',
     image: '/images/home/examenes.jpg',
     alt: 'Alumnos con sus certificados de Cambridge',
     link: '/examenes-internacionales',
