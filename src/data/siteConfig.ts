@@ -28,7 +28,7 @@ export const siteConfig = {
   businessName,
   tagline: 'Aprendé inglés y disfrutá del proceso',
   tabTitle: `${businessName} | School of English`,
-  metaDescription: `Academia de inglés en ${addressLocality}. Clases para niños y adolescentes. Preparación para exámenes internacionales Cambridge. Viajes de inmersión a Inglaterra.`,
+  metaDescription: `Academia de inglés en ${addressLocality}. Cursos para niños y adolescentes. Preparación para exámenes internacionales Cambridge. Viajes educativos a Inglaterra.`,
   siteUrl,
   experienceYears,
   experienceText: `Más de ${experienceYears} años formando estudiantes de inglés en ${addressLocality}.`,

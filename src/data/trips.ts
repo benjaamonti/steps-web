@@ -199,7 +199,7 @@ export const tripIncludes: TripInclude[] = [
 export const tripFaq: FAQ[] = [
   {
     question: '¿Quién puede viajar?',
-    answer: 'Chicos que tengan entre 13 y 17 años al momento de viajar y estén en 3rd Level o un nivel superior.',
+    answer: 'Estudiantes que tengan entre 13 y 17 años al momento de viajar y estén en 3rd Level o un nivel superior.',
   },
   {
     question: '¿Cuándo es el próximo viaje?',
@@ -207,7 +207,7 @@ export const tripFaq: FAQ[] = [
   },
   {
     question: '¿Quién acompaña al grupo?',
-    answer: 'Group leaders de Steps, entre ellos John, que viajan con los chicos durante todo el viaje. Antes de cada viaje participan de la capacitación para líderes que organiza Together.',
+    answer: 'Group leaders de Steps, entre ellos John, que viajan con los estudiantes durante todo el viaje. Antes de cada viaje participan de la capacitación para líderes que organiza Together.',
   },
   {
     question: '¿Cómo se preparan antes de viajar?',
@@ -215,6 +215,6 @@ export const tripFaq: FAQ[] = [
   },
   {
     question: '¿Dónde se alojan?',
-    answer: 'En la residencia del colegio donde hacen la summer school, junto a chicos de otros países.',
+    answer: 'En la residencia del colegio donde hacen la summer school, junto a estudiantes de otros países.',
   },
 ]

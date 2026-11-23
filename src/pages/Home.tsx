@@ -37,7 +37,7 @@ const itemVariants = {
     logo: '/images/awards/cambridge-preparation-centre.png',
     alt: 'Cambridge English Preparation Centre',
     title: 'Centro de preparación oficial de Cambridge',
-    description: 'Preparamos e inscribimos a nuestros alumnos a través de Buenos Aires Open Centre, y fuimos sede de exámenes en Steps.',
+    description: 'Preparamos e inscribimos a nuestros estudiantes a través de Buenos Aires Open Centre, y fuimos sede de exámenes en Steps.',
   },
 ] */}
 
@@ -45,7 +45,7 @@ const previewCards = [
   {
     icon: GraduationCap,
     title: 'Nuestras Clases',
-    description: 'Niveles para niños y adolescentes, en grupos reducidos, con pantallas interactivas en todas nuestras aulas, proyectos y clases abiertas con las familias.',
+    description: 'Cursos para niños y adolescentes en grupos reducidos, con clases dinámicas, juego, pantallas interactivas en todas nuestras aulas y proyectos que compartimos con las familias.',
     image: '/images/home/clases.jpg',
     alt: 'Little Steps en una Open Class',
     link: '/nuestras-clases',
@@ -53,7 +53,7 @@ const previewCards = [
   {
     icon: FileText,
     title: 'Exámenes Internacionales',
-    description: 'Preparación de exámenes internacionales de la Universidad de Cambridge.',
+    description: 'Cursos de preparación para los exámenes internacionales de la Universidad de Cambridge, como B2 First y C1 Advanced, con simulacros y seguimiento personalizado.',
     image: '/images/home/examenes.jpg',
     alt: 'Alumnos con sus certificados de Cambridge',
     link: '/examenes-internacionales',
@@ -61,7 +61,7 @@ const previewCards = [
   {
     icon: Plane,
     title: 'Viajes a Inglaterra',
-    description: 'Dos semanas en una summer school británica, excursiones por Inglaterra y, en muchos viajes, cierre en París. Para niños de 13 a 17 años. Próximo viaje: julio 2028.',
+    description: 'Viajes educativos que combinan aprendizaje, cultura y nuevas experiencias: dos semanas en una summer school británica y excursiones por Inglaterra. Para estudiantes de 13 a 17 años.',
     image: '/images/home/viajes.jpg',
     alt: 'Alumnos de Steps en Londres',
     link: '/viajes-a-inglaterra',
@@ -154,7 +154,13 @@ export default function Home() {
                   Steps es un instituto de inglés para niños y adolescentes en Mar del Plata, con más de 30 años de trayectoria.
                 </p>
                 <p>
-                  En Steps se aprende haciendo. Cada grupo prepara proyectos en inglés (obras de teatro, museos, ferias, debates) y abrimos el aula a las familias en nuestras Open Classes para mostrar lo que aprendieron. Trabajamos con grupos reducidos y atención personalizada.
+                  Nuestro edificio fue pensado y diseñado especialmente para aprender, con aulas amplias, cómodas y luminosas que invitan a participar, compartir y disfrutar del aprendizaje.
+                </p>
+                <p>
+                  Ofrecemos cursos organizados según su edad y conocimiento. Trabajamos con grupos reducidos, que nos permiten conocer a cada estudiante y su familia, y brindar una atención personalizada.
+                </p>
+                <p>
+                  Contamos con un equipo docente que combina calidad académica y calidez humana para acompañar a nuestros estudiantes en cada etapa de su aprendizaje.
                 </p>
               </div>
             </motion.div>
@@ -221,7 +227,7 @@ export default function Home() {
               ¿Qué ofrecemos?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Clases para cada edad, preparación para los exámenes Internacionales de la Universidad de Cambridge y viajes de estudio a Inglaterra.
+              Clases para cada edad, preparación para los exámenes internacionales de la Universidad de Cambridge y viajes de estudio a Inglaterra.
             </p>
           </motion.div>
 
@@ -282,7 +288,7 @@ export default function Home() {
               ¿Empezamos?
             </h2>
             <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-              ¡Contactanos para empezar tu nivelación!
+              En Steps, aprender inglés es mucho más que estudiar un idioma. Es comunicarse, jugar, crear, compartir, descubrir y crecer. ¡Contactanos para empezar tu nivelación!
             </p>
             <Link
               to="/contacto"

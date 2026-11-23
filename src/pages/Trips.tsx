@@ -14,7 +14,6 @@ import {
 } from 'lucide-react'
 import { PageMeta } from '@/components/layout/PageMeta'
 import { whyEngland, tripIncludes, tripFaq } from '@/data/trips'
-// import { testimonials } from '@/data/testimonials'
 import { pageMeta } from '@/data/pageMeta'
 import { Gallery, type GalleryImage } from '@/components/ui/Gallery'
 import { FaqList } from '@/components/ui/FaqList'
@@ -69,8 +68,6 @@ const galleryImages: GalleryImage[] = [
 ]
 
 export default function Trips() {
-  // const tripTestimonials = testimonials.filter((t) => t.type === 'trip')
-
   return (
     <>
       <PageMeta {...pageMeta['/viajes-a-inglaterra']} />
@@ -88,8 +85,8 @@ export default function Trips() {
               Viajes a Inglaterra
             </h1>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">
-              Dos semanas de clases en una summer school británica, excursiones por
-              Inglaterra y, en muchos viajes, cierre en París. Para niños de 13 a 17 años.
+              Organizamos viajes educativos a Inglaterra que combinan aprendizaje, cultura
+              y nuevas experiencias.
             </p>
           </motion.div>
         </div>
@@ -110,9 +107,14 @@ export default function Trips() {
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Steps organiza viajes educativos al Reino Unido junto a Together. El grupo
-                  viaja en julio y pasa dos semanas en una summer school internacional: clases
-                  de inglés, actividades por la tarde, niños de otros países y excursiones.
+                  Una oportunidad perfecta para poner en práctica el idioma en contextos reales,
+                  conocer otros lugares y desarrollar autonomía y confianza.
+                </p>
+                <p>
+                  Organizamos los viajes junto a Together. El grupo viaja en julio y pasa dos
+                  semanas en una summer school internacional: clases de inglés, actividades por
+                  la tarde, estudiantes de otros países y excursiones. En muchos viajes, el cierre
+                  es en París.
                 </p>
                 <p>
                   En 2026 el grupo estuvo en Leighton Park Summer School, en Reading. En 2022
@@ -120,7 +122,7 @@ export default function Trips() {
                   en Bristol.
                 </p>
                 <p>
-                  Pueden viajar niños de entre 13 y 17 años al momento del viaje que estén en
+                  Pueden viajar estudiantes de entre 13 y 17 años al momento del viaje que estén en
                   3rd Level o un nivel superior. El próximo viaje es en julio de 2028: el grupo
                   ya está confirmado y todavía hay lugar.
                 </p>
@@ -256,61 +258,6 @@ export default function Trips() {
           <Gallery images={galleryImages} />
         </div>
       </section>
-
-      {/* Section 6 - Testimonios: oculta hasta tener las citas (ver TODO en src/data/testimonials.ts).
-          Para mostrarla, descomentá este bloque, el import de testimonials y tripTestimonials.
-      <section className="py-20 lg:py-28 bg-cream">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
-              Lo que dicen quienes viajaron
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Experiencias reales de nuestros alumnos
-            </p>
-          </motion.div>
-
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
-          >
-            {tripTestimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                className="relative bg-white p-8 rounded-xl shadow-md border-l-4 border-accent"
-              >
-                <div className="absolute top-4 right-4 text-[#d65661]/20">
-                  <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                  </svg>
-                </div>
-
-                <p className="text-gray-700 italic mb-6 relative z-10">
-                  "{testimonial.quote}"
-                </p>
-
-                <p className="text-primary font-medium">
-                  — {testimonial.author}
-                  {testimonial.age && `, ${testimonial.age}`}
-                  {testimonial.destination && ` · ${testimonial.destination}`}
-                  {testimonial.year && ` · ${testimonial.year}`}
-                </p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-      */}
 
       {/* Section 7 - Preguntas frecuentes */}
       <section className="py-20 lg:py-28 bg-cream">

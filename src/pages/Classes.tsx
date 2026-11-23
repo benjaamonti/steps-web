@@ -71,7 +71,7 @@ export default function Classes() {
               Nuestras Clases
             </h1>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">
-              Clases presenciales de inglés para niños y adolescentes en Mar del Plata, organizadas por edad y nivel.
+              Cursos de inglés para niños y adolescentes en Mar del Plata, organizados según su edad y conocimiento.
             </p>
           </motion.div>
         </div>
@@ -151,7 +151,7 @@ export default function Classes() {
               Proyectos y Open Classes
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Durante el año cada grupo prepara un proyecto en inglés y lo comparte con las familias.
+              Nuestros proyectos integran los conocimientos y habilidades que trabajamos a lo largo del año, y cada grupo elige cómo quiere compartir lo aprendido con otros cursos o con sus familias. Obras de teatro, musicales, muestras interactivas, clases abiertas y muchas otras propuestas llenan Steps de creatividad, entusiasmo y experiencias compartidas.
             </p>
           </motion.div>
 

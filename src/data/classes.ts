@@ -17,12 +17,12 @@ export interface FAQ {
 }
 
 export const methodology = {
-  intro: 'En Steps el inglés se usa desde la primera clase. Cada nivel trabaja con proyectos que terminan en algo concreto: una obra de teatro, un museo, un noticiero, una feria de países o un juicio simulado. Así los chicos usan el idioma para crear, presentar y compartir.',
+  intro: 'Nuestras clases son dinámicas y participativas, con especial énfasis en la comunicación y la oralidad. Desde el primer día, generamos oportunidades para hablar, preguntar, compartir ideas y ganar confianza hablando en inglés.',
   pillars: [
     {
       icon: 'MessageCircle',
       title: 'Aprender jugando',
-      description: 'Juegos, canciones y cuentos en los niveles Kids. En Teens siguen aprendiendo con juegos, pero mucho más complejos.',
+      description: 'Desde Little Steps hasta C1 Advanced, el juego es parte de nuestra forma de enseñar. Contamos con un espacio diseñado para aprender a través del juego y el movimiento, con desafíos y propuestas colaborativas que conectan el cuerpo con el lenguaje.',
     },
     {
       icon: 'Users',
@@ -31,13 +31,13 @@ export const methodology = {
     },
     {
       icon: 'BookOpen',
-      title: 'Pantallas interactivas',
-      description: 'Nuestras aulas tienen pantallas interactivas para trabajar con juegos, videos y actividades digitales en cada clase.',
+      title: 'Tecnología en el aula',
+      description: 'Todas nuestras aulas están equipadas con pantallas interactivas de última tecnología. Integramos herramientas digitales, recursos audiovisuales y actividades interactivas para explorar, crear y colaborar en inglés.',
     },
     {
       icon: 'Target',
       title: 'Proyectos en cada nivel',
-      description: 'Masterchef Kids, Zootopia, Matilda, Bake Off, talk shows, debates y mock trials: cada grupo tiene su proyecto del año.',
+      description: 'Nuestros proyectos integran lo que trabajamos a lo largo del año: Masterchef Kids, Matilda, Bake Off, talk shows, debates y mock trials, entre muchos otros.',
     },
   ] as MethodologyPillar[],
 }
@@ -53,13 +53,13 @@ export const classLevels: ClassLevel[] = [
   {
     group: 'kids',
     level: 'First Steps',
-    description: 'Nivel exclusivo para chicos de segundo grado. Aprenden jugando, con clases dinámicas y participativas.',
+    description: 'Nivel exclusivo para estudiantes de segundo grado. Aprenden jugando, con clases dinámicas y participativas.',
     image: '/images/classes/levels/first-steps.jpg',
   },
   {
     group: 'kids',
     level: 'Kids 1',
-    description: 'Nivel inicial para chicos de 3º y 4º grado. Cocinan en Masterchef Kids, arman el Big Sandwich de Pete the Cat y hacen obras de teatro.',
+    description: 'Nivel inicial para estudiantes de 3º y 4º grado. Cocinan en Masterchef Kids, arman el Big Sandwich de Pete the Cat y hacen obras de teatro.',
     image: '/images/classes/levels/kids-1.jpg',
   },
   {
@@ -77,7 +77,7 @@ export const classLevels: ClassLevel[] = [
   {
     group: 'kids',
     level: 'Kids 4',
-    description: 'Escriben textos comparativos sobre animales, montan su propio museo y pueden rendir Movers, el examen de Cambridge para chicos.',
+    description: 'Escriben textos comparativos sobre animales, montan su propio museo y pueden rendir Movers, el examen de Cambridge para niños.',
     image: '/images/classes/levels/kids-4.jpg',
   },
   // Juniors
@@ -160,11 +160,11 @@ export const faq: FAQ[] = [
   },
   {
     question: '¿Cómo puedo ver lo que aprende mi hijo?',
-    answer: 'Enviamos un boletín trimestral donde te informamos del progreso en las distintas habilidades de la lengua.Durante el año cada grupo prepara una Open Class: las familias vienen al aula, juegan con los chicos y ven sus proyectos en inglés.',
+    answer: 'Enviamos un boletín trimestral donde te informamos del progreso en las distintas habilidades de la lengua. Durante el año cada grupo prepara una Open Class: las familias vienen al aula, juegan con los estudiantes y ven sus proyectos en inglés.',
   },
   {
     question: '¿Qué pasa después de 6th Level?',
-    answer: 'Pueden prepararse para B2 First y después para C1 Advanced, los exámenes de la Universidad de Cambridge. Antes, en Kids 4, los chicos también pueden rendir Movers.',
+    answer: 'Pueden prepararse para B2 First y después para C1 Advanced, los exámenes de la Universidad de Cambridge. Antes, en Kids 4, los estudiantes también pueden rendir Movers.',
   },
   {
     question: '¿Dónde se rinden los exámenes de Cambridge?',

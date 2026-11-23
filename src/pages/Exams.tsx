@@ -60,8 +60,8 @@ export default function Exams() {
               Exámenes Internacionales
             </h1>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">
-              Preparamos a nuestros alumnos para rendir exámenes de inglés
-              respaldados por la Universidad de Cambridge.
+              Ofrecemos cursos de preparación para los exámenes internacionales de la
+              Universidad de Cambridge, como B2 First y C1 Advanced, entre otros.
             </p>
           </motion.div>
         </div>
@@ -88,7 +88,7 @@ export default function Exams() {
                 </p>
                 <p>
                   Trabajamos junto a Buenos Aires Open Centre, centro examinador de Cambridge,
-                  y Steps ya fue sede de exámenes para nuestros alumnos y para estudiantes de
+                  y Steps ya fue sede de exámenes para nuestros estudiantes y para estudiantes de
                   otras instituciones.
                 </p>
               </div>
@@ -206,7 +206,9 @@ export default function Exams() {
               Nuestro Proceso de Preparación
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Te acompañamos en cada paso hasta obtener tu certificación
+              Nuestra preparación combina práctica intensiva de Reading, Writing, Listening,
+              Speaking y Use of English, simulacros, estrategias de examen y seguimiento
+              personalizado que se traducen en excelentes resultados.
             </p>
           </motion.div>
 
